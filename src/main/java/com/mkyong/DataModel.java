@@ -28,27 +28,51 @@ public class DataModel extends DescriptionType {
 		String indexedTextSearch;
 
 		public void setDataModelDescription(String[][] descriptionMatrix){
-				this.setFeatureType(descriptionMatrix[0][0]);
-				this.setDatabaseName(descriptionMatrix[1][1]);
-				this.setDataModel(descriptionMatrix[2][1]);
-				this.setDataModelURL(descriptionMatrix[3][1]);
-				this.setEnforcedSchema(descriptionMatrix[4][1]);
-				this.setSchemaURL(descriptionMatrix[5][1]);
-				this.setOpaqueDataObjects(descriptionMatrix[6][1]);
-				this.setOpaqueDataURL(descriptionMatrix[7][1]);
-				this.setHierarchicalDataObjects(descriptionMatrix[8][1]);
-				this.setAutoAllocatedKeys(descriptionMatrix[9][1]);
-				this.setCompositeKeys(descriptionMatrix[10][1]);
-				this.setSecondaryIndexes(descriptionMatrix[11][0]);
-				this.setData2iURL(descriptionMatrix[12][1]);
-				this.setQueryByKeyRanges(descriptionMatrix[13][1]);
-				this.setKeyRangeURL(descriptionMatrix[14][1]);
-				this.setQueryByPartialKeys(descriptionMatrix[15][1]);
-				this.setQueryByNonKeyValues(descriptionMatrix[16][1]);
-				this.setQueryScanURL(descriptionMatrix[17][1]);
-				this.setMapReduceAPI(descriptionMatrix[18][0]);
-				this.setMapReduceURL(descriptionMatrix[19][1]);
-				this.setIndexedTextSearch(descriptionMatrix[20][1]);
+//				this.setFeatureType(descriptionMatrix[0][0]);
+//				this.setDatabaseName(descriptionMatrix[1][1]);
+//				this.setDataModel(descriptionMatrix[2][1]);
+//				this.setDataModelURL(descriptionMatrix[3][1]);
+//				this.setEnforcedSchema(descriptionMatrix[4][1]);
+//				this.setSchemaURL(descriptionMatrix[5][1]);
+//				this.setOpaqueDataObjects(descriptionMatrix[6][1]);
+//				this.setOpaqueDataURL(descriptionMatrix[7][1]);
+//				this.setHierarchicalDataObjects(descriptionMatrix[8][1]);
+//				this.setAutoAllocatedKeys(descriptionMatrix[9][1]);
+//				this.setCompositeKeys(descriptionMatrix[10][1]);
+//				this.setSecondaryIndexes(descriptionMatrix[11][1]);
+//				this.setData2iURL(descriptionMatrix[12][1]);
+//				this.setQueryByKeyRanges(descriptionMatrix[13][1]);
+//				this.setKeyRangeURL(descriptionMatrix[14][1]);
+//				this.setQueryByPartialKeys(descriptionMatrix[15][1]);
+//				this.setQueryByNonKeyValues(descriptionMatrix[16][1]);
+//				this.setQueryScanURL(descriptionMatrix[17][1]);
+//				this.setMapReduceAPI(descriptionMatrix[18][1]);
+//				this.setMapReduceURL(descriptionMatrix[19][1]);
+//				this.setIndexedTextSearch(descriptionMatrix[20][1]);
+
+				for (String[] value : descriptionMatrix) {
+						if (value[0].equals("Enforced Schema")) {
+								this.setEnforcedSchema(value[1]);
+						} else if (value[0].equals("Opaque Data Objects (need application interpretation)")) {
+								this.setOpaqueDataObjects(value[1]);
+						} else if (value[0].equals("Hierarchical Data Objects (e.g. sub objects)")) {
+								this.setHierarchicalDataObjects(value[1]);
+						} else if (value[0].equals("Automatically Allocated Keys")) {
+								this.setAutoAllocatedKeys(value[1]);
+						} else if (value[0].equals("Composite Keys")) {
+								this.setCompositeKeys(value[1]);
+						} else if (value[0].equals("Secondary Indexes")) {
+								this.setSecondaryIndexes(value[1]);
+						} else if (value[0].equals("Query by Key Ranges")) {
+								this.setQueryByKeyRanges(value[1]);
+						}else if (value[0].equals("Query by Partial Keys")) {
+								this.setQueryByPartialKeys(value[1]);
+						} else if (value[0].equals("Query by Non-keyed Values")) {
+								this.setQueryByNonKeyValues(value[1]);
+						} else if (value[0].equals("Map Reduce API")) {
+								this.setMapReduceAPI(value[1]);
+						}
+				}
 		}
 
 		public String getFeatureType() {

@@ -62,12 +62,12 @@ public class DatabaseDescription {
 		}
 
 		public static void main(String[] args) {
-				Distribution distribution = new Distribution();
+				DataModel datamodel = new DataModel();
 
-				System.out.println(distribution.getQueryArchitecture() + "**************************");
-				distribution.setDistributionDescription(ArrayParser.parseStringToArray(Database.retrieveDescription("oracle", "admin")));
+				System.out.println(datamodel.getEnforcedSchema() + "**************************");
+				datamodel.setDataModelDescription(ArrayParser.parseStringToArray(Database.retrieveDescription("accumulo", "data_model")));
 //				System.out.println(DatabaseDescription.setFeatureDescription(ArrayParser.parseStringToArray(Database.retrieveDescription("cassandra", "consistency")),
 //						"cassandra", "consistency"));
-				System.out.println(distribution.getQueryArchitecture()+"***********************");
+				System.out.println(datamodel.getEnforcedSchema()+"***********************");
 		}
 }

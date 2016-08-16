@@ -1039,10 +1039,9 @@ public class FeatureRatings {
 						return FeatureRatings.getConsistencyRatings2(databaseName, feature);
 				} else if (featureCategory.equals("data_distribution")) {
 						return FeatureRatings.getDataDistributionRatings2(databaseName, feature);
-				}
-				// else if (featureCategory.equals("data_model")) {
-				//						return FeatureRatings.getDataModelRatings2(databaseName, feature);
-				//				}
+				} else if (featureCategory.equals("data_model")) {
+										return FeatureRatings.getDataModelRatings2(databaseName, feature);
+								}
 				// else if (featureCategory.equals("query")) {
 				//						return FeatureRatings.getQueryLanguagesRatings2(databaseName, feature);
 				//				}
@@ -1354,131 +1353,107 @@ public class FeatureRatings {
 
 						return null;
 				}
-		//
-		//		public static Integer getDataModelRatings2(String databaseName, String feature) {
-		//
-		//				DataModel returnValueAdmin = new DataModel();
-		//				returnValueAdmin.setDataModelDescription(
-		//						ArrayParser.parseStringToArray(Database.retrieveDescription(databaseName, "data_model")));
-		//
-		//				if (databaseName.equals("accumulo")) {
-		//						returnValueArray[0] = 2;
-		//						returnValueArray[1] = 4;
-		//						returnValueArray[2] = 6;
-		//						returnValueArray[3] = 12;
-		//						returnValueArray[4] = 48;
-		//						returnValueArray[5] = 12;
-		//						returnValueArray[6] = 55;
-		//				} else if (databaseName.equals("cassandra")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 75;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 7;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("hbase")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 48;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("mongo")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 75;
-		//						returnValueArray[4] = 12;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("couch")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 7;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("couchbase")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 12;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 48;
-		//				} else if (databaseName.equals("orient")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 7;
-		//				} else if (databaseName.equals("neo")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 12;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 48;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("redis")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 11;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("riak")) {
-		//						returnValueArray[0] = 75;
-		//						returnValueArray[1] = 12;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 48;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("dynamo")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("oracle")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 48;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 75;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("foundation")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 7;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 12;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("volt")) {
-		//						returnValueArray[0] = 48;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 12;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				}
-		//
-		//				returnValue.setRankings(returnValueArray);
-		//
-		//				return returnValue;
-		//		}
+
+				public static Integer getDataModelRatings2(String databaseName, String feature) {
+
+						DataModel returnValueDataModel = new DataModel();
+						returnValueDataModel.setDataModelDescription(
+								ArrayParser.parseStringToArray(Database.retrieveDescription(databaseName, "data_model")));
+
+						if (feature.equals("Scalable Request Processing Architecture")) {
+								if (returnValueDataModel.getEnforcedSchema().equals("required")) {
+										return 2;
+								}else if (returnValueDataModel.getEnforcedSchema().equals("optional")) {
+										return 4;
+								}else if (returnValueDataModel.getEnforcedSchema().equals("not required")) {
+										return 7;
+								} else
+										return 50;
+						} else if (feature.equals("Opaque Data Objects (need application interpretation)")) {
+
+								if (returnValueDataModel.getOpaqueDataObjects().equals("required")) {
+										return 1;
+								} else if (returnValueDataModel.getOpaqueDataObjects().equals("not required")) {
+										return 7;
+								}else
+										return 50;
+						} else if (feature.equals("Hierarchical Data Objects (e.g. sub objects)")) {
+
+								if (returnValueDataModel.getHierarchicalDataObjects().equals("not supported")) {
+										return 1;
+								} else if (returnValueDataModel.getHierarchicalDataObjects().equals("supported")) {
+										return 7;
+								}else
+										return 50;
+						} else if (feature.equals("Automatically Allocated Keys")) {
+								if (returnValueDataModel.getAutoAllocatedKeys().equals("not supported")) {
+										return 1;
+								} else if (returnValueDataModel.getAutoAllocatedKeys().equals("supported")) {
+										return 7;
+								}else
+										return 50;
+						} else if (feature.equals("Composite Keys")) {
+
+								if (returnValueDataModel.getCompositeKeys().equals("not supported")) {
+										return 1;
+								} else if (returnValueDataModel.getCompositeKeys().equals("supported")) {
+										return 7;
+								}else
+										return 50;
+						} else if (feature.equals("Secondary Indexes")) {
+
+								if (returnValueDataModel.getSecondaryIndexes().equals("not supported")) {
+										return 1;
+								} else if (returnValueDataModel.getSecondaryIndexes().equals("supported")) {
+										return 7;
+								}else
+										return 50;
+						} else if (feature.equals("Query by Key Ranges")) {
+
+								if (returnValueDataModel.getQueryByKeyRanges().equals("not supported")) {
+										return 1;
+								} else if (returnValueDataModel.getQueryByKeyRanges().equals("supported")) {
+										return 7;
+								}else
+										return 50;
+						}else if (feature.equals("Query by Partial Key")) {
+								if (returnValueDataModel.getQueryByPartialKeys().equals("not supported")) {
+										return 1;
+								} else if (returnValueDataModel.getQueryByPartialKeys().equals("supported")) {
+										return 6;
+								}else
+										return 50;
+						} else if (feature.equals("Query by Non-keyed Values")) {
+
+								if (returnValueDataModel.getQueryByNonKeyValues().equals("not supported")) {
+										return 1;
+								} else if (returnValueDataModel.getQueryByNonKeyValues().equals("supported")) {
+										return 7;
+								}else
+										return 50;
+						} else if (feature.equals("Map Reduce API")) {
+
+								if (returnValueDataModel.getMapReduceAPI().equals("not supported")) {
+										return 1;
+								} else if (returnValueDataModel.getMapReduceAPI().equals("intergrated with an external framework")) {
+										return 5;
+								}else if (returnValueDataModel.getMapReduceAPI().equals("builtin")) {
+										return 7;
+								}else
+										return 50;
+						}
+//						else if (feature.equals("Indexed Text Search")) {
+//
+//								if (returnValueDataModel.getPhysicalStorageUsage().equals("not supported")) {
+//										return 1;
+//								} else if (returnValueDataModel.getPhysicalStorageUsage().equals("supported")) {
+//										return 7;
+//								}else
+//										return 50;
+//						}
+
+						return null;
+				}
 		//
 		//		public static Integer getQueryLanguagesRatings2(String databaseName, String feature) {
 		//
