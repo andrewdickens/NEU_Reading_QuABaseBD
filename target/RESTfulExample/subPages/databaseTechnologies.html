@@ -1,0 +1,129 @@
+<html>
+<head>
+    <!--<%&#45;&#45;<title>Main Page</title>&#45;&#45;%>-->
+    <!--<%&#45;&#45;<meta name="viewport" content="initial-scale=1, maximum-scale=1">&#45;&#45;%>-->
+    <!--<%&#45;&#45;<link rel='stylesheet' href='webjars/bootstrap/3.2.0/css/bootstrap.css'>&#45;&#45;%>-->
+    <!--<%&#45;&#45;<link href="<c:url value="/resources/css/custom.css" />" rel="stylesheet">&#45;&#45;%>-->
+    <!--[if lt IE 7]>
+    <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>
+    <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>
+    <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+
+    <title>HTML</title>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="https://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.min.js"></script>
+    <script type="text/javascript" src="webjars/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="webjars/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/bower_components/angular/angular.js"></script>
+    <script src="js/bower_components/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="js/components/version/version.js"></script>
+    <script src="js/components/version/version-directive.js"></script>
+    <script src="js/components/version/interpolate-filter.js"></script>
+    <script src="../js/loadDatabaseInfo.js"></script>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">QuABaseBD - a Knowledge Base for Big Data
+                Architectures and
+                Technologies</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/index.html">Main Page</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <!--<%--<li><a href="WEB-INF/index.jsp">Main Page</a></li>--%>-->
+                <li><a href="/index.html">Main Page </a></li>
+                <li class="active"><a href="databaseTechnologies.html">Database Technologies <span
+                        class="sr-only">(current)</span></a></li>
+                <li><a href="radarCharts/RadarChart.html">Radar Charts</a></li>
+                <li><a href="BubbleChart/BubbleChart.html">Bubble Charts</a></li>
+                <li><a href="heatMap/HeatMap.html">Heat Map</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h3 class="page-header">Database Technologies</h3>
+
+            <div id="placement1"><h1>Choose a Database to display</h1></div>
+            <div id="placement2"><h2></h2></div>
+            <div id="placement3"><h2></h2></div>
+            <div id="placement4"><h2></h2></div>
+            <div id="placement5"><h2></h2></div>
+            <div id="placement6"><h2></h2></div>
+            <div id="placement7"><h2></h2></div>
+            <div id="placement8"><h2></h2></div>
+            <div id="placement9"><h2></h2></div>
+            <div id="placement10"><h2></h2></div>
+
+            <button type="button" onclick="loadDatabaseAdminInformation('cassandra', 'databaseDescription')">Display Cassandra Admin</button>
+
+            <button type="button" onclick="loadDatabaseAdminInformation('accumulo', 'databaseDescription')">Display Accumulo Admin</button>
+
+            <button type="button" onclick="loadDatabaseDistributionInformation('accumulo', 'distribution')">Display Accumulo Distribution</button>
+
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">QuABaseBD - Northeastern University</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+
