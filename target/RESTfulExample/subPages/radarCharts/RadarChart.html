@@ -330,8 +330,7 @@
                 <div class="pull-right">
                     <div class="btn-group">
                         <button type="button" class="btn btn-success" onclick="
-//                         document.getElementById('featureValues').innerHTML = document.getElementById('featureCompareTest').innerHTML;
-//                            alert('test');
+
                             var x = document.getElementById('featureList');
                             var s = x.options[x.selectedIndex].value;
 
@@ -339,14 +338,6 @@
 //                            var n = t.options[t.selectedIndex].value;
 
                             var i = document.getElementById('featureValues');
-//                            var j = i.options[i.selectedIndex].value;
-//
-//
-//                            alert(s);
-//                            alert(getSelectFeatures(i));
-//                            alert(getSelectValuesCount(i));
-//                            alert(getSelectValues(t));
-//                            alert(getSelectValuesCount(t));
 
                             var radarChartBuildObject = {featureCategory: s,
                                                          features: getSelectFeatures(i),
@@ -466,16 +457,14 @@
                 document.getElementById('chart-feature-identifier').innerHTML = capitalizeFirstLetter(s) + ' Features';
 
                 var radarChartObject = {numDatabases: getSelectValuesCount(t), databases: getSelectValues(t), featureType: s};
-
-//                loadRadarDataObject(radarChartObject);
                 ">
-                        <OPTION value="empty">Select Feature Type</OPTION>
+                        <OPTION value=" ">Select Feature Type</OPTION>
                         <OPTION value="admin">Admin</OPTION>
                         <OPTION value="scalability">Scalability</OPTION>
                         <OPTION value="consistency">Consistency</OPTION>
                         <OPTION value="data_model">Data Model</OPTION>
-                        <OPTION value="data_replication">Replication</OPTION>
-                        <OPTION value="data_distribution">Distribution</OPTION>
+                        <OPTION value="data_replication">Data Replication</OPTION>
+                        <OPTION value="data_distribution">Data Distribution</OPTION>
                         <OPTION value="security">Security</OPTION>
                         <OPTION value="query">Query Languages</OPTION>
                     </select>
@@ -628,20 +617,6 @@
                     <form onselect="validate()">
                         <select class="form-control" multiple="" id="featureValues"
                                 name="featureCompare">
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
-                            <OPTION value=""></OPTION>
                         </select>
                     </form>
                 </div>

@@ -861,7 +861,7 @@ public class FeatureRatings {
 		public static Integer getScalabilityRatings2(String databaseName, String feature) {
 
 				Scalability returnValue = new Scalability();
-				returnValue.setScalabilityDescription(ArrayParser
+				returnValue.setScalabilityDescription(ArrayParser //todo values don't map to excel
 						.parseStringToArray(Database.retrieveDescription(databaseName, "scalability")));
 
 				if (feature.equals("Scale Out Architecture")) {
