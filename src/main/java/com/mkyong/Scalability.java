@@ -19,18 +19,32 @@ public class Scalability extends DescriptionType {
 		String scaleArchitectureURL;
 
 		public void setScalabilityDescription(String[][] descriptionMatrix){
-				this.setFeatureType(descriptionMatrix[0][0]);
-				this.setDatabaseName(descriptionMatrix[3][1]);
-				this.setScaleOutArchitecture(descriptionMatrix[1][1]);
-				this.setScaleOutURL(descriptionMatrix[2][1]);
-				this.setClientRequestLoadBalancing(descriptionMatrix[4][1]);
-				this.setLoadBalancingURL(descriptionMatrix[5][1]);
-				this.setScaleDataCapacity(descriptionMatrix[6][1]);
-				this.setScaleDataURL(descriptionMatrix[7][1]);
-				this.setDataObjectsBasedOnLocks(descriptionMatrix[8][1]);
-				this.setWriteLocksURL(descriptionMatrix[9][1]);
-				this.setScalableRequestProcessingArchitecture(descriptionMatrix[10][1]);
-				this.setScaleArchitectureURL(descriptionMatrix[11][0]);
+//				this.setFeatureType(descriptionMatrix[0][0]);
+//				this.setDatabaseName(descriptionMatrix[3][1]);
+//				this.setScaleOutArchitecture(descriptionMatrix[1][1]);
+//				this.setScaleOutURL(descriptionMatrix[2][1]);
+//				this.setClientRequestLoadBalancing(descriptionMatrix[4][1]);
+//				this.setLoadBalancingURL(descriptionMatrix[5][1]);
+//				this.setScaleDataCapacity(descriptionMatrix[6][1]);
+//				this.setScaleDataURL(descriptionMatrix[7][1]);
+//				this.setDataObjectsBasedOnLocks(descriptionMatrix[8][1]);
+//				this.setWriteLocksURL(descriptionMatrix[9][1]);
+//				this.setScalableRequestProcessingArchitecture(descriptionMatrix[10][1]);
+//				this.setScaleArchitectureURL(descriptionMatrix[11][0]);
+//
+				for (String[] value : descriptionMatrix) {
+						if (value[0].equals("Scale Out Architecture")) {
+								this.setScaleOutArchitecture(value[1]);
+						} else if (value[0].equals("Client Request Load Balancing")) {
+								this.setClientRequestLoadBalancing(value[1]);
+						} else if (value[0].equals("Scale Data Capacity")) {
+								this.setScaleDataCapacity(value[1]);
+						} else if (value[0].equals("Data Object Based Locks on Writes")) {
+								this.setDataObjectsBasedOnLocks(value[1]);
+						} else if (value[0].equals("Scalable Request Processing Architecture")) {
+								this.setScalableRequestProcessingArchitecture(value[1]);
+						}
+				}
 		}
 
 		public String getFeatureType() {

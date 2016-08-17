@@ -62,12 +62,20 @@ public class DatabaseDescription {
 		}
 
 		public static void main(String[] args) {
-				DataModel datamodel = new DataModel();
+//				Admin admin = new Admin();
+//
+//				System.out.println(admin.getClusterMonitoring() + "**************************");
+//				admin.setAdminDescription(ArrayParser.parseStringToArray(Database.retrieveDescription("cassandra", "admin")));
+////				System.out.println(DatabaseDescription.setFeatureDescription(ArrayParser.parseStringToArray(Database.retrieveDescription("cassandra", "consistency")),
+////						"cassandra", "consistency"));
+//				System.out.println(admin.getClusterMonitoring()+"***********************");
 
-				System.out.println(datamodel.getEnforcedSchema() + "**************************");
-				datamodel.setDataModelDescription(ArrayParser.parseStringToArray(Database.retrieveDescription("accumulo", "data_model")));
-//				System.out.println(DatabaseDescription.setFeatureDescription(ArrayParser.parseStringToArray(Database.retrieveDescription("cassandra", "consistency")),
-//						"cassandra", "consistency"));
-				System.out.println(datamodel.getEnforcedSchema()+"***********************");
+				QueryLanguage query = new QueryLanguage();
+
+				System.out.println(query.getDeclaritive() + "**************************");
+				query.setQueryLanguageDescription(ArrayParser.parseStringToArray(Database.retrieveDescription("cassandra", "admin")));
+				//				System.out.println(DatabaseDescription.setFeatureDescription(ArrayParser.parseStringToArray(Database.retrieveDescription("cassandra", "consistency")),
+				//						"cassandra", "consistency"));
+				System.out.println(query.getDeclaritive()+"***********************");
 		}
 }

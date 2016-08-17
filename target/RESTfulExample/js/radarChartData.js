@@ -315,11 +315,11 @@ function loadRadarDataObjectOne2(dataObject) {
                     label: capitalizeFirstLetter(databaseName),
                     data: accumuloValues,
                     backgroundColor: "rgba(220,65,65,0.0)",
-                    borderColor: "rgba(220,120,120,1)",
-                    pointBackgroundColor: "rgba(220,120,120,1)",
-                    pointBorderColor: "rgba(220,120,120,1)",
+                    borderColor: "rgba(220,65,65,.7)",
+                    pointBackgroundColor: "rgba(220,65,65,.7)",
+                    pointBorderColor: "rgba(220,65,65,.7)",
                     pointHoverBackgroundColor: "#fff",
-                    pointHoverBorderColor: "rgba(179,181,198,1)"
+                    pointHoverBorderColor: "rgba(220,65,65,.7)"
 //                                            borderWidth: 1
                 }
             ]
@@ -351,21 +351,21 @@ function loadRadarDataObjectTwo2(dataObject) {
                     label: capitalizeFirstLetter(databaseName1),
                     data: accumuloValues1,
                     backgroundColor: "rgba(220,65,65,0.0)",
-                    borderColor: "rgba(220,120,120,1)",
-                    pointBackgroundColor: "rgba(220,120,120,1)",
-                    pointBorderColor: "rgba(220,120,120,1)",
+                    borderColor: "rgba(220,65,65,.7)",
+                    pointBackgroundColor: "rgba(220,65,65,.7)",
+                    pointBorderColor: "rgba(220,65,65,.7)",
                     pointHoverBackgroundColor: "#fff",
-                    pointHoverBorderColor: "rgba(179,181,198,1)"
+                    pointHoverBorderColor: "rgba(220,65,65,.7)"
                 },
                 {
                     label: capitalizeFirstLetter(databaseName2),
                     data: accumuloValues2,
-                    backgroundColor: "rgba(0,255,0,0.0)",
-                    borderColor: "rgba(0,255,0,1)",
-                    pointBackgroundColor: "rgba(0,255,0,1)",
-                    pointBorderColor: "rgba(0,255,0,1)",
+                    backgroundColor: "rgba(63, 191, 127,0.0)",
+                    borderColor: "rgba(63, 191, 127,.7)",
+                    pointBackgroundColor: "rgba(63, 191, 127,.7)",
+                    pointBorderColor: "rgba(63, 191, 127,.7)",
                     pointHoverBackgroundColor: "#fff",
-                    pointHoverBorderColor: "rgba(0,255,0,1)"
+                    pointHoverBorderColor: "rgba(63, 191, 127,.7)"
                 }
             ]
         },
@@ -398,31 +398,31 @@ function loadRadarDataObjectThree2(dataObject) {
                     label: capitalizeFirstLetter(databaseName1),
                     data: accumuloValues1,
                     backgroundColor: "rgba(220,65,65,0.0)",
-                    borderColor: "rgba(220,120,120,1)",
-                    pointBackgroundColor: "rgba(220,120,120,1)",
-                    pointBorderColor: "rgba(220,120,120,1)",
+                    borderColor: "rgba(220,65,65,.7)",
+                    pointBackgroundColor: "rgba(220,65,65,.7)",
+                    pointBorderColor: "rgba(220,65,65,.7)",
                     pointHoverBackgroundColor: "#fff",
-                    pointHoverBorderColor: "rgba(179,181,198,1)"
+                    pointHoverBorderColor: "rgba(220,65,65,.7)"
                 },
                 {
                     label: capitalizeFirstLetter(databaseName2),
                     data: accumuloValues2,
-                    backgroundColor: "rgba(0,255,0,0.0)",
-                    borderColor: "rgba(0,255,0,1)",
-                    pointBackgroundColor: "rgba(0,255,0,1)",
-                    pointBorderColor: "rgba(0,255,0,1)",
+                    backgroundColor: "rgba(63, 191, 127,0.0)",
+                    borderColor: "rgba(63, 191, 127,.7)",
+                    pointBackgroundColor: "rgba(63, 191, 127,.7)",
+                    pointBorderColor: "rgba(63, 191, 127,.7)",
                     pointHoverBackgroundColor: "#fff",
-                    pointHoverBorderColor: "rgba(0,255,0,1)"
+                    pointHoverBorderColor: "rgba(63, 191, 127,.7)"
                 },
                 {
                     label: capitalizeFirstLetter(databaseName3),
                     data: accumuloValues3,
-                    backgroundColor: "rgba(0,0,255,0.0)",
-                    borderColor: "rgba(0,0,255,1)",
-                    pointBackgroundColor: "rgba(0,0,255,1)",
-                    pointBorderColor: "rgba(0,0,255,1)",
+                    backgroundColor: "rgba(63, 127, 191,0.0)",
+                    borderColor: "rgba(63, 127, 191,.7)",
+                    pointBackgroundColor: "rgba(63, 127, 191,.7)",
+                    pointBorderColor: "rgba(63, 127, 191,.7)",
                     pointHoverBackgroundColor: "#fff",
-                    pointHoverBorderColor: "rgba(0,0,255,1)"
+                    pointHoverBorderColor: "rgba(63, 127, 191,.7)"
                 }
             ]
         },

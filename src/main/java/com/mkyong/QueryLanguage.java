@@ -28,28 +28,80 @@ public class QueryLanguage extends DescriptionType {
 		String expiryURL;
 
 		public void setQueryLanguageDescription(String[][] descriptionMatrix){
-				this.setFeatureType(descriptionMatrix[0][0]);
-				this.setDatabaseName(descriptionMatrix[1][1]);
-				this.setApiBased(descriptionMatrix[2][1]);
-				this.setAPIURL(descriptionMatrix[3][1]);
-				this.setDeclaritive(descriptionMatrix[4][1]);
-				this.setRestHTTPBased(descriptionMatrix[5][1]);
-				this.setLanguagesSupported(descriptionMatrix[6][1]);
-				this.setLanguageURL(descriptionMatrix[7][1]);
-				this.setCursorBasedQuery(descriptionMatrix[8][1]);
-				this.setCursorURL(descriptionMatrix[9][1]);
-				this.setJoinStyleQuery(descriptionMatrix[10][1]);
-				this.setComplexDataTypes(descriptionMatrix[11][1]);
-				this.setQlDataTypesURL(descriptionMatrix[12][1]);
-				this.setRestrictObjectsReturnByQuery(descriptionMatrix[13][1]);
-				this.setRestrictURL(descriptionMatrix[14][1]);
-				this.setKeyMatchingOptions(descriptionMatrix[15][1]);
-				this.setSortingOfQueryResults(descriptionMatrix[16][1]);
-				this.setSortURL(descriptionMatrix[17][1]);
-				this.setTriggers(descriptionMatrix[18][1]);
-				this.setExpireDataValues(descriptionMatrix[19][0]);
-				this.setExpiryURL(descriptionMatrix[20][1]);
+//				this.setFeatureType(descriptionMatrix[0][0]);
+//				this.setDatabaseName(descriptionMatrix[1][1]);
+//				this.setApiBased(descriptionMatrix[2][1]);
+//				this.setAPIURL(descriptionMatrix[3][1]);
+//				this.setDeclaritive(descriptionMatrix[4][1]);
+//				this.setRestHTTPBased(descriptionMatrix[5][1]);
+//				this.setLanguagesSupported(descriptionMatrix[6][1]);
+//				this.setLanguageURL(descriptionMatrix[7][1]);
+//				this.setCursorBasedQuery(descriptionMatrix[8][1]);
+//				this.setCursorURL(descriptionMatrix[9][1]);
+//				this.setJoinStyleQuery(descriptionMatrix[10][1]);
+//				this.setComplexDataTypes(descriptionMatrix[11][1]);
+//				this.setQlDataTypesURL(descriptionMatrix[12][1]);
+//				this.setRestrictObjectsReturnByQuery(descriptionMatrix[13][1]);
+//				this.setRestrictURL(descriptionMatrix[14][1]);
+//				this.setKeyMatchingOptions(descriptionMatrix[15][1]);
+//				this.setSortingOfQueryResults(descriptionMatrix[16][1]);
+//				this.setSortURL(descriptionMatrix[17][1]);
+//				this.setTriggers(descriptionMatrix[18][1]);
+//				this.setExpireDataValues(descriptionMatrix[19][0]);
+//				this.setExpiryURL(descriptionMatrix[20][1]);
 
+				for (String[] value : descriptionMatrix) {
+						if (value[0].equals("API-based")) {
+								this.setApiBased(value[1]);
+						} else if (value[0].equals("Declarative")) {
+								this.setDeclaritive(value[1]);
+						} else if (value[0].equals("REST/HTTP-based")) {
+								this.setRestHTTPBased(value[1]);
+						} else if (value[0].equals("Languages supported")) {
+								this.setLanguagesSupported(value[1]);
+						} else if (value[0].equals("Cursor-based queries")) {
+								this.setCursorBasedQuery(value[1]);
+						} else if (value[0].equals("JOIN-style queries")) {
+								this.setJoinStyleQuery(value[1]);
+						} else if (value[0].equals("Complex data types")) {
+								this.setComplexDataTypes(value[1]);
+						} else if (value[0].equals("Restrict number of objects returned by a query")) {
+								this.setRestrictObjectsReturnByQuery(value[1]);
+						} else if (value[0].equals("Key matching options")) {
+								this.setKeyMatchingOptions(value[1]);
+						}else if (value[0].equals("Sorting of query results")) {
+								this.setSortingOfQueryResults(value[1]);
+						} else if (value[0].equals("Triggers")) {
+								this.setTriggers(value[1]);
+						} else if (value[0].equals("Expire data values")) {
+								this.setExpireDataValues(value[1]);
+						}
+				}
+
+		}
+
+		public QueryLanguage() {
+				this.featureType = "noValue";
+				this.databaseName = "noValue";
+				this.apiBased = "noValue";
+				this.APIURL = "noValue";
+				this.declaritive = "noValue";
+				RestHTTPBased = "noValue";
+				this.languagesSupported = "noValue";
+				this.languageURL = "noValue";
+				this.cursorBasedQuery = "noValue";
+				this.cursorURL = "noValue";
+				this.joinStyleQuery = "noValue";
+				this.complexDataTypes = "noValue";
+				this.qlDataTypesURL = "noValue";
+				this.restrictObjectsReturnByQuery = "noValue";
+				this.restrictURL = "noValue";
+				this.keyMatchingOptions = "noValue";
+				this.sortingOfQueryResults = "noValue";
+				this.sortURL = "noValue";
+				this.triggers = "noValue";
+				this.expireDataValues = "noValue";
+				this.expiryURL = "noValue";
 		}
 
 		public String getQlDataTypesURL() {

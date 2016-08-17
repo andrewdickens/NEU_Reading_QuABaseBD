@@ -7,1030 +7,6 @@ import com.mkyong.*;
  */
 public class FeatureRatings {
 
-//		public static int[] cassandraAdminRatings = new int[6];
-//
-//		int[] rankings;
-//
-//		public int[] getRankings() {
-//				return rankings;
-//		}
-
-//		public void setRankings(int[] rankings) {
-//				this.rankings = rankings;
-//		}
-
-//		public static FeatureRatings getFeatureRating(String featureType, String databaseName) {
-//				if (featureType.equals("admin")) {
-//						return FeatureRatings.getAdminRatings(databaseName);
-//				} else if (featureType.equals("consistency")) {
-//						return FeatureRatings.getConsistencyRatings(databaseName);
-//				} else if (featureType.equals("data_distribution")) {
-//						return FeatureRatings.getDataDistributionRatings(databaseName);
-//				} else if (featureType.equals("data_model")) {
-//						return FeatureRatings.getDataModelRatings(databaseName);
-//				} else if (featureType.equals("query")) {
-//						return FeatureRatings.getQueryLanguagesRatings(databaseName);
-//				} else if (featureType.equals("data_replication")) {
-//						return FeatureRatings.getDataReplicationRatings(databaseName);
-//				} else if (featureType.equals("security")) {
-//						return FeatureRatings.getSecurityRatings(databaseName);
-//				} else if (featureType.equals("scalability")) {
-//						return FeatureRatings.getScalabilityRatings(databaseName);
-//				}
-//				return null;
-//		}
-//
-//		public static FeatureRatings getAdminRatings(String databaseName) {
-//
-//				FeatureRatings returnValue = new FeatureRatings();
-//				int returnValueArray[] = new int[7];
-//
-//				if (databaseName.equals("accumulo")) {
-//						returnValueArray[0] = 2;
-//						returnValueArray[1] = 4;
-//						returnValueArray[2] = 6;
-//						returnValueArray[3] = 7;
-//						returnValueArray[4] = 75;
-//						returnValueArray[5] = 48;
-//						returnValueArray[6] = 55;
-//				} else if (databaseName.equals("cassandra")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("hbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 48;
-//						returnValueArray[2] = 12;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 75;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("mongo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 48;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 12;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couch")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 75;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couchbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 12;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("orient")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 48;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 12;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("neo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 75;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 7;
-//				} else if (databaseName.equals("redis")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 12;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("riak")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 48;
-//						returnValueArray[6] = 12;
-//				} else if (databaseName.equals("dynamo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 75;
-//				} else if (databaseName.equals("oracle")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 7;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("foundation")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 48;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 12;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("volt")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 75;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 12;
-//						returnValueArray[6] = 60;
-//				}
-//
-//				returnValue.setRankings(returnValueArray);
-//
-//				return returnValue;
-//		}
-//
-//		public static FeatureRatings getConsistencyRatings(String databaseName) {
-//
-//				FeatureRatings returnValue = new FeatureRatings();
-//				int returnValueArray[] = new int[7];
-//
-//				if (databaseName.equals("accumulo")) {
-//						returnValueArray[0] = 2;
-//						returnValueArray[1] = 4;
-//						returnValueArray[2] = 6;
-//						returnValueArray[3] = 12;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 48;
-//						returnValueArray[6] = 55;
-//				} else if (databaseName.equals("cassandra")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 7;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("hbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 48;
-//						returnValueArray[3] = 12;
-//						returnValueArray[4] = 75;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("mongo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couch")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 75;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 7;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couchbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 18;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("orient")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("neo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 48;
-//						returnValueArray[5] = 7;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("redis")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 75;
-//						returnValueArray[2] = 12;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("riak")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 48;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 7;
-//				} else if (databaseName.equals("dynamo")) {
-//						returnValueArray[0] = 75;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("oracle")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 7;
-//				} else if (databaseName.equals("foundation")) {
-//						returnValueArray[0] = 48;
-//						returnValueArray[1] = 75;
-//						returnValueArray[2] = 12;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("volt")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				}
-//
-//				returnValue.setRankings(returnValueArray);
-//
-//				return returnValue;
-//		}
-//
-//		public static FeatureRatings getDataDistributionRatings(String databaseName) {
-//
-//				FeatureRatings returnValue = new FeatureRatings();
-//				int returnValueArray[] = new int[7];
-//
-//				if (databaseName.equals("accumulo")) {
-//						returnValueArray[0] = 2;
-//						returnValueArray[1] = 4;
-//						returnValueArray[2] = 6;
-//						returnValueArray[3] = 7;
-//						returnValueArray[4] = 75;
-//						returnValueArray[5] = 48;
-//						returnValueArray[6] = 55;
-//				} else if (databaseName.equals("cassandra")) {
-//						returnValueArray[0] = 48;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 12;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("hbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 75;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("mongo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 48;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couch")) {
-//						returnValueArray[0] = 7;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 75;
-//				} else if (databaseName.equals("couchbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 12;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 48;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("orient")) {
-//						returnValueArray[0] = 75;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("neo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 48;
-//						returnValueArray[6] = 75;
-//				} else if (databaseName.equals("redis")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 75;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 7;
-//				} else if (databaseName.equals("riak")) {
-//						returnValueArray[0] = 12;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 48;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("dynamo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 75;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 12;
-//				} else if (databaseName.equals("oracle")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 12;
-//						returnValueArray[6] = 75;
-//				} else if (databaseName.equals("foundation")) {
-//						returnValueArray[0] = 48;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 7;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("volt")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 7;
-//				}
-//
-//				returnValue.setRankings(returnValueArray);
-//
-//				return returnValue;
-//		}
-//
-//		public static FeatureRatings getDataModelRatings(String databaseName) {
-//
-//				FeatureRatings returnValue = new FeatureRatings();
-//				int returnValueArray[] = new int[7];
-//
-//				if (databaseName.equals("accumulo")) {
-//						returnValueArray[0] = 2;
-//						returnValueArray[1] = 4;
-//						returnValueArray[2] = 6;
-//						returnValueArray[3] = 12;
-//						returnValueArray[4] = 48;
-//						returnValueArray[5] = 12;
-//						returnValueArray[6] = 55;
-//				} else if (databaseName.equals("cassandra")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 75;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 7;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("hbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 48;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("mongo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 75;
-//						returnValueArray[4] = 12;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couch")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 7;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couchbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 48;
-//				} else if (databaseName.equals("orient")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 7;
-//				} else if (databaseName.equals("neo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 48;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("redis")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 11;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("riak")) {
-//						returnValueArray[0] = 75;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 48;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("dynamo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("oracle")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 48;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 75;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("foundation")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 7;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 12;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("volt")) {
-//						returnValueArray[0] = 48;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 12;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				}
-//
-//				returnValue.setRankings(returnValueArray);
-//
-//				return returnValue;
-//		}
-//
-//		public static FeatureRatings getQueryLanguagesRatings(String databaseName) {
-//
-//				FeatureRatings returnValue = new FeatureRatings();
-//				int returnValueArray[] = new int[7];
-//
-//				if (databaseName.equals("accumulo")) {
-//						returnValueArray[0] = 2;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 75;
-//						returnValueArray[3] = 12;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 48;
-//						returnValueArray[6] = 55;
-//				} else if (databaseName.equals("cassandra")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 7;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 48;
-//				} else if (databaseName.equals("hbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("mongo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 48;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couch")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 7;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couchbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 48;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 12;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("orient")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 12;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("neo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 48;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 12;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 75;
-//				} else if (databaseName.equals("redis")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 48;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 12;
-//				} else if (databaseName.equals("riak")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 7;
-//				} else if (databaseName.equals("dynamo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 12;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 48;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("oracle")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 12;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("foundation")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 48;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 7;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("volt")) {
-//						returnValueArray[0] = 12;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				}
-//
-//				returnValue.setRankings(returnValueArray);
-//
-//				return returnValue;
-//		}
-//
-//		public static FeatureRatings getDataReplicationRatings(String databaseName) {
-//
-//				FeatureRatings returnValue = new FeatureRatings();
-//				int returnValueArray[] = new int[7];
-//
-//				if (databaseName.equals("accumulo")) {
-//						returnValueArray[0] = 2;
-//						returnValueArray[1] = 4;
-//						returnValueArray[2] = 6;
-//						returnValueArray[3] = 7;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 48;
-//						returnValueArray[6] = 55;
-//				} else if (databaseName.equals("cassandra")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 48;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("hbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 48;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("mongo")) {
-//						returnValueArray[0] = 12;
-//						returnValueArray[1] = 7;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couch")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 75;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 48;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couchbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 7;
-//				} else if (databaseName.equals("orient")) {
-//						returnValueArray[0] = 48;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("neo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 12;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 48;
-//				} else if (databaseName.equals("redis")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 7;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("riak")) {
-//						returnValueArray[0] = 12;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 48;
-//				} else if (databaseName.equals("dynamo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 12;
-//						returnValueArray[6] = 7;
-//				} else if (databaseName.equals("oracle")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("foundation")) {
-//						returnValueArray[0] = 48;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 12;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("volt")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 7;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				}
-//
-//				returnValue.setRankings(returnValueArray);
-//
-//				return returnValue;
-//		}
-//
-//		public static FeatureRatings getSecurityRatings(String databaseName) {
-//
-//				FeatureRatings returnValue = new FeatureRatings();
-//				int returnValueArray[] = new int[7];
-//
-//				if (databaseName.equals("accumulo")) {
-//						returnValueArray[0] = 2;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 6;
-//						returnValueArray[3] = 12;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 48;
-//						returnValueArray[6] = 55;
-//				} else if (databaseName.equals("cassandra")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 48;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 12;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("hbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 7;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("mongo")) {
-//						returnValueArray[0] = 12;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 48;
-//						returnValueArray[5] = 8;
-//				} else if (databaseName.equals("couch")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 12;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couchbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 48;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("orient")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 7;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("neo")) {
-//						returnValueArray[0] = 48;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("redis")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 12;
-//				} else if (databaseName.equals("riak")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 48;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("dynamo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 12;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("oracle")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 48;
-//						returnValueArray[5] = 7;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("foundation")) {
-//						returnValueArray[0] = 12;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("volt")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 48;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 7;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				}
-//
-//				returnValue.setRankings(returnValueArray);
-//
-//				return returnValue;
-//		}
-//
-//		public static FeatureRatings getScalabilityRatings(String databaseName) {
-//
-//				FeatureRatings returnValue = new FeatureRatings();
-//				int returnValueArray[] = new int[7];
-//
-//				if (databaseName.equals("accumulo")) {
-//						returnValueArray[0] = 2;
-//						returnValueArray[1] = 4;
-//						returnValueArray[2] = 12;
-//						returnValueArray[3] = 12;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 48;
-//						returnValueArray[6] = 55;
-//				} else if (databaseName.equals("cassandra")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 7;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("hbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("mongo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 48;
-//						returnValueArray[2] = 12;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("couch")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 7;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 12;
-//				} else if (databaseName.equals("couchbase")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 48;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("orient")) {
-//						returnValueArray[0] = 12;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 7;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 48;
-//				} else if (databaseName.equals("neo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 12;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("redis")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 48;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("riak")) {
-//						returnValueArray[0] = 12;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 7;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("dynamo")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 48;
-//						returnValueArray[3] = 12;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("oracle")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 48;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("foundation")) {
-//						returnValueArray[0] = 5;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 7;
-//						returnValueArray[6] = 60;
-//				} else if (databaseName.equals("volt")) {
-//						returnValueArray[0] = 48;
-//						returnValueArray[1] = 10;
-//						returnValueArray[2] = 76;
-//						returnValueArray[3] = 4;
-//						returnValueArray[4] = 24;
-//						returnValueArray[5] = 8;
-//						returnValueArray[6] = 12;
-//				}
-//
-//				returnValue.setRankings(returnValueArray);
-//
-//				return returnValue;
-//		}
-
 		public static Integer getFeatureRatingAll(String databaseName, String featureCategory,
 				String feature) {
 				if (featureCategory.equals("admin")) {
@@ -1040,20 +16,16 @@ public class FeatureRatings {
 				} else if (featureCategory.equals("data_distribution")) {
 						return FeatureRatings.getDataDistributionRatings2(databaseName, feature);
 				} else if (featureCategory.equals("data_model")) {
-										return FeatureRatings.getDataModelRatings2(databaseName, feature);
-								}
-				// else if (featureCategory.equals("query")) {
-				//						return FeatureRatings.getQueryLanguagesRatings2(databaseName, feature);
-				//				}
-				// else if (featureCategory.equals("data_replication")) {
-				//						return FeatureRatings.getDataReplicationRatings2(databaseName, feature);
-				//				}
-				// else if (featureCategory.equals("security")) {
-				//						return FeatureRatings.getSecurityRatings2(databaseName, feature);
-				//				}
-				// else if (featureCategory.equals("scalability")) {
-				//						return FeatureRatings.getScalabilityRatings2(databaseName, feature);
-				//				}
+						return FeatureRatings.getDataModelRatings2(databaseName, feature);
+				} else if (featureCategory.equals("query")) {
+						return FeatureRatings.getQueryLanguagesRatings2(databaseName, feature);
+				} else if (featureCategory.equals("data_replication")) {
+						return FeatureRatings.getDataReplicationRatings2(databaseName, feature);
+				} else if (featureCategory.equals("security")) {
+						return FeatureRatings.getSecurityRatings2(databaseName, feature);
+				} else if (featureCategory.equals("scalability")) {
+						return FeatureRatings.getScalabilityRatings2(databaseName, feature);
+				}
 				return null;
 		}
 
@@ -1066,7 +38,8 @@ public class FeatureRatings {
 				if (feature.equals("Configuration Files")) {
 						if (returnValueAdmin.getConfigurationFiles().equals("multiple")) {
 								return 4;
-						}if (returnValueAdmin.getConfigurationFiles().equals("single")) {
+						}
+						if (returnValueAdmin.getConfigurationFiles().equals("single")) {
 								return 7;
 						} else
 								return 50;
@@ -1076,7 +49,7 @@ public class FeatureRatings {
 								return 1;
 						} else if (returnValueAdmin.getNodeCommandLineAccess().equals("non-authenticated")) {
 								return 3;
-						}else if (returnValueAdmin.getNodeCommandLineAccess().equals("authenticated")) {
+						} else if (returnValueAdmin.getNodeCommandLineAccess().equals("authenticated")) {
 								return 7;
 						} else
 								return 50;
@@ -1086,18 +59,19 @@ public class FeatureRatings {
 								return 1;
 						} else if (returnValueAdmin.getNodeAddRemove().equals("single file")) {
 								return 4;
-						}else if (returnValueAdmin.getNodeAddRemove().equals("centralized tool, multiple files")) {
+						} else if (returnValueAdmin.getNodeAddRemove()
+								.equals("centralized tool, multiple files")) {
 								return 7;
 						} else if (returnValueAdmin.getNodeAddRemove().equals("centralized tool")) {
 								return 7;
-						}else
+						} else
 								return 50;
 				} else if (feature.equals("Cluster monitoring")) {
-						if (returnValueAdmin.getClusterMonitoring().equals("snapshot")) {
+						if (returnValueAdmin.getClusterMonitoring().contains("snapshot")) {
 								return 3;
 						} else if (returnValueAdmin.getClusterMonitoring().equals("enterprise version only")) {
 								return 6;
-						}else if (returnValueAdmin.getClusterMonitoring().equals("real time")) {
+						} else if (returnValueAdmin.getClusterMonitoring().equals("real-time")) {
 								return 7;
 						} else
 								return 50;
@@ -1107,7 +81,7 @@ public class FeatureRatings {
 								return 1;
 						} else if (returnValueAdmin.getDumpDatabaseConfiguration().equals("supported")) {
 								return 7;
-						}else
+						} else
 								return 50;
 				} else if (feature.equals("Database object count")) {
 
@@ -1115,7 +89,7 @@ public class FeatureRatings {
 								return 1;
 						} else if (returnValueAdmin.getDatabaseObjectCount().equals("supported")) {
 								return 7;
-						}else
+						} else
 								return 50;
 				} else if (feature.equals("Physical storage usage")) {
 
@@ -1123,7 +97,7 @@ public class FeatureRatings {
 								return 1;
 						} else if (returnValueAdmin.getPhysicalStorageUsage().equals("supported")) {
 								return 7;
-						}else
+						} else
 								return 50;
 				}
 				return null;
@@ -1142,8 +116,8 @@ public class FeatureRatings {
 								return 1;
 						} else if (returnValueConsistency.getObjectLevelIsolation().equals("MVCC")) {
 								return 4;
-						}else
-						return 7;
+						} else
+								return 7;
 				} else if (feature.equals("ACID transactions in single database")) {
 
 						if (returnValueConsistency.getACIDtransactions().equals("NoValue")) {
@@ -1249,710 +223,720 @@ public class FeatureRatings {
 		}
 
 
-				public static Integer getDataDistributionRatings2(String databaseName, String feature) {
+		public static Integer getDataDistributionRatings2(String databaseName, String feature) {
 
-						Distribution returnValueDistribution = new Distribution();
-						returnValueDistribution.setDistributionDescription(
-								ArrayParser.parseStringToArray(Database.retrieveDescription(databaseName, "data_distribution")));
+				Distribution returnValueDistribution = new Distribution();
+				returnValueDistribution.setDistributionDescription(ArrayParser
+						.parseStringToArray(Database.retrieveDescription(databaseName, "data_distribution")));
 
-						if (feature.equals("Data Distribution Architecture")) {
-								if (returnValueDistribution.getArchitecture().equals("NoValue")) {
-										return 0;
-								} else if (returnValueDistribution.getArchitecture().equals("single database only")) {
-										return 1;
-								} else if (returnValueDistribution.getArchitecture().equals("master-single slave")) {
-										return 3;
-								}else if (returnValueDistribution.getArchitecture().equals("master-multiple slaves")) {
-										return 5;
-								}else return 7;
-						} else if (feature.equals("Data Distribution Method")) {
+				if (feature.equals("Data Distribution Architecture")) {
+						if (returnValueDistribution.getArchitecture().equals("NoValue")) {
+								return 0;
+						} else if (returnValueDistribution.getArchitecture().equals("single database only")) {
+								return 1;
+						} else if (returnValueDistribution.getArchitecture().equals("master-single slave")) {
+								return 3;
+						} else if (returnValueDistribution.getArchitecture().equals("master-multiple slaves")) {
+								return 5;
+						} else
+								return 7;
+				} else if (feature.equals("Data Distribution Method")) {
 
-								if (returnValueDistribution.getDistributionMethod().equals("NoValue")) {
-										return 0;
-								} else if (returnValueDistribution.getDistributionMethod().equals("Not relevant (single server only)")) {
-										return 1;
-								} else if (returnValueDistribution.getDistributionMethod()
-										.equals("assigned key ranges to nodes")) {
-										return 3;
-								}else if (returnValueDistribution.getDistributionMethod()
-										.equals("hash key")) {
-										return 6;
-								} else
-										return 7;
-						} else if (feature.equals("Automatic Data Rebalancing")) {
+						if (returnValueDistribution.getDistributionMethod().equals("NoValue")) {
+								return 0;
+						} else if (returnValueDistribution.getDistributionMethod()
+								.equals("Not relevant (single server only)")) {
+								return 1;
+						} else if (returnValueDistribution.getDistributionMethod()
+								.equals("assigned key ranges to nodes")) {
+								return 3;
+						} else if (returnValueDistribution.getDistributionMethod().equals("hash key")) {
+								return 6;
+						} else
+								return 7;
+				} else if (feature.equals("Automatic Data Rebalancing")) {
 
-								if (returnValueDistribution.getRebalancing().equals("NoValue")) {
-										return 0;
-								} else if (returnValueDistribution.getRebalancing().equals("no rebalancing (single server only)")) {
-										return 1;
-								}else if (returnValueDistribution.getRebalancing().equals("administrative rebalancing tools")) {
-										return 3;
-								}else if (returnValueDistribution.getRebalancing().equals("schedulable rebalancing")) {
-										return 4;
-								}else if (returnValueDistribution.getRebalancing().equals("failure triggered")) {
-										return 5;
-								} else if (returnValueDistribution.getRebalancing().equals("new storage triggered")) {
-										return 6;
-								}else
-										return 7;
-						} else if (feature
-								.equals("Physical Data Distribution")) {
+						if (returnValueDistribution.getRebalancing().equals("NoValue")) {
+								return 0;
+						} else if (returnValueDistribution.getRebalancing()
+								.equals("no rebalancing (single server only)")) {
+								return 1;
+						} else if (returnValueDistribution.getRebalancing()
+								.equals("administrative rebalancing tools")) {
+								return 3;
+						} else if (returnValueDistribution.getRebalancing().equals("schedulable rebalancing")) {
+								return 4;
+						} else if (returnValueDistribution.getRebalancing().equals("failure triggered")) {
+								return 5;
+						} else if (returnValueDistribution.getRebalancing().equals("new storage triggered")) {
+								return 6;
+						} else
+								return 7;
+				} else if (feature.equals("Physical Data Distribution")) {
 
-								if (returnValueDistribution.getPhysicalDistribution().equals("NoValue")) {
-										return 0;
-								} else if (returnValueDistribution.getPhysicalDistribution()
-										.equals("single cluster")) {
-										return 3;
-								}else if (returnValueDistribution.getPhysicalDistribution()
-										.equals("rack-aware on single cluster")) {
-										return 4;
-								} else
-										return 7;
-						} else if (feature.equals("Query Architecture")) {
-								if (returnValueDistribution.getQueryArchitecture().equals("NoValue")) {
-										return 0;
-								} else if (returnValueDistribution.getQueryArchitecture()
-										.equals("direct shard connection only (resolved in client)")) {
-										return 2;
-								} else if (returnValueDistribution.getQueryArchitecture()
-										.equals("external load balancer required")) {
-										return 4;
-								} else if (returnValueDistribution.getQueryArchitecture()
-										.equals("centralized coordinator for shard key lookup")) {
-										return 5;
-								} else
-										return 7;
-						} else if (feature.equals("Queries using Non-Shard Key Value")) {
+						if (returnValueDistribution.getPhysicalDistribution().equals("NoValue")) {
+								return 0;
+						} else if (returnValueDistribution.getPhysicalDistribution().equals("single cluster")) {
+								return 3;
+						} else if (returnValueDistribution.getPhysicalDistribution()
+								.equals("rack-aware on single cluster")) {
+								return 4;
+						} else
+								return 7;
+				} else if (feature.equals("Query Architecture")) {
+						if (returnValueDistribution.getQueryArchitecture().equals("NoValue")) {
+								return 0;
+						} else if (returnValueDistribution.getQueryArchitecture()
+								.equals("direct shard connection only (resolved in client)")) {
+								return 2;
+						} else if (returnValueDistribution.getQueryArchitecture()
+								.equals("external load balancer required")) {
+								return 4;
+						} else if (returnValueDistribution.getQueryArchitecture()
+								.equals("centralized coordinator for shard key lookup")) {
+								return 5;
+						} else
+								return 7;
+				} else if (feature.equals("Queries using Non-Shard Key Value")) {
 
-								if (returnValueDistribution.getNonShardKey().equals("NoValue")) {
-										return 0;
-								} else if (returnValueDistribution.getNonShardKey()
-										.equals("not supported")) {
-										return 1;
-								} else if (returnValueDistribution.getNonShardKey()
-										.equals("non-indexed (scan)")) {
-										return 3;
-								} else
-										return 7;
-						}else if (feature.equals("Merging Query Results from Multiple Shards")) {
+						if (returnValueDistribution.getNonShardKey().equals("NoValue")) {
+								return 0;
+						} else if (returnValueDistribution.getNonShardKey().equals("not supported")) {
+								return 1;
+						} else if (returnValueDistribution.getNonShardKey().equals("non-indexed (scan)")) {
+								return 3;
+						} else
+								return 7;
+				} else if (feature.equals("Merging Query Results from Multiple Shards")) {
 
-								if (returnValueDistribution.getMergingResults().equals("NoValue")) {
-										return 0;
-								} else if (returnValueDistribution.getMergingResults()
-										.equals("not supported")) {
-										return 1;
-								} else if (returnValueDistribution.getMergingResults()
-										.equals("random order")) {
-										return 3;
-								} else if (returnValueDistribution.getMergingResults()
-										.equals("paged from server")) {
-										return 5;
-								}else
-										return 7;
-						}
-
-						return null;
+						if (returnValueDistribution.getMergingResults().equals("NoValue")) {
+								return 0;
+						} else if (returnValueDistribution.getMergingResults().equals("not supported")) {
+								return 1;
+						} else if (returnValueDistribution.getMergingResults().equals("random order")) {
+								return 3;
+						} else if (returnValueDistribution.getMergingResults().equals("paged from server")) {
+								return 5;
+						} else
+								return 7;
 				}
 
-				public static Integer getDataModelRatings2(String databaseName, String feature) {
+				return null;
+		}
 
-						DataModel returnValueDataModel = new DataModel();
-						returnValueDataModel.setDataModelDescription(
-								ArrayParser.parseStringToArray(Database.retrieveDescription(databaseName, "data_model")));
+		public static Integer getDataModelRatings2(String databaseName, String feature) {
 
-						if (feature.equals("Scalable Request Processing Architecture")) {
-								if (returnValueDataModel.getEnforcedSchema().equals("required")) {
-										return 2;
-								}else if (returnValueDataModel.getEnforcedSchema().equals("optional")) {
-										return 4;
-								}else if (returnValueDataModel.getEnforcedSchema().equals("not required")) {
-										return 7;
-								} else
-										return 50;
-						} else if (feature.equals("Opaque Data Objects (need application interpretation)")) {
+				DataModel returnValueDataModel = new DataModel();
+				returnValueDataModel.setDataModelDescription(ArrayParser
+						.parseStringToArray(Database.retrieveDescription(databaseName, "data_model")));
 
-								if (returnValueDataModel.getOpaqueDataObjects().equals("required")) {
-										return 1;
-								} else if (returnValueDataModel.getOpaqueDataObjects().equals("not required")) {
-										return 7;
-								}else
-										return 50;
-						} else if (feature.equals("Hierarchical Data Objects (e.g. sub objects)")) {
+				if (feature.equals("Scalable Request Processing Architecture")) {
+						if (returnValueDataModel.getEnforcedSchema().equals("required")) {
+								return 2;
+						} else if (returnValueDataModel.getEnforcedSchema().equals("optional")) {
+								return 4;
+						} else if (returnValueDataModel.getEnforcedSchema().equals("not required")) {
+								return 7;
+						} else
+								return 50;
+				} else if (feature.equals("Opaque Data Objects (need application interpretation)")) {
 
-								if (returnValueDataModel.getHierarchicalDataObjects().equals("not supported")) {
-										return 1;
-								} else if (returnValueDataModel.getHierarchicalDataObjects().equals("supported")) {
-										return 7;
-								}else
-										return 50;
-						} else if (feature.equals("Automatically Allocated Keys")) {
-								if (returnValueDataModel.getAutoAllocatedKeys().equals("not supported")) {
-										return 1;
-								} else if (returnValueDataModel.getAutoAllocatedKeys().equals("supported")) {
-										return 7;
-								}else
-										return 50;
-						} else if (feature.equals("Composite Keys")) {
+						if (returnValueDataModel.getOpaqueDataObjects().equals("required")) {
+								return 1;
+						} else if (returnValueDataModel.getOpaqueDataObjects().equals("not required")) {
+								return 7;
+						} else
+								return 50;
+				} else if (feature.equals("Hierarchical Data Objects (e.g. sub objects)")) {
 
-								if (returnValueDataModel.getCompositeKeys().equals("not supported")) {
-										return 1;
-								} else if (returnValueDataModel.getCompositeKeys().equals("supported")) {
-										return 7;
-								}else
-										return 50;
-						} else if (feature.equals("Secondary Indexes")) {
+						if (returnValueDataModel.getHierarchicalDataObjects().equals("not supported")) {
+								return 1;
+						} else if (returnValueDataModel.getHierarchicalDataObjects().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+				} else if (feature.equals("Automatically Allocated Keys")) {
+						if (returnValueDataModel.getAutoAllocatedKeys().equals("not supported")) {
+								return 1;
+						} else if (returnValueDataModel.getAutoAllocatedKeys().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+				} else if (feature.equals("Composite Keys")) {
 
-								if (returnValueDataModel.getSecondaryIndexes().equals("not supported")) {
-										return 1;
-								} else if (returnValueDataModel.getSecondaryIndexes().equals("supported")) {
-										return 7;
-								}else
-										return 50;
-						} else if (feature.equals("Query by Key Ranges")) {
+						if (returnValueDataModel.getCompositeKeys().equals("not supported")) {
+								return 1;
+						} else if (returnValueDataModel.getCompositeKeys().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+				} else if (feature.equals("Secondary Indexes")) {
 
-								if (returnValueDataModel.getQueryByKeyRanges().equals("not supported")) {
-										return 1;
-								} else if (returnValueDataModel.getQueryByKeyRanges().equals("supported")) {
-										return 7;
-								}else
-										return 50;
-						}else if (feature.equals("Query by Partial Key")) {
-								if (returnValueDataModel.getQueryByPartialKeys().equals("not supported")) {
-										return 1;
-								} else if (returnValueDataModel.getQueryByPartialKeys().equals("supported")) {
-										return 6;
-								}else
-										return 50;
-						} else if (feature.equals("Query by Non-keyed Values")) {
+						if (returnValueDataModel.getSecondaryIndexes().equals("not supported")) {
+								return 1;
+						} else if (returnValueDataModel.getSecondaryIndexes().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+				} else if (feature.equals("Query by Key Ranges")) {
 
-								if (returnValueDataModel.getQueryByNonKeyValues().equals("not supported")) {
-										return 1;
-								} else if (returnValueDataModel.getQueryByNonKeyValues().equals("supported")) {
-										return 7;
-								}else
-										return 50;
-						} else if (feature.equals("Map Reduce API")) {
+						if (returnValueDataModel.getQueryByKeyRanges().equals("not supported")) {
+								return 1;
+						} else if (returnValueDataModel.getQueryByKeyRanges().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+				} else if (feature.equals("Query by Partial Key")) {
+						if (returnValueDataModel.getQueryByPartialKeys().equals("not supported")) {
+								return 1;
+						} else if (returnValueDataModel.getQueryByPartialKeys().equals("supported")) {
+								return 6;
+						} else
+								return 50;
+				} else if (feature.equals("Query by Non-keyed Values")) {
 
-								if (returnValueDataModel.getMapReduceAPI().equals("not supported")) {
-										return 1;
-								} else if (returnValueDataModel.getMapReduceAPI().equals("intergrated with an external framework")) {
-										return 5;
-								}else if (returnValueDataModel.getMapReduceAPI().equals("builtin")) {
-										return 7;
-								}else
-										return 50;
-						}
-//						else if (feature.equals("Indexed Text Search")) {
-//
-//								if (returnValueDataModel.getPhysicalStorageUsage().equals("not supported")) {
-//										return 1;
-//								} else if (returnValueDataModel.getPhysicalStorageUsage().equals("supported")) {
-//										return 7;
-//								}else
-//										return 50;
-//						}
+						if (returnValueDataModel.getQueryByNonKeyValues().equals("not supported")) {
+								return 1;
+						} else if (returnValueDataModel.getQueryByNonKeyValues().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+				} else if (feature.equals("Map Reduce API")) {
 
-						return null;
+						if (returnValueDataModel.getMapReduceAPI().equals("not supported")) {
+								return 1;
+						} else if (returnValueDataModel.getMapReduceAPI()
+								.equals("intergrated with an external framework")) {
+								return 5;
+						} else if (returnValueDataModel.getMapReduceAPI().equals("builtin")) {
+								return 7;
+						} else
+								return 50;
 				}
-		//
-		//		public static Integer getQueryLanguagesRatings2(String databaseName, String feature) {
-		//
-		//				QueryLanguage returnValueAdmin = new QueryLanguage();
-		//				returnValueAdmin.setQueryLanguageDescription(
-		//						ArrayParser.parseStringToArray(Database.retrieveDescription(databaseName, "query_language")));
-		//
-		//				if (databaseName.equals("accumulo")) {
-		//						returnValueArray[0] = 2;
-		//						returnValueArray[1] = 12;
-		//						returnValueArray[2] = 75;
-		//						returnValueArray[3] = 12;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 48;
-		//						returnValueArray[6] = 55;
-		//				} else if (databaseName.equals("cassandra")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 7;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 48;
-		//				} else if (databaseName.equals("hbase")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 12;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("mongo")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 48;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("couch")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 12;
-		//						returnValueArray[2] = 7;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("couchbase")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 48;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 12;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("orient")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 12;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("neo")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 48;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 12;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 75;
-		//				} else if (databaseName.equals("redis")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 48;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 12;
-		//				} else if (databaseName.equals("riak")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 7;
-		//				} else if (databaseName.equals("dynamo")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 12;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 48;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("oracle")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 12;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("foundation")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 48;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 7;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("volt")) {
-		//						returnValueArray[0] = 12;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				}
-		//
-		//				returnValue.setRankings(returnValueArray);
-		//
-		//				return returnValue;
-		//		}
-		//
-		//		public static Integer getDataReplicationRatings2(String databaseName, String feature) {
-		//
-		//				Replication returnValueAdmin = new Replication();
-		//				returnValueAdmin.setReplicationDescription(
-		//						ArrayParser.parseStringToArray(Database.retrieveDescription(databaseName, "data_replication")));
-		//
-		//				if (databaseName.equals("accumulo")) {
-		//						returnValueArray[0] = 2;
-		//						returnValueArray[1] = 4;
-		//						returnValueArray[2] = 6;
-		//						returnValueArray[3] = 7;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 48;
-		//						returnValueArray[6] = 55;
-		//				} else if (databaseName.equals("cassandra")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 12;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 48;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("hbase")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 48;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("mongo")) {
-		//						returnValueArray[0] = 12;
-		//						returnValueArray[1] = 7;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("couch")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 75;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 48;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("couchbase")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 7;
-		//				} else if (databaseName.equals("orient")) {
-		//						returnValueArray[0] = 48;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("neo")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 12;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 48;
-		//				} else if (databaseName.equals("redis")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 7;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("riak")) {
-		//						returnValueArray[0] = 12;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 48;
-		//				} else if (databaseName.equals("dynamo")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 12;
-		//						returnValueArray[6] = 7;
-		//				} else if (databaseName.equals("oracle")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("foundation")) {
-		//						returnValueArray[0] = 48;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 12;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("volt")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 7;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				}
-		//
-		//				returnValue.setRankings(returnValueArray);
-		//
-		//				return returnValue;
-		//		}
-		//
-		//		public static Integer getSecurityRatings2(String databaseName, String feature) {
-		//
-		//				Security returnValueAdmin = new Security();
-		//				returnValueAdmin.setSecurityDescription(
-		//						ArrayParser.parseStringToArray(Database.retrieveDescription(databaseName, "security")));
-		//
-		//				if (databaseName.equals("accumulo")) {
-		//						returnValueArray[0] = 2;
-		//						returnValueArray[1] = 12;
-		//						returnValueArray[2] = 6;
-		//						returnValueArray[3] = 12;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 48;
-		//						returnValueArray[6] = 55;
-		//				} else if (databaseName.equals("cassandra")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 48;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 12;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("hbase")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 7;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("mongo")) {
-		//						returnValueArray[0] = 12;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 48;
-		//						returnValueArray[5] = 8;
-		//				} else if (databaseName.equals("couch")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 12;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("couchbase")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 48;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("orient")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 12;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 7;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("neo")) {
-		//						returnValueArray[0] = 48;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("redis")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 12;
-		//				} else if (databaseName.equals("riak")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 48;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("dynamo")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 12;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("oracle")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 48;
-		//						returnValueArray[5] = 7;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("foundation")) {
-		//						returnValueArray[0] = 12;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("volt")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 48;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 7;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				}
-		//
-		//				returnValue.setRankings(returnValueArray);
-		//
-		//				return returnValue;
-		//		}
-		//
-		//		public static Integer getScalabilityRatings2(String databaseName, String feature) {
-		//
-		//				Scalability returnValueAdmin = new Scalability();
-		//				returnValueAdmin.setScalabilityDescription(
-		//						ArrayParser.parseStringToArray(Database.retrieveDescription(databaseName, "scalability")));
-		//
-		//				if (databaseName.equals("accumulo")) {
-		//						returnValueArray[0] = 2;
-		//						returnValueArray[1] = 4;
-		//						returnValueArray[2] = 12;
-		//						returnValueArray[3] = 12;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 48;
-		//						returnValueArray[6] = 55;
-		//				} else if (databaseName.equals("cassandra")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 7;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("hbase")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("mongo")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 48;
-		//						returnValueArray[2] = 12;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("couch")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 7;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 12;
-		//				} else if (databaseName.equals("couchbase")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 48;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("orient")) {
-		//						returnValueArray[0] = 12;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 7;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 48;
-		//				} else if (databaseName.equals("neo")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 12;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("redis")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 48;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("riak")) {
-		//						returnValueArray[0] = 12;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 7;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("dynamo")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 48;
-		//						returnValueArray[3] = 12;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("oracle")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 48;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("foundation")) {
-		//						returnValueArray[0] = 5;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 7;
-		//						returnValueArray[6] = 60;
-		//				} else if (databaseName.equals("volt")) {
-		//						returnValueArray[0] = 48;
-		//						returnValueArray[1] = 10;
-		//						returnValueArray[2] = 76;
-		//						returnValueArray[3] = 4;
-		//						returnValueArray[4] = 24;
-		//						returnValueArray[5] = 8;
-		//						returnValueArray[6] = 12;
-		//				}
-		//
-		//				returnValue.setRankings(returnValueArray);
-		//
-		//				return returnValue;
-		//		}
+				//						else if (feature.equals("Indexed Text Search")) {
+				//
+				//								if (returnValueDataModel.getPhysicalStorageUsage().equals("not supported")) {
+				//										return 1;
+				//								} else if (returnValueDataModel.getPhysicalStorageUsage().equals("supported")) {
+				//										return 7;
+				//								}else
+				//										return 50;
+				//						}
+				return null;
+		}
+
+		public static Integer getQueryLanguagesRatings2(String databaseName, String feature) {
+
+				QueryLanguage returnValueQuery = new QueryLanguage();
+				returnValueQuery.setQueryLanguageDescription(
+						ArrayParser.parseStringToArray(Database.retrieveDescription(databaseName, "query")));
+
+				if (feature.equals("API-based")) {
+						if (returnValueQuery.getApiBased().equals("NoValue")) {
+								return 0;
+						} else if (returnValueQuery.getApiBased().equals("not supported")) {
+								return 4;
+						} else if (returnValueQuery.getApiBased().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Declarative")) {
+
+						if (returnValueQuery.getDeclaritive().equals("NoValue")) {
+								return 0;
+						} else if (returnValueQuery.getDeclaritive().equals("not supported")) {
+								return 1;
+						} else if (returnValueQuery.getJoinStyleQuery().equals("not suppported")) {
+								return 1;
+						} else if (returnValueQuery.getDeclaritive().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("REST/HTTP-based")) {
+
+						if (returnValueQuery.getRestHTTPBased().equals("NoValue")) {
+								return 0;
+						} else if (returnValueQuery.getRestHTTPBased().equals("not supported")) {
+								return 1;
+						} else if (returnValueQuery.getRestHTTPBased().equals("not suppported")) {
+								return 1;
+						} else if (returnValueQuery.getRestHTTPBased().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Languages supported")) { //todo needs to count the languages
+
+						if (returnValueQuery.getLanguagesSupported().equals("NoValue")) {
+								return 0;
+						} else if (returnValueQuery.getLanguagesSupported().equals("2")) {
+								return 1;
+						} else if (returnValueQuery.getLanguagesSupported().equals("3")) {
+								return 2;
+						} else if (returnValueQuery.getLanguagesSupported().equals("4")) {
+								return 3;
+						} else if (returnValueQuery.getLanguagesSupported().equals("5")) {
+								return 4;
+						} else if (returnValueQuery.getLanguagesSupported().equals("6")) {
+								return 5;
+						} else if (returnValueQuery.getLanguagesSupported().equals("7")) {
+								return 6;
+						} else if (returnValueQuery.getLanguagesSupported().equals("8+")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Cursor-based queries")) {
+						if (returnValueQuery.getCursorBasedQuery().equals("NoValue")) {
+								return 0;
+						} else if (returnValueQuery.getCursorBasedQuery().equals("not supported")) {
+								return 1;
+						} else if (returnValueQuery.getCursorBasedQuery().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("JOIN-style queries")) {
+						if (returnValueQuery.getJoinStyleQuery().equals("NoValue")) {
+								return 0;
+						} else if (returnValueQuery.getJoinStyleQuery().equals("not supported")) {
+								return 1;
+						} else if (returnValueQuery.getJoinStyleQuery().equals("not suppported")) {
+								return 1;
+						} else if (returnValueQuery.getJoinStyleQuery().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Complex data types")) {
+
+						if (returnValueQuery.getComplexDataTypes().equals("NoValue")) {
+								return 0;
+						} else if (returnValueQuery.getComplexDataTypes().equals("none")) {
+								return 1;
+						} else if (returnValueQuery.getComplexDataTypes().equals("1")) {
+								return 2;
+						} else if (returnValueQuery.getComplexDataTypes().equals("2")) {
+								return 3;
+						} else if (returnValueQuery.getComplexDataTypes().equals("3")) {
+								return 4;
+						} else if (returnValueQuery.getComplexDataTypes().equals("4")) {
+								return 5;
+						} else if (returnValueQuery.getComplexDataTypes().equals("5")) {
+								return 6;
+						} else if (returnValueQuery.getComplexDataTypes().equals("6+")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Restrict number of objects returned by a query")) {
+
+						if (returnValueQuery.getRestrictObjectsReturnByQuery().equals("NoValue")) {
+								return 0;
+						} else if (returnValueQuery.getRestrictObjectsReturnByQuery().equals("not supported")) {
+								return 1;
+						} else if (returnValueQuery.getRestrictObjectsReturnByQuery().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Key matching options")) {
+
+						if (returnValueQuery.getKeyMatchingOptions().equals("NoValue")) {
+								return 0;
+						} else if (returnValueQuery.getKeyMatchingOptions().equals("exact")) {
+								return 1;
+						} else if (returnValueQuery.getKeyMatchingOptions().equals("2")) {
+								return 3;
+						} else if (returnValueQuery.getKeyMatchingOptions().equals("3")) {
+								return 5;
+						} else if (returnValueQuery.getKeyMatchingOptions().equals("4")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature
+						.equals("Sorting of query results")) { //todo values don't match spreadsheet
+						if (returnValueQuery.getSortingOfQueryResults().equals("NoValue")) {
+								return 0;
+						} else if (returnValueQuery.getSortingOfQueryResults().equals("none")) {
+								return 1;
+						} else if (returnValueQuery.getSortingOfQueryResults().equals("1")) {
+								return 4;
+						} else if (returnValueQuery.getSortingOfQueryResults().equals("2")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Triggers")) {
+
+						if (returnValueQuery.getTriggers().equals("NoValue")) {
+								return 0;
+						} else if (returnValueQuery.getTriggers().equals("not supported")) {
+								return 1;
+						} else if (returnValueQuery.getTriggers().equals("1")) {
+								return 4;
+						} else if (returnValueQuery.getTriggers().equals("2")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Expire data values")) {
+
+						if (returnValueQuery.getExpireDataValues().equals("NoValue")) {
+								return 0;
+						} else if (returnValueQuery.getExpireDataValues().equals("not supported")) {
+								return 1;
+						} else if (returnValueQuery.getExpireDataValues().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+				}
+				return null;
+		}
+
+
+		public static Integer getDataReplicationRatings2(String databaseName, String feature) {
+
+				Replication returnValue = new Replication();
+				returnValue.setReplicationDescription(ArrayParser
+						.parseStringToArray(Database.retrieveDescription(databaseName, "data_replication")));
+
+				if (feature.equals("Replication Architecture")) {
+						if (returnValue.getArchitecture().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getArchitecture().equals("master-slave")) {
+								return 4;
+						} else if (returnValue.getArchitecture().equals("peer-to-peer")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Replication for Backup")) {
+
+						if (returnValue.getReplicationForBackup().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getReplicationForBackup().equals("not supported")) {
+								return 1;
+						} else if (returnValue.getReplicationForBackup().equals("not suppported")) {
+								return 1;
+						} else if (returnValue.getReplicationForBackup().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Replication across Data Centers")) {
+
+						if (returnValue.getReplicationAcrossDataCenters().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getReplicationAcrossDataCenters()
+								.equals("supported by standard data replication mechanisms")) {
+								return 3;
+						} else if (returnValue.getReplicationAcrossDataCenters()
+								.equals("supported by enterprise version only (data center aware)")) {
+								return 6;
+						} else if (returnValue.getReplicationAcrossDataCenters()
+								.equals("supported by data center aware features")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Replicas Writes")) {
+
+						if (returnValue.getReplicaWrites().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getReplicaWrites().equals("to master replica only")) {
+								return 1;
+						} else if (returnValue.getReplicaWrites().equals("to any replica")) {
+								return 3;
+						} else if (returnValue.getReplicaWrites()
+								.equals("to specified replica (configurable)")) {
+								return 5;
+						} else if (returnValue.getReplicaWrites().equals("to multiple replicas")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Replica Reads")) {
+						if (returnValue.getReplicaReads().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getReplicaReads().equals("from master replica only")) {
+								return 2;
+						} else if (returnValue.getReplicaReads()
+								.equals("from specified replica (configurable)")) {
+								return 3;
+						} else if (returnValue.getReplicaReads().equals("from any replica")) {
+								return 5;
+						} else if (returnValue.getReplicaReads().equals("from multiple replicas")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Read Repair")) {
+						if (returnValue.getReadRepair().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getReadRepair().equals("not relevant")) {
+								return 1;
+						} else if (returnValue.getReadRepair().equals("not supported")) {
+								return 1;
+						} else if (returnValue.getReadRepair().equals("background")) {
+								return 6;
+						} else if (returnValue.getReadRepair().equals("per query")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Automatic Replica Failure Detection")) {
+
+						if (returnValue.getAutomaticReplicaFailureDetection().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getAutomaticReplicaFailureDetection().equals("not supported")) {
+								return 1;
+						} else if (returnValue.getAutomaticReplicaFailureDetection().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Automatic Failover")) {
+
+						if (returnValue.getAutomaticFailover().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getAutomaticFailover().equals("not supported")) {
+								return 1;
+						} else if (returnValue.getAutomaticFailover().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Automatic New Master Election after Failure")) {
+
+						if (returnValue.getAutomaticNewMasterElection().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getAutomaticNewMasterElection()
+								.equals("not supported/not relevant")) {
+								return 1;
+						} else if (returnValue.getAutomaticNewMasterElection().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Replica Recovery and Resynchronization")) {
+						if (returnValue.getReplicaRecoveryAndResync().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getReplicaRecoveryAndResync().equals("not supported")) {
+								return 1;
+						} else if (returnValue.getReplicaRecoveryAndResync()
+								.equals("performed by administrator")) {
+								return 5;
+						} else if (returnValue.getReplicaRecoveryAndResync().equals("supported- automatic")) {
+								return 7;
+						} else
+								return 50;
+
+				}
+				return null;
+		}
+
+		public static Integer getSecurityRatings2(String databaseName, String feature) {
+
+				Security returnValue = new Security();
+				returnValue.setSecurityDescription(
+						ArrayParser.parseStringToArray(Database.retrieveDescription(databaseName, "security")));
+
+				if (feature.equals("Client Authentication")) {
+						if (returnValue.getClientAuthentication().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getClientAuthentication().equals("custom user/password")) {
+								return 1;
+						} else if (returnValue.getClientAuthentication().equals("2")) {
+								return 4;
+						} else if (returnValue.getClientAuthentication().equals("3+")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Server authentication")) {//todo values don't map to excel
+
+						if (returnValue.getServerAuthentication().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getServerAuthentication().equals("not secured")) {
+								return 1;
+						} else if (returnValue.getServerAuthentication().equals("1")) {
+								return 4;
+						} else if (returnValue.getServerAuthentication().equals("2+")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Credential Store")) {
+
+						if (returnValue.getCredentialStore().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getCredentialStore().equals("certificates only")) {
+								return 1;
+						} else if (returnValue.getCredentialStore().equals("external file")) {
+								return 4;
+						} else if (returnValue.getCredentialStore().equals("in database")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Role Based Security")) {
+
+						if (returnValue.getRoleBasedSecurity().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getRoleBasedSecurity().equals("not supported")) {
+								return 1;
+						} else if (returnValue.getRoleBasedSecurity()
+								.equals("supported - enterprise version only")) {
+								return 5;
+						} else if (returnValue.getRoleBasedSecurity()
+								.equals("supported - requires programmatic extension")) {
+								return 6;
+						} else if (returnValue.getRoleBasedSecurity().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Security Role Options")) {//todo values don't map to excel
+						if (returnValue.getSecurityRoleOptions().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getSecurityRoleOptions().equals("not supported")) {
+								return 1;
+						} else if (returnValue.getSecurityRoleOptions().equals("default roles (only)")) {
+								return 2;
+						} else
+								return 50;
+
+				} else if (feature.equals("Scope of Roles")) {
+						if (returnValue.getScopeOfRoles().equals("NoValue")) {//todo could be multiple values
+								return 0;
+						} else if (returnValue.getScopeOfRoles().equals("cluster")) {
+								return 1;
+						} else if (returnValue.getScopeOfRoles().equals("database")) {
+								return 3;
+						} else if (returnValue.getScopeOfRoles().contains("collection")) {
+								return 4;
+						} else if (returnValue.getScopeOfRoles().equals("object")) {
+								return 6;
+						} else if (returnValue.getScopeOfRoles().equals("field")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Database Encryption")) {
+
+						if (returnValue.getDatabaseEncryption().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getDatabaseEncryption().equals("not supported")) {
+								return 1;
+						} else if (returnValue.getDatabaseEncryption().equals("supported")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Logging")) {
+
+						if (returnValue.getLogging().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getLogging().equals("no logging")) {
+								return 1;
+						} else if (returnValue.getLogging()
+								.equals("requires external components (eg Web Servers)")) {
+								return 3;
+						} else if (returnValue.getLogging().equals("Fixed event logging")) {
+								return 5;
+						} else if (returnValue.getLogging().equals("configurable event logging")) {
+								return 7;
+						} else
+								return 50;
+
+				}
+				return null;
+
+		}
+
+		public static Integer getScalabilityRatings2(String databaseName, String feature) {
+
+				Scalability returnValue = new Scalability();
+				returnValue.setScalabilityDescription(ArrayParser
+						.parseStringToArray(Database.retrieveDescription(databaseName, "scalability")));
+
+				if (feature.equals("Scale Out Architecture")) {
+						if (returnValue.getScaleOutArchitecture().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getScaleOutArchitecture().equals("Replicate Complete")) {
+								return 1;
+						} else if (returnValue.getScaleOutArchitecture().equals("horizontal")) {
+								return 5;
+						} else if (returnValue.getScaleOutArchitecture().equals("Horizontal and Replicate")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Client Request Load Balancing")) {
+
+						if (returnValue.getClientRequestLoadBalancing().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getClientRequestLoadBalancing().equals("HTTP")) {
+								return 1;
+						} else if (returnValue.getClientRequestLoadBalancing().equals("Fixed")) {
+								return 3;
+						} else if (returnValue.getClientRequestLoadBalancing()
+								.equals("Bal. across coordinators")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Scale Data Capacity")) {
+
+						if (returnValue.getScaleDataCapacity().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getScaleDataCapacity().equals("Single")) {
+								return 1;
+						} else if (returnValue.getScaleDataCapacity().equals("Manual")) {
+								return 3;
+						} else if (returnValue.getScaleDataCapacity().equals("Auto")) {
+								return 7;
+						} else
+								return 50;
+
+				} else if (feature.equals("Data Object Based Locks on Writes")) {
+
+						if (returnValue.getDataObjectsBasedOnLocks().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getDataObjectsBasedOnLocks().equals("whole database")) {
+								return 1;
+						} else if (returnValue.getDataObjectsBasedOnLocks()
+								.equals("single threaded (partition lock)")) {
+								return 4;
+						} else if (returnValue.getDataObjectsBasedOnLocks().equals("object")) {
+								return 6;
+						} else
+								return 7;
+
+				} else if (feature.equals("Scalable Request Processing Architecture")) {
+						if (returnValue.getScalableRequestProcessingArchitecture().equals("NoValue")) {
+								return 0;
+						} else if (returnValue.getScalableRequestProcessingArchitecture()
+								.equals("Not scalable")) {
+								return 1;
+						} else if (returnValue.getScalableRequestProcessingArchitecture().equals("external")) {
+								return 3;
+						} else if (returnValue.getScalableRequestProcessingArchitecture()
+								.equals("centralized")) {
+								return 5;
+						} else if (returnValue.getScalableRequestProcessingArchitecture()
+								.equals("fully distributed")) {
+								return 7;
+						} else
+								return 50;
+
+				}
+				return null;
+		}
 
 }
 

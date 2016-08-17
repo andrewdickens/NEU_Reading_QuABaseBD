@@ -24,25 +24,45 @@ public class Security extends DescriptionType {
 		String logging;
 		String secLoggingURL;
 
-		public void setSecurityDescription(String[][] descriptionMatrix){
-				this.setFeatureType(descriptionMatrix[0][0]);
-				this.setDatabaseName(descriptionMatrix[1][1]);
-				this.setClientAuthentication(descriptionMatrix[2][1]);
-				this.setClientAuthURL(descriptionMatrix[3][1]);
-				this.setServerAuthentication(descriptionMatrix[4][1]);
-				this.setServerAuthURL(descriptionMatrix[5][1]);
-				this.setCredentialStore(descriptionMatrix[6][1]);
-				this.setCredentialsURL(descriptionMatrix[7][1]);
-				this.setRoleBasedSecurity(descriptionMatrix[8][1]);
-				this.setSecRolesURL(descriptionMatrix[9][1]);
-				this.setSecurityRoleOptions(descriptionMatrix[10][1]);
-				this.setSecRoleOptionURL(descriptionMatrix[11][0]);
-				this.setScopeOfRoles(descriptionMatrix[12][1]);
-				this.setSecRolesURL(descriptionMatrix[13][1]);
-				this.setDatabaseEncryption(descriptionMatrix[14][1]);
-				this.setSecEncryptURL(descriptionMatrix[15][1]);
-				this.setLogging(descriptionMatrix[16][1]);
-				this.setSecLoggingURL(descriptionMatrix[17][1]);
+		public void setSecurityDescription(String[][] descriptionMatrix) {
+				//				this.setFeatureType(descriptionMatrix[0][0]);
+				//				this.setDatabaseName(descriptionMatrix[1][1]);
+				//				this.setClientAuthentication(descriptionMatrix[2][1]);
+				//				this.setClientAuthURL(descriptionMatrix[3][1]);
+				//				this.setServerAuthentication(descriptionMatrix[4][1]);
+				//				this.setServerAuthURL(descriptionMatrix[5][1]);
+				//				this.setCredentialStore(descriptionMatrix[6][1]);
+				//				this.setCredentialsURL(descriptionMatrix[7][1]);
+				//				this.setRoleBasedSecurity(descriptionMatrix[8][1]);
+				//				this.setSecRolesURL(descriptionMatrix[9][1]);
+				//				this.setSecurityRoleOptions(descriptionMatrix[10][1]);
+				//				this.setSecRoleOptionURL(descriptionMatrix[11][0]);
+				//				this.setScopeOfRoles(descriptionMatrix[12][1]);
+				//				this.setSecRolesURL(descriptionMatrix[13][1]);
+				//				this.setDatabaseEncryption(descriptionMatrix[14][1]);
+				//				this.setSecEncryptURL(descriptionMatrix[15][1]);
+				//				this.setLogging(descriptionMatrix[16][1]);
+				//				this.setSecLoggingURL(descriptionMatrix[17][1]);
+
+				for (String[] value : descriptionMatrix) {
+						if (value[0].equals("Client Authentication")) {
+								this.setClientAuthentication(value[1]);
+						} else if (value[0].equals("Server authentication")) {
+								this.setServerAuthentication(value[1]);
+						} else if (value[0].equals("Credential Store")) {
+								this.setCredentialStore(value[1]);
+						} else if (value[0].equals("Role Based Security")) {
+								this.setRoleBasedSecurity(value[1]);
+						} else if (value[0].equals("Security Role Options")) {
+								this.setSecurityRoleOptions(value[1]);
+						} else if (value[0].equals("Scope of Roles")) {
+								this.setScopeOfRoles(value[1]);
+						} else if (value[0].equals("Database Encryption")) {
+								this.setDatabaseEncryption(value[1]);
+						} else if (value[0].equals("Logging")) {
+								this.setLogging(value[1]);
+						}
+				}
 
 		}
 

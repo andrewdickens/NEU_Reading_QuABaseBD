@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="566d8638-a090-4f88-87bf-6f0a01cb65e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/DataModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/DataModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/DatabaseDescription.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/DatabaseDescription.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/QueryLanguage.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/QueryLanguage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/Replication.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/Replication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/Scalability.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/Scalability.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/Security.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/Security.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html" afterPath="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/subPages/radarCharts/RadarChart.html" afterPath="$PROJECT_DIR$/target/RESTfulExample/subPages/radarCharts/RadarChart.html" />
     </list>
     <ignored path="RESTfulExample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,14 +33,14 @@
     <favorites_list name="RESTfulExample" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6025825">
+    <splitter split-orientation="horizontal" split-proportion="0.4784792">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Distribution.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Distribution.java">
+          <file leaf-file-name="radarChartData.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/js/radarChartData.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="56" selection-end-column="9" />
+                  <caret line="424" column="64" selection-start-line="424" selection-start-column="64" selection-end-line="424" selection-end-column="64" />
                   <folding />
                 </state>
               </provider>
@@ -46,30 +50,73 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/DatabaseDescription.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="67" column="125" selection-start-line="67" selection-start-column="125" selection-end-line="67" selection-end-column="125" />
+                  <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DataModel.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/DataModel.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.07772021">
-                  <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="50" selection-end-column="62" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FeatureRatings.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java">
+          <file leaf-file-name="QueryLanguage.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/QueryLanguage.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="1367" column="87" selection-start-line="1367" selection-start-column="87" selection-end-line="1367" selection-end-column="87" />
+                  <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="78" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Admin.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Admin.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="48" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FeatureRatings.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.813253">
+                  <caret line="848" column="57" selection-start-line="848" selection-start-column="57" selection-end-line="848" selection-end-column="57" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Replication.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Replication.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="69" selection-end-column="9" />
                   <folding>
-                    <element signature="e#126#185#0" expanded="false" />
+                    <element signature="e#2958#2959#0" expanded="true" />
+                    <element signature="e#2988#2989#0" expanded="true" />
+                    <element signature="e#3044#3045#0" expanded="true" />
+                    <element signature="e#3088#3089#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Security.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Security.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="64" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Scalability.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Scalability.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -77,8 +124,8 @@
           <file leaf-file-name="RadarChart.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+                <state vertical-scroll-proportion="186.875">
+                  <caret line="288" column="46" selection-start-line="288" selection-start-column="46" selection-end-line="288" selection-end-column="46" />
                   <folding />
                 </state>
               </provider>
@@ -87,12 +134,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file leaf-file-name="RadarChart.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5675676">
-                  <caret line="542" column="43" selection-start-line="542" selection-start-column="43" selection-end-line="542" selection-end-column="57" />
+                <state vertical-scroll-proportion="-2.8246753">
+                  <caret line="524" column="43" selection-start-line="524" selection-start-column="43" selection-end-line="524" selection-end-column="83" />
                   <folding />
                 </state>
               </provider>
@@ -146,8 +193,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/test.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/CouchbaseRadarChart.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Replication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Security.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/subPages/BubbleChart.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/subPages/HeatMap.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/chartLabels.js" />
@@ -159,8 +204,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/AccumuloRadarChart.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Scalability.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/QueryLanguage.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/bower_components/bootstrap/dist/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceDatabaseInformation.java" />
@@ -168,13 +211,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/ArrayParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceChartData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Consistency.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Admin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Distribution.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/DatabaseDescription.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/DataModel.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/DatabaseDescription.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/QueryLanguage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Replication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Security.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Scalability.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java" />
       </list>
     </option>
   </component>
@@ -328,6 +375,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="radarCharts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTfulExample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTfulExample 7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1096,12 +1169,12 @@
       <workItem from="1470462094909" duration="1477000" />
       <workItem from="1470463761227" duration="118708000" />
       <workItem from="1471313486926" duration="10000" />
-      <workItem from="1471313502493" duration="2023000" />
+      <workItem from="1471313502493" duration="11565000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207480000" />
+    <option name="totallyTimeSpent" value="217022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1436" height="877" extended-state="6" />
@@ -1116,7 +1189,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909784" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2267516" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.54140127" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16178344" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24892396" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -1233,16 +1306,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1367" column="87" selection-start-line="1367" selection-start-column="87" selection-end-line="1367" selection-end-column="87" />
-          <folding>
-            <element signature="e#126#185#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Distribution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1251,26 +1314,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/DataModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5714286">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/radarChartData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="424" column="64" selection-start-line="424" selection-start-column="64" selection-end-line="424" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/DatabaseDescription.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="125" selection-start-line="67" selection-start-column="125" selection-end-line="67" selection-end-column="125" />
+          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="48" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/QueryLanguage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="78" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state vertical-scroll-proportion="186.875">
+          <caret line="288" column="46" selection-start-line="288" selection-start-column="46" selection-end-line="288" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/DataModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Scalability.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07772021">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="50" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Security.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="64" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Replication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="69" selection-end-column="9" />
+          <folding>
+            <element signature="e#2958#2959#0" expanded="true" />
+            <element signature="e#2988#2989#0" expanded="true" />
+            <element signature="e#3044#3045#0" expanded="true" />
+            <element signature="e#3088#3089#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.813253">
+          <caret line="848" column="57" selection-start-line="848" selection-start-column="57" selection-end-line="848" selection-end-column="57" />
           <folding />
         </state>
       </provider>
