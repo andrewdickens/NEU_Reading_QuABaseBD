@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="566d8638-a090-4f88-87bf-6f0a01cb65e4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/WEB-INF/classes/com/mkyong/rest/FeatureRatings.class" afterPath="$PROJECT_DIR$/target/RESTfulExample/WEB-INF/classes/com/mkyong/rest/FeatureRatings.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/rest/FeatureRatings.class" afterPath="$PROJECT_DIR$/target/classes/com/mkyong/rest/FeatureRatings.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html" afterPath="$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html" afterPath="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/subPages/heatMap/HeatMap.html" afterPath="$PROJECT_DIR$/target/RESTfulExample/subPages/heatMap/HeatMap.html" />
     </list>
     <ignored path="RESTfulExample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,96 +35,31 @@
     <splitter split-orientation="horizontal" split-proportion="0.4784792">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="RadarChart.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.9004093">
+                  <caret line="333" column="28" selection-start-line="333" selection-start-column="28" selection-end-line="347" selection-end-column="72" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="radarChartData.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/js/radarChartData.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="424" column="64" selection-start-line="424" selection-start-column="64" selection-end-line="424" selection-end-column="64" />
+                  <caret line="522" column="5" selection-start-line="522" selection-start-column="5" selection-end-line="522" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DatabaseDescription.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/DatabaseDescription.java">
+          <file leaf-file-name="JSONServiceChartData.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceChartData.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="QueryLanguage.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/QueryLanguage.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="78" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Admin.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Admin.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="48" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FeatureRatings.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.26998225">
-                  <caret line="863" column="90" selection-start-line="863" selection-start-column="90" selection-end-line="863" selection-end-column="90" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Replication.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Replication.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="69" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#2958#2959#0" expanded="true" />
-                    <element signature="e#2988#2989#0" expanded="true" />
-                    <element signature="e#3044#3045#0" expanded="true" />
-                    <element signature="e#3088#3089#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Security.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Security.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="64" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Scalability.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Scalability.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RadarChart.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="186.875">
-                  <caret line="288" column="46" selection-start-line="288" selection-start-column="46" selection-end-line="288" selection-end-column="46" />
+                  <caret line="24" column="0" selection-start-line="24" selection-start-column="2" selection-end-line="28" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -128,11 +69,31 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="RadarChart.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="RadarChart.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7773655">
-                  <caret line="465" column="62" selection-start-line="465" selection-start-column="62" selection-end-line="465" selection-end-column="62" />
+                <state vertical-scroll-proportion="-267.41666">
+                  <caret line="654" column="0" selection-start-line="633" selection-start-column="0" selection-end-line="654" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="HeatMap.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.25779036">
+                  <caret line="316" column="53" selection-start-line="316" selection-start-column="53" selection-end-line="316" selection-end-column="53" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="heatMapData.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/js/heatMapData.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="1018" column="5" selection-start-line="1018" selection-start-column="5" selection-end-line="1018" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -195,26 +156,26 @@
         <option value="$PROJECT_DIR$/src/main/webapp/subPages/databaseCharts.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/subPages/BubbleChart/BubbleChart.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/AccumuloRadarChart.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceDatabaseInformation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/ArrayParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceChartData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Consistency.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Admin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Distribution.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/DataModel.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/DatabaseDescription.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/QueryLanguage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Replication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Security.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Scalability.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceChartData.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html" />
       </list>
     </option>
   </component>
@@ -368,6 +329,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="radarCharts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTfulExample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTfulExample 7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="subPages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heatMap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1162,12 +1153,12 @@
       <workItem from="1470462094909" duration="1477000" />
       <workItem from="1470463761227" duration="118708000" />
       <workItem from="1471313486926" duration="10000" />
-      <workItem from="1471313502493" duration="12718000" />
+      <workItem from="1471313502493" duration="18002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218175000" />
+    <option name="totallyTimeSpent" value="223459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1436" height="877" extended-state="6" />
@@ -1182,8 +1173,8 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909784" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24713376" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16178344" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24713376" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03821656" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24892396" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -1216,14 +1207,14 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3910828" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10191083" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32866243" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24892396" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24713376" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03821656" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24892396" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1315,22 +1306,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/radarChartData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="424" column="64" selection-start-line="424" selection-start-column="64" selection-end-line="424" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/DatabaseDescription.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1339,33 +1314,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026642984">
+          <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/QueryLanguage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.035523977">
           <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="78" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Scalability.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/DatabaseDescription.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Security.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="64" selection-end-column="9" />
+        <state vertical-scroll-proportion="1.044405">
+          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Replication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.61456484">
           <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="69" selection-end-column="9" />
           <folding>
             <element signature="e#2958#2959#0" expanded="true" />
@@ -1376,18 +1351,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Security.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26998225">
-          <caret line="863" column="90" selection-start-line="863" selection-start-column="90" selection-end-line="863" selection-end-column="90" />
+        <state vertical-scroll-proportion="0.48134992">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="64" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/Scalability.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63232684">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceChartData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="2" selection-end-line="28" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/radarChartData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="522" column="5" selection-start-line="522" selection-start-column="5" selection-end-line="522" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/heatMapData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1018" column="5" selection-start-line="1018" selection-start-column="5" selection-end-line="1018" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25779036">
+          <caret line="316" column="53" selection-start-line="316" selection-start-column="53" selection-end-line="316" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7773655">
-          <caret line="465" column="62" selection-start-line="465" selection-start-column="62" selection-end-line="465" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.9004093">
+          <caret line="333" column="28" selection-start-line="333" selection-start-column="28" selection-end-line="347" selection-end-column="72" />
           <folding />
         </state>
       </provider>

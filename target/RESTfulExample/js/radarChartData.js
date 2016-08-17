@@ -532,3 +532,63 @@ function loadRadarChartData2(dataObject, index) {
 function capitalizeFirstLetter(string){
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+function getSelectValues(select) {
+    var result = [];
+    var options = select && select.options;
+    var opt;
+
+    var count = 0;
+    for (var i = 0, iLen = options.length; i < iLen; i++) {
+        opt = options[i];
+
+        if (opt.selected) {
+            count++;
+            if (count > 3) {
+//                                                alert("Please select no more than 2 values");
+                return 'accumulo';
+            }
+            result.push(opt.value || opt.text);
+        }
+    }
+    return result;
+}
+
+function getSelectFeatures(select) {
+    var result = [];
+    var options = select && select.options;
+    var opt;
+
+    var count = 0;
+    for (var i = 0, iLen = options.length; i < iLen; i++) {
+        opt = options[i];
+
+        if (opt.selected) {
+            count++;
+            if (count > 7) {
+                alert("Please select no more than 7 features to compare");
+                return;
+            }
+            result.push(opt.value || opt.text);
+        }
+    }
+    return result;
+}
+
+function getSelectValuesCount(select) {
+    var result = [];
+    var options = select && select.options;
+    var opt;
+
+    var count = 0;
+    for (var i = 0, iLen = options.length; i < iLen; i++) {
+        opt = options[i];
+
+        if (opt.selected) {
+            count++;
+
+            result.push(opt.value || opt.text);
+        }
+    }
+    return count;
+}

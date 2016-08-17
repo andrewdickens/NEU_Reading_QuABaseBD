@@ -1,4 +1,6 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 
     <meta charset="utf-8">
@@ -6,12 +8,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
     <title>QuABaseBD</title>
 
-    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
-    <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+    <script src="../../js/databaseCharts.js"></script>
+    <script src="../../js/Chart.js-2.1.6/dist/Chart.js"></script>
+
+    <!--<script src="../../js/radarChartData.js"></script>-->
+    <script src="../../js/chartData.js"></script>
+    <script src="../../js/Chart.js-2.1.6/src/core/core.js"></script>
+
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="../../dist/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <!--<link href="../../bower_components/morrisjs/morris.css" rel="stylesheet">-->
+
+    <!-- Custom Fonts -->
+    <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
     <script src="../../js/databaseCharts.js"></script>
     <script src="../../js/Chart.js-2.1.6/dist/Chart.js"></script>
     <script src="../../js/radarChartData.js"></script>
@@ -22,78 +53,601 @@
     <script src="../../js/heatMapData.js"></script>
 
 </head>
-<body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
+
+<div id="wrapper">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">QuABaseBD - a Knowledge Base for Big Data
+            <a class="navbar-brand" href="/index.html">QuABaseBD - a Knowledge Base for Big Data
                 Architectures and
                 Technologies</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/index.html">Main Page</a></li>
+        <!-- /.navbar-header -->
 
-                <li><a href="#">Help</a></li>
-            </ul>
-            <form class="navbar-form navbar-right">
-                <input type="text" class="form-control" placeholder="Search...">
-            </form>
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-messages">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                            </div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Pellentesque eleifend...
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                            </div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Pellentesque eleifend...
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                            </div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Pellentesque eleifend...
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a class="text-center" href="#">
+                            <strong>Read All Messages</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-messages -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-tasks">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <p>
+                                    <strong>Task 1</strong>
+                                    <span class="pull-right text-muted">40% Complete</span>
+                                </p>
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-success"
+                                         role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                                         aria-valuemax="100" style="width: 40%">
+                                        <span class="sr-only">40% Complete (success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <p>
+                                    <strong>Task 2</strong>
+                                    <span class="pull-right text-muted">20% Complete</span>
+                                </p>
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-info" role="progressbar"
+                                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                                         style="width: 20%">
+                                        <span class="sr-only">20% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <p>
+                                    <strong>Task 3</strong>
+                                    <span class="pull-right text-muted">60% Complete</span>
+                                </p>
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-warning"
+                                         role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                         aria-valuemax="100" style="width: 60%">
+                                        <span class="sr-only">60% Complete (warning)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <p>
+                                    <strong>Task 4</strong>
+                                    <span class="pull-right text-muted">80% Complete</span>
+                                </p>
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar"
+                                         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                                         style="width: 80%">
+                                        <span class="sr-only">80% Complete (danger)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a class="text-center" href="#">
+                            <strong>See All Tasks</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-tasks -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-alerts">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-comment fa-fw"></i> New Comment
+                                <span class="pull-right text-muted small">4 minutes ago</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                <span class="pull-right text-muted small">12 minutes ago</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                <span class="pull-right text-muted small">4 minutes ago</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-tasks fa-fw"></i> New Task
+                                <span class="pull-right text-muted small">4 minutes ago</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                <span class="pull-right text-muted small">4 minutes ago</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a class="text-center" href="#">
+                            <strong>See All Alerts</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-alerts -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav in" id="side-menu">
+                    <li class="sidebar-search">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <!-- /input-group -->
+                    </li>
+                    <li>
+                        <a href="/index.html"><i class="fa fa-dashboard fa-fw"></i>
+                            Main Page</a>
+                    </li>
+
+                    <li>
+                        <a href="../radarCharts/RadarChart.html"><i class="fa fa-table fa-fw"></i>Radar Chart
+                            Comparison</a>
+                    </li>
+                    <li>
+                        <a href="../heatMap/HeatMap.html"><i class="fa fa-edit fa-fw"></i>Heat Map
+                            Comparison</a>
+                    </li>
+
+                    <li>
+                        <a href="../../pages/index.html"><i class="fa fa-edit fa-fw"></i>BootStrap
+                            Template</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
         </div>
-    </div>
-</nav>
+        <!-- /.navbar-static-side -->
+    </nav>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li><a href="/index.html">Main Page </a></li>
-                <li><a href="../databaseTechnologies.html">Database Technologies</a></li>
-                <li><a href="../radarCharts/RadarChart.html">Radar Chart Comparison</a></li>
-                <li class="active"><a href="HeatMap.html">Heat Map Comparison<span
-                        class="sr-only">(current)</span></a></li>
-            </ul>
+    <div id="page-wrapper" style="min-height: 731px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">Database Radar Charts</h3>
+                <div class="pull-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success" onclick="
+
+                            var x = document.getElementById('featureList');
+                            console.log(x);
+                            var s = x.options[x.selectedIndex].value;
+                            console.log(s);
+
+                            var t = document.getElementById('database');
+                            console.log(getSelectValues(t));
+//                            var n = t.options[t.selectedIndex].value;
+
+                            var i = document.getElementById('featureValues');
+                            console.log(getSelectFeatures(i));
+
+                            var HeatmapBuildObject = {featureCategory: s,
+                                                         features: getSelectFeatures(i),
+                                                         numberOfFeatures: getSelectValuesCount(i),
+                                                          databases: getSelectValues(t),
+                                                          numberOfDatabases: getSelectValuesCount(t)};
+
+                            loadHeatmapObject(HeatmapBuildObject);
+
+                        ">Compare Databases
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="col-sm-4 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h3 class="page-header">Database Feature Rankings: Heat Map</h3>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"> </i>
+                        Heat Map Area
+                        <div class="pull-right">
+                            <p id="chart-feature-identifier"></p>
+                        </div>
+                    </div>
 
-            <div class="container">
+                    <div class="panel-body">
 
-                <button type="button" onclick="loadAdminHeatMapData()">Admin</button>
-                <button type="button" onclick="loadConsistencyHeatMapData()">Consistency</button>
-                <button type="button" onclick="loadDistributionHeatMapData()">Data Distribution</button>
-                <button type="button" onclick="loadModelHeatMapData()">Data Model</button>
-                <button type="button" onclick="loadReplicationHeatMapData()">Data Replication</button>
-                <button type="button" onclick="loadSecurityHeatMapData()">Security</button>
-                <button type="button" onclick="loadScalabilityHeatMapData()">Scalability</button>
-                <button type="button" onclick="loadLanguagesHeatMapData()">Query Languages</button>
+                        <canvas id="heatmap" width="700" height="700"></canvas>
 
+                    </div>
+                    <script>
+                        loadAdminHeatMapData('accumulo');
+                    </script>
 
+                </div>
+            </div>
 
-                <canvas id="heatmap" width="700" height="700"></canvas>
+            <div class="col-lg-4">
+
+                <div class="form group">
+                    <label>Choose Feature Category</label>
+                    <select class="form-control-edit" id="featureList" onchange="
+                var x = document.getElementById('featureList');
+                var s = x.options[x.selectedIndex].value;
+                var t = document.getElementById('database');
+                document.getElementById('featureValues').innerHTML = document.getElementById(s).innerHTML;
+                console.log(s);
+
+                document.getElementById('chart-feature-identifier').innerHTML = capitalizeFirstLetter(s) + ' Features';
+
+                var radarChartObject = {numDatabases: getSelectValuesCount(t), databases: getSelectValues(t), featureType: s};
+                ">
+                        <OPTION value=" ">Select Feature Type</OPTION>
+                        <OPTION value="admin">Admin</OPTION>
+                        <OPTION value="scalability">Scalability</OPTION>
+                        <OPTION value="consistency">Consistency</OPTION>
+                        <OPTION value="data_model">Data Model</OPTION>
+                        <OPTION value="data_replication">Data Replication</OPTION>
+                        <OPTION value="data_distribution">Data Distribution</OPTION>
+                        <OPTION value="security">Security</OPTION>
+                        <OPTION value="query">Query Languages</OPTION>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <form onselect="validate()">
+                        <select class="form-control" multiple="" id="admin"
+                                name="admin">
+                            <OPTION value="Configuration Files">Configuration Files</OPTION>
+                            <OPTION value="Node command line access">Node command line access</OPTION>
+                            <OPTION value="Node add remove">Node add/remove</OPTION>
+                            <OPTION value="Cluster monitoring">Cluster monitoring</OPTION>
+                            <OPTION value="Dump database configuration">Dump database configuration</OPTION>
+                            <OPTION value="Database object count">Database object count</OPTION>
+                            <OPTION value="Physical storage usage">Physical storage usage</OPTION>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="form-group">
+                    <form onselect="validate()">
+                        <select class="form-control" multiple="" id="consistency"
+                                name="consistency">
+                            <OPTION value="Object-Level isolation on updates">Object-Level isolation on updates</OPTION>
+                            <OPTION value="ACID transactions in single database">ACID transactions in single database</OPTION>
+                            <OPTION value="Distributed ACID transactions">Distributed ACID transactions</OPTION>
+                            <OPTION value="Updates applied to transaction log before returning from write">Updates applied before returning from write</OPTION>
+                            <OPTION value="Specify Quorum reads and writes">Specify Quorum Reads/Writes</OPTION>
+                            <OPTION value="Specify number of replicas to write to">Specify number of replicas to write to</OPTION>
+                            <OPTION value="Behaviour when write cannot complete on specified number of replicas">Behaviour when write cannot complete</OPTION>
+                            <OPTION value="Specify number of replicas to read from">Specify number of replicas to read from</OPTION>
+                            <OPTION value="Read from replica master only">Read from replica master only</OPTION>
+                            <OPTION value="Object level timestamps to detect conflicts">Object level timestamps to detect conflicts</OPTION>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="form-group">
+                    <form onselect="validate()">
+                        <select class="form-control" multiple="" id="scalability"
+                                name="scalability">
+                            <OPTION value="Scale Out Architecture">Scale Out Architecture</OPTION>
+                            <OPTION value="Client Request Load Balancing">Client Request Load Balancing</OPTION>
+                            <OPTION value="Scale Data Capacity">Scale Data Capacity</OPTION>
+                            <OPTION value="Data Object Based Locks on Writes">Data Object Based Locks on Writes</OPTION>
+                            <OPTION value="Scalable Request Processing Architecture">Scalable Request Processing Architecture</OPTION>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="form-group">
+                    <form onselect="validate()">
+                        <select class="form-control" multiple="" id="data_model"
+                                name="data_model">
+                            <OPTION value="Scalable Request Processing Architecture">Enforced Schema</OPTION>
+                            <OPTION value="Opaque Data Objects (need application interpretation)">Opaque Data Objects</OPTION>
+                            <OPTION value="Hierarchical Data Objects (e.g. sub objects)">Hierarchical Data Objects</OPTION>
+                            <OPTION value="Automatically Allocated Keys">Automatically Allocated Keys</OPTION>
+                            <OPTION value="Composite Keys">Composite Keys</OPTION>
+                            <OPTION value="Secondary Indexes">Secondary Indexes</OPTION>
+                            <OPTION value="Query by Key Ranges">Query by Key Ranges</OPTION>
+                            <OPTION value="Query by Partial Key">Query by Partial Key</OPTION>
+                            <OPTION value="Query by Non-keyed Values">Query by Non-keyed Values</OPTION>
+                            <OPTION value="Map Reduce API">Map Reduce API</OPTION>
+                            <!--<OPTION value="Indexed Text Search">Indexed Text Search</OPTION>-->
+                        </select>
+                    </form>
+                </div>
+
+                <div class="form-group">
+                    <form onselect="validate()">
+                        <select class="form-control" multiple="" id="data_replication"
+                                name="data_replication">
+                            <OPTION value="Replication Architecture">Replication Architecture</OPTION>
+                            <OPTION value="Replication for Backup">Replication for Backup</OPTION>
+                            <OPTION value="Replication across Data Centers">Replication across Data Centers</OPTION>
+                            <OPTION value="Replicas Writes">Replicas Writes</OPTION>
+                            <OPTION value="Replica Reads">Replica Reads</OPTION>
+                            <OPTION value="Read Repair">Read Repair</OPTION>
+                            <OPTION value="Automatic Replica Failure Detection">Automatic Replica Failure Detection</OPTION>
+                            <OPTION value="Automatic Failover">Automatic Failover</OPTION>
+                            <OPTION value="Automatic New Master Election after Failure">Automatic New Master Election after Failure</OPTION>
+                            <OPTION value="Replica Recovery and Resynchronization">Replica Recovery and Resynchronization</OPTION>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="form-group">
+                    <form onselect="validate()">
+                        <select class="form-control" multiple="" id="data_distribution"
+                                name="data_distribution">
+                            <OPTION value="Data Distribution Architecture">Data Distribution Architecture</OPTION>
+                            <OPTION value="Data Distribution Method">Data Distribution Method</OPTION>
+                            <OPTION value="Automatic Data Rebalancing">Automatic Data Rebalancing</OPTION>
+                            <OPTION value="Physical Data Distribution">Physical Data Distribution</OPTION>
+                            <OPTION value="Query Architecture">Query Architecture</OPTION>
+                            <OPTION value="Queries using Non-Shard Key Value">Queries using Non-Shard Key Value</OPTION>
+                            <OPTION value="Merging Query Results from Multiple Shards">Merging Query Results from Multiple Shards</OPTION>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="form-group">
+                    <form onselect="validate()">
+                        <select class="form-control" multiple="" id="security"
+                                name="security">
+                            <OPTION value="Client Authentication">Client Authentication</OPTION>
+                            <OPTION value="Server authentication">Server authentication</OPTION>
+                            <OPTION value="Credential Store">Credential Store</OPTION>
+                            <OPTION value="Role Based Security">Role Based Security</OPTION>
+                            <OPTION value="Security Role Options">Security Role Options</OPTION>
+                            <OPTION value="Scope of Roles">Scope of Roles</OPTION>
+                            <OPTION value="Database Encryption">Database Encryption</OPTION>
+                            <OPTION value="Logging">Logging</OPTION>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="form-group">
+                    <form onselect="validate()">
+                        <select class="form-control" multiple="" id="query"
+                                name="query">
+                            <OPTION value="API-based">API-based</OPTION>
+                            <OPTION value="Declarative">Declarative</OPTION>
+                            <OPTION value="REST/HTTP-based">REST/HTTP-based</OPTION>
+                            <OPTION value="Languages supported">Languages supported</OPTION>
+                            <OPTION value="Cursor-based queries">Cursor-based queries</OPTION>
+                            <OPTION value="JOIN-style queries">JOIN-style queries</OPTION>
+                            <OPTION value="Complex data types">Complex data types</OPTION>
+                            <OPTION value="Restrict number of objects returned by a query">Restrict number of objects returned by a query</OPTION>
+                            <OPTION value="Key matching options">Key matching options</OPTION>
+                            <OPTION value="Sorting of query results">Sorting of query results</OPTION>
+                            <OPTION value="Triggers">Triggers</OPTION>
+                            <OPTION value="Expire data values">Expire data values</OPTION>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="form-group">
+                    <form onselect="validate()">
+                        <select class="form-control" multiple="" id="empty"
+                                name="empty">
+                        </select>
+                    </form>
+                </div>
+
+                <div class="form-group">
+                    <label>Choose features to display on chart</label>
+                    <form onselect="validate()">
+                        <select class="form-control" multiple="" id="featureValues"
+                                name="featureCompare">
+                        </select>
+                    </form>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <!--<label>Choose databases to compare</label>-->
+                    <form onselect="validate()">
+                        <select class="form-control-edit" multiple="" id="database"
+                                name="databaseCompare">
+                            <OPTION value="accumulo">Accumulo</OPTION>
+                            <OPTION value="cassandra">Cassandra</OPTION>
+                            <OPTION value="hbase">HBase</OPTION>
+                            <OPTION value="mongo">Mongo DB</OPTION>
+                            <OPTION value="couch">Couch</OPTION>
+                            <OPTION value="couchbase">Couchbase</OPTION>
+                            <OPTION value="orient">OrientDB</OPTION>
+                            <OPTION value="neo">Neo4j</OPTION>
+                            <OPTION value="redis">Redis</OPTION>
+                            <OPTION value="riak">Riak</OPTION>
+                            <OPTION value="dynamo">Dynamo</OPTION>
+                            <OPTION value="oracle">Oracle NoSQL</OPTION>
+                            <OPTION value="foundation">Foundation DB</OPTION>
+                            <OPTION value="volt">Volt DB</OPTION>
+                        </select>
+                    </form>
+                </div>
 
                 <script>
-                    loadAdminHeatMapData('accumulo');
+                    document.getElementsByName('admin')[0].style.display = 'none';
+                    document.getElementsByName('scalability')[0].style.display = 'none';
+                    document.getElementsByName('security')[0].style.display = 'none';
+                    document.getElementsByName('data_model')[0].style.display = 'none';
+                    document.getElementsByName('data_distribution')[0].style.display = 'none';
+                    document.getElementsByName('query')[0].style.display = 'none';
+                    document.getElementsByName('data_replication')[0].style.display = 'none';
+                    document.getElementsByName('consistency')[0].style.display = 'none';
+                    document.getElementsByName('empty')[0].style.display = 'none';
+                    document.getElementsByName('databaseCompare')[0].style.display = 'none';
+
                 </script>
 
             </div>
+            <!--</div>-->
         </div>
     </div>
+    <script>
+        function validate() {
+            var selectChoose = document.getElementById('database');
+            var maxOptions = 1;
+            var optionCount = 0;
+            for (var i = 0; i < selectChoose.length; i++) {
+                if (selectChoose[i].selected) {
+                    optionCount++;
+                    if (optionCount > maxOptions) {
+                        alert("please choose no more than 1 values")
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+    </script>
+
+
 </div>
-</body>
-<footer class="footer">
-    <div class="container">
-        <p class="text-muted">QuABaseBD - Northeastern University</p>
-    </div>
-</footer>
+
+<!-- jQuery -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="../../bower_components/raphael/raphael-min.js"></script>
+<script src="../../bower_components/morrisjs/morris.min.js"></script>
+<script src="../../js/morris-data.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../../dist/js/sb-admin-2.js"></script>
 </body>
 </html>
 

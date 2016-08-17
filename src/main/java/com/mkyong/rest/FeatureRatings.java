@@ -10,7 +10,7 @@ public class FeatureRatings {
 		public static Integer getFeatureRatingAll(String databaseName, String featureCategory,
 				String feature) {
 				if (featureCategory.equals("admin")) {
-						return FeatureRatings.getAdminRatings2(databaseName, feature);
+						return FeatureRatings.getAdminRatings(databaseName, feature);
 				} else if (featureCategory.equals("consistency")) {
 						return FeatureRatings.getConsistencyRatings2(databaseName, feature);
 				} else if (featureCategory.equals("data_distribution")) {
@@ -29,7 +29,7 @@ public class FeatureRatings {
 				return null;
 		}
 
-		public static Integer getAdminRatings2(String databaseName, String feature) {
+		public static Integer getAdminRatings(String databaseName, String feature) {
 
 				Admin returnValueAdmin = new Admin();
 				returnValueAdmin.setAdminDescription(

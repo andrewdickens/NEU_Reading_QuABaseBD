@@ -22,13 +22,7 @@ function loadAdminHeatMapData(){
 
 
     var data = {
-        labels: ['Configuration Files',
-            'Node command line access',
-            'Node add/remove',
-            'Cluster monitoring',
-            'Dump database configuration',
-            'Database object count',
-            'Physical storage usage'],
+        //labels:,
         datasets: [
             {
                 label: 'Accumulo',
@@ -908,30 +902,204 @@ function loadLanguagesHeatMapData(){
     var newChart = new Chart(ctx).HeatMap(data, options);
 }
 
-function reloadHeatmapData(data){
+//function reloadHeatmapData(data){
+//    var data = {
+//        labels: ['test', 'test', 'test'],
+//        datasets: [
+//            {
+//                label: 'Accumulo',
+//                data: [8, 6, 5]
+//            }
+////                            {
+////                                label: 'Cassandra',
+////                                data: [6, 8, 5, 6, 5, 5, 7]
+////                            },
+////                            {
+////                                label: 'HBase',
+////                                data: [8, 5, 6, 4, 2, 2, 3]
+////                            },
+////                            {
+////                                label: 'MongoDB',
+////                                data: [4, 0, 7, 4, 6, 3, 2]
+////                            },
+////                            {
+////                                label: 'CouchDB',
+////                                data: [1, 0, 0, 7, 0, 4, 1]
+////                            }
+//        ]
+//    };
+//
+//    var options = {
+//        backgroundColor: '#fff',
+//        rounded: true,
+//        colorInterpolation: "gradient",
+//        colorHighlight: true
+//    };
+//
+//    var ctx = document.getElementById('heatmap').getContext('2d');
+//    var newChart = new Chart(ctx).HeatMap(data, options);
+//}
+
+function getSelectValues(select) {
+    var result = [];
+    var options = select && select.options;
+    var opt;
+
+    var count = 0;
+    for (var i = 0, iLen = options.length; i < iLen; i++) {
+        opt = options[i];
+
+        if (opt.selected) {
+            count++;
+//            if (count > 3) {
+////                                                alert("Please select no more than 2 values");
+//                return 'accumulo';
+//            }
+            result.push(opt.value || opt.text);
+        }
+    }
+    return result;
+}
+
+function getSelectFeatures(select) {
+    var result = [];
+    var options = select && select.options;
+    var opt;
+
+    var count = 0;
+    for (var i = 0, iLen = options.length; i < iLen; i++) {
+        opt = options[i];
+
+        if (opt.selected) {
+            count++;
+            //if (count > 7) {
+            //    alert("Please select no more than 7 features to compare");
+            //    return;
+            //}
+            result.push(opt.value || opt.text);
+        }
+    }
+    return result;
+}
+
+function getSelectValuesCount(select) {
+    var result = [];
+    var options = select && select.options;
+    var opt;
+
+    var count = 0;
+    for (var i = 0, iLen = options.length; i < iLen; i++) {
+        opt = options[i];
+
+        if (opt.selected) {
+            count++;
+
+            result.push(opt.value || opt.text);
+        }
+    }
+    return count;
+}
+
+function loadHeatMapRankings(dataObject, database) {
+    var returnData = [];
+
+    for(var i=0; i<dataObject.numberOfFeatures; i++) {
+        //console.log("http://localhost:8080/rest/database/chart/get/ranking/" + databaseName + "/" + featureType);
+
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/rest/database/chart/get/ranking" + "/" + database + "/" + dataObject.featureCategory + "/" + dataObject.features[i],
+            async: false,
+            dataType: "json",
+            success: function (data) {
+                console.log("in success callback data");
+                returnData[i] = data;
+            }
+        });
+    }
+
+    console.log(returnData);
+    return returnData;
+}
+
+function loadHeatmapObject(dataObject){
+
+    var AccumuloRankings = loadHeatMapRankings(dataObject, 'accumulo');
+    var CassandraRankings = loadHeatMapRankings(dataObject, 'cassandra');
+    var HBaseRankings = loadHeatMapRankings(dataObject, 'hbase');
+    var MongoRankings = loadHeatMapRankings(dataObject, 'mongo');
+    var CouchRankings = loadHeatMapRankings(dataObject, 'couch');
+    var CouchbaseRankings = loadHeatMapRankings(dataObject, 'couchbase');
+    var OrientRankings = loadHeatMapRankings(dataObject, 'orient');
+    var NeoRankings = loadHeatMapRankings(dataObject, 'neo');
+    var RedisRankings = loadHeatMapRankings(dataObject, 'redis');
+    var RiakRankings = loadHeatMapRankings(dataObject, 'riak');
+    var DynamoRankings = loadHeatMapRankings(dataObject, 'dynamo');
+    var OracleRankings = loadHeatMapRankings(dataObject, 'oracle');
+    var FoundationRankings = loadHeatMapRankings(dataObject, 'foundation');
+    var VoltRankings = loadHeatMapRankings(dataObject, 'volt');
+
+
     var data = {
-        labels: ['test', 'test', 'test'],
+        labels: dataObject.features,
         datasets: [
             {
                 label: 'Accumulo',
-                data: [8, 6, 5]
+                data: AccumuloRankings
+            },
+            {
+                label: 'Cassandra',
+                data: CassandraRankings
+            },
+            {
+                label: 'hBase',
+                data: HBaseRankings
+            },
+            {
+                label: 'MongoDB',
+                data: MongoRankings
+            },
+            {
+                label: 'CouchDB',
+                data: CouchRankings
+            },
+            {
+                label: 'Couchbase',
+                data: CouchbaseRankings
+            },
+            {
+                label: 'OrientDB',
+                data: OrientRankings
+            },
+            {
+                label: 'Neo4j',
+                data: NeoRankings
+            },
+            {
+                label: 'Redis',
+                data: RedisRankings
+            },
+            {
+                label: 'Riak',
+                data: RiakRankings
+            },
+            {
+                label: 'DynamoDB',
+                data: DynamoRankings
+            },
+            {
+                label: 'Oracle NoSQL',
+                data: OracleRankings
+            },
+            {
+                label: 'FoundationDB',
+                data: FoundationRankings
+            },
+            {
+                label: 'VoltDB',
+                data: VoltRankings
             }
-//                            {
-//                                label: 'Cassandra',
-//                                data: [6, 8, 5, 6, 5, 5, 7]
-//                            },
-//                            {
-//                                label: 'HBase',
-//                                data: [8, 5, 6, 4, 2, 2, 3]
-//                            },
-//                            {
-//                                label: 'MongoDB',
-//                                data: [4, 0, 7, 4, 6, 3, 2]
-//                            },
-//                            {
-//                                label: 'CouchDB',
-//                                data: [1, 0, 0, 7, 0, 4, 1]
-//                            }
+
         ]
     };
 
@@ -944,25 +1112,4 @@ function reloadHeatmapData(data){
 
     var ctx = document.getElementById('heatmap').getContext('2d');
     var newChart = new Chart(ctx).HeatMap(data, options);
-}
-
-function loadHeatMapRankings(databaseName, featureType) {
-    var json;
-    var returnData2 = [];
-
-    console.log("http://localhost:8080/rest/database/chart/get/ranking/" + databaseName + "/"+featureType);
-
-    $.ajax({
-        type: "GET",
-        url: "http://localhost:8080/rest/database/chart/get/ranking/" + databaseName + "/"+featureType,
-        async: false,
-        dataType: "json",
-        success: function (data) {
-            console.log("in success callback data");
-            returnData2 = data.rankings;
-        }
-    });
-
-    console.log(returnData2);
-    return returnData2;
 }

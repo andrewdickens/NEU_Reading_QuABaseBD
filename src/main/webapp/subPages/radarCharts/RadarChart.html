@@ -313,7 +313,7 @@
                     </li>
 
                     <li>
-                        <a href="../index.html"><i class="fa fa-edit fa-fw"></i>BootStrap
+                        <a href="../../pages/index.html"><i class="fa fa-edit fa-fw"></i>BootStrap
                             Template</a>
                     </li>
                 </ul>
@@ -369,76 +369,6 @@
                         <!--<div class="container">-->
                         <canvas id="radarChart" width="600" height="400"></canvas>
 
-                        <!--<script>-->
-                            <!--loadRadarData('databaseDescription', 'accumulo');-->
-                        <!--</script>-->
-
-                        <script>
-                            function getSelectValues(select) {
-                                var result = [];
-                                var options = select && select.options;
-                                var opt;
-
-                                var count = 0;
-                                for (var i = 0, iLen = options.length; i < iLen; i++) {
-                                    opt = options[i];
-
-                                    if (opt.selected) {
-                                        count++;
-                                        if (count > 3) {
-//                                                alert("Please select no more than 2 values");
-                                            return 'accumulo';
-                                        }
-                                        result.push(opt.value || opt.text);
-                                    }
-                                }
-                                return result;
-                            }
-                        </script>
-
-                        <script>
-                            function getSelectFeatures(select) {
-                                var result = [];
-                                var options = select && select.options;
-                                var opt;
-
-                                var count = 0;
-                                for (var i = 0, iLen = options.length; i < iLen; i++) {
-                                    opt = options[i];
-
-                                    if (opt.selected) {
-                                        count++;
-                                        if (count > 7) {
-                                                alert("Please select no more than 7 features to compare");
-                                            return;
-                                        }
-                                        result.push(opt.value || opt.text);
-                                    }
-                                }
-                                return result;
-                            }
-                        </script>
-
-                        <script>
-                            function getSelectValuesCount(select) {
-                                var result = [];
-                                var options = select && select.options;
-                                var opt;
-
-                                var count = 0;
-                                for (var i = 0, iLen = options.length; i < iLen; i++) {
-                                    opt = options[i];
-
-                                    if (opt.selected) {
-                                        count++;
-
-                                        result.push(opt.value || opt.text);
-                                    }
-                                }
-                                return count;
-                            }
-                        </script>
-                        <!--</div>-->
                     </div>
                 </div>
             </div>
@@ -448,15 +378,15 @@
                 <div class="form group">
                     <label>Choose Feature Category</label>
                     <select class="form-control-edit" id="featureList" onchange="
-                var x = document.getElementById('featureList');
-                var s = x.options[x.selectedIndex].value;
-                var t = document.getElementById('database');
-                document.getElementById('featureValues').innerHTML = document.getElementById(s).innerHTML;
-                console.log(s);
-
-                document.getElementById('chart-feature-identifier').innerHTML = capitalizeFirstLetter(s) + ' Features';
-
-                var radarChartObject = {numDatabases: getSelectValuesCount(t), databases: getSelectValues(t), featureType: s};
+//                var x = document.getElementById('featureList');
+//                var s = x.options[x.selectedIndex].value;
+//                var t = document.getElementById('database');
+//                document.getElementById('featureValues').innerHTML = document.getElementById(s).innerHTML;
+//                console.log(s);
+//
+//                document.getElementById('chart-feature-identifier').innerHTML = capitalizeFirstLetter(s) + ' Features';
+//
+//                var radarChartObject = {numDatabases: getSelectValuesCount(t), databases: getSelectValues(t), featureType: s};
                 ">
                         <OPTION value=" ">Select Feature Type</OPTION>
                         <OPTION value="admin">Admin</OPTION>
@@ -471,7 +401,9 @@
                 </div>
 
                 <div class="form-group">
-                    <form onselect="validate()">
+                    <form onselect="
+//                    validate()
+                    ">
                         <select class="form-control" multiple="" id="admin"
                                 name="admin">
                             <OPTION value="Configuration Files">Configuration Files</OPTION>
@@ -486,7 +418,9 @@
                 </div>
 
                 <div class="form-group">
-                    <form onselect="validate()">
+                    <form onselect="
+//                    validate()
+                    ">
                         <select class="form-control" multiple="" id="consistency"
                                 name="consistency">
                             <OPTION value="Object-Level isolation on updates">Object-Level isolation on updates</OPTION>
@@ -504,7 +438,9 @@
                 </div>
 
                 <div class="form-group">
-                    <form onselect="validate()">
+                    <form onselect="
+//                    validate()
+                    ">
                         <select class="form-control" multiple="" id="scalability"
                                 name="scalability">
                             <OPTION value="Scale Out Architecture">Scale Out Architecture</OPTION>
@@ -517,7 +453,9 @@
                 </div>
 
                 <div class="form-group">
-                    <form onselect="validate()">
+                    <form onselect="
+//                    validate()
+                    ">
                         <select class="form-control" multiple="" id="data_model"
                                 name="data_model">
                             <OPTION value="Scalable Request Processing Architecture">Enforced Schema</OPTION>
@@ -536,7 +474,9 @@
                 </div>
 
                 <div class="form-group">
-                    <form onselect="validate()">
+                    <form onselect="
+//                    validate()
+                    ">
                         <select class="form-control" multiple="" id="data_replication"
                                 name="data_replication">
                             <OPTION value="Replication Architecture">Replication Architecture</OPTION>
@@ -554,7 +494,9 @@
                 </div>
 
                 <div class="form-group">
-                    <form onselect="validate()">
+                    <form onselect="
+//                    validate()
+                    ">
                         <select class="form-control" multiple="" id="data_distribution"
                                 name="data_distribution">
                             <OPTION value="Data Distribution Architecture">Data Distribution Architecture</OPTION>
@@ -569,7 +511,9 @@
                 </div>
 
                 <div class="form-group">
-                    <form onselect="validate()">
+                    <form onselect="
+//                    validate()
+                    ">
                         <select class="form-control" multiple="" id="security"
                                 name="security">
                             <OPTION value="Client Authentication">Client Authentication</OPTION>
@@ -585,7 +529,9 @@
                 </div>
 
                 <div class="form-group">
-                    <form onselect="validate()">
+                    <form onselect="
+//                    validate()
+                    ">
                         <select class="form-control" multiple="" id="query"
                                 name="query">
                             <OPTION value="API-based">API-based</OPTION>
@@ -605,7 +551,9 @@
                 </div>
 
                 <div class="form-group">
-                    <form onselect="validate()">
+                    <form onselect="
+//                    validate()
+                    ">
                         <select class="form-control" multiple="" id="empty"
                                 name="empty">
                         </select>
@@ -614,7 +562,9 @@
 
                 <div class="form-group">
                     <label>Choose features to display on chart</label>
-                    <form onselect="validate()">
+                    <form onselect="
+//                    validate()
+                    ">
                         <select class="form-control" multiple="" id="featureValues"
                                 name="featureCompare">
                         </select>
@@ -624,7 +574,9 @@
 
                 <div class="form-group">
                     <label>Choose databases to compare</label>
-                    <form onselect="validate()">
+                    <form onselect="
+//                    validate()
+                    ">
                         <select class="form-control-edit" multiple="" id="database"
                                 name="databaseCompare">
                             <OPTION value="accumulo">Accumulo</OPTION>
