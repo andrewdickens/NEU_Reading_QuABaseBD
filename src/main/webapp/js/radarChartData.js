@@ -337,7 +337,6 @@ function loadRadarDataObjectOne2(dataObject) {
 function loadRadarDataObjectTwo2(dataObject) {
     var databaseName1 = dataObject.databases[0];
     var databaseName2 = dataObject.databases[1];
-    //var radarLabels1 = loadChartLabels(dataObject.databases[0], dataObject.featureType);
     var accumuloValues1 = loadRadarChartData2(dataObject, 0);
     var accumuloValues2 = loadRadarChartData2(dataObject, 1);
 
@@ -351,7 +350,7 @@ function loadRadarDataObjectTwo2(dataObject) {
                     label: capitalizeFirstLetter(databaseName1),
                     data: accumuloValues1,
                     backgroundColor: "rgba(220,65,65,0.0)",
-                    borderColor: "rgba(220,65,65,.7)",
+                    borderColor: "rgba(220,65,65,.3)",
                     pointBackgroundColor: "rgba(220,65,65,.7)",
                     pointBorderColor: "rgba(220,65,65,.7)",
                     pointHoverBackgroundColor: "#fff",
@@ -361,7 +360,7 @@ function loadRadarDataObjectTwo2(dataObject) {
                     label: capitalizeFirstLetter(databaseName2),
                     data: accumuloValues2,
                     backgroundColor: "rgba(63, 191, 127,0.0)",
-                    borderColor: "rgba(63, 191, 127,.7)",
+                    borderColor: "rgba(63, 191, 127,.3)",
                     pointBackgroundColor: "rgba(63, 191, 127,.7)",
                     pointBorderColor: "rgba(63, 191, 127,.7)",
                     pointHoverBackgroundColor: "#fff",

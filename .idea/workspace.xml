@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="566d8638-a090-4f88-87bf-6f0a01cb65e4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html" afterPath="$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/rest/FeatureRatings.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/WEB-INF/classes/com/mkyong/rest/FeatureRatings.class" afterPath="$PROJECT_DIR$/target/RESTfulExample/WEB-INF/classes/com/mkyong/rest/FeatureRatings.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java" afterPath="$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html" afterPath="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/js/heatMapData.js" afterPath="$PROJECT_DIR$/target/RESTfulExample/js/heatMapData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/js/radarChartData.js" afterPath="$PROJECT_DIR$/target/RESTfulExample/js/radarChartData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/subPages/radarCharts/RadarChart.html" afterPath="$PROJECT_DIR$/target/RESTfulExample/subPages/radarCharts/RadarChart.html" />
     </list>
     <ignored path="RESTfulExample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,86 +33,80 @@
     <favorites_list name="RESTfulExample" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4784792">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="RadarChart.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.97402596">
-                  <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="17.5">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="radarChartData.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/js/radarChartData.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="522" column="5" selection-start-line="522" selection-start-column="5" selection-end-line="522" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="JSONServiceChartData.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceChartData.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="24" column="0" selection-start-line="24" selection-start-column="2" selection-end-line="28" selection-end-column="7" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="RadarChart.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-267.41666">
-                  <caret line="654" column="0" selection-start-line="633" selection-start-column="0" selection-end-line="654" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="HeatMap.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4140625">
-                  <caret line="338" column="48" selection-start-line="338" selection-start-column="48" selection-end-line="338" selection-end-column="48" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="heatMapData.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/js/heatMapData.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="1018" column="5" selection-start-line="1018" selection-start-column="5" selection-end-line="1018" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="RadarChart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.625">
+              <caret line="389" column="18" selection-start-line="389" selection-start-column="18" selection-end-line="389" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="17.5">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="radarChartData.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/radarChartData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.8937198">
+              <caret line="352" column="51" selection-start-line="352" selection-start-column="51" selection-end-line="352" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loadDatabaseInfo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/loadDatabaseInfo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="heatMapData.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/heatMapData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1039" column="33" selection-start-line="1026" selection-start-column="26" selection-end-line="1039" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONServiceChartData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceChartData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="2" selection-end-line="28" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FeatureRatings.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="761" column="61" selection-start-line="761" selection-start-column="61" selection-end-line="761" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -172,12 +175,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Replication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Security.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Scalability.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceChartData.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" />
       </list>
     </option>
   </component>
@@ -206,9 +209,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="1440" />
     <option name="y" value="23" />
-    <option name="width" value="1436" />
-    <option name="height" value="877" />
+    <option name="width" value="1916" />
+    <option name="height" value="1177" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1155,15 +1159,15 @@
       <workItem from="1470462094909" duration="1477000" />
       <workItem from="1470463761227" duration="118708000" />
       <workItem from="1471313486926" duration="10000" />
-      <workItem from="1471313502493" duration="18161000" />
+      <workItem from="1471313502493" duration="20435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223618000" />
+    <option name="totallyTimeSpent" value="225892000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1436" height="877" extended-state="6" />
+    <frame x="1440" y="23" width="1916" height="1177" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1175,10 +1179,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909784" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24713376" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4018433" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40636942" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24892396" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18516542" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1316,14 +1320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.026642984">
-          <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/QueryLanguage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.035523977">
@@ -1345,10 +1341,10 @@
         <state vertical-scroll-proportion="0.61456484">
           <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="69" selection-end-column="9" />
           <folding>
-            <element signature="e#2958#2959#0" expanded="true" />
-            <element signature="e#2988#2989#0" expanded="true" />
-            <element signature="e#3044#3045#0" expanded="true" />
-            <element signature="e#3088#3089#0" expanded="true" />
+            <element signature="e#2958#2959#0" expanded="false" />
+            <element signature="e#2988#2989#0" expanded="false" />
+            <element signature="e#3044#3045#0" expanded="false" />
+            <element signature="e#3088#3089#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1369,30 +1365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceChartData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="2" selection-end-line="28" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/radarChartData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="522" column="5" selection-start-line="522" selection-start-column="5" selection-end-line="522" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/heatMapData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1018" column="5" selection-start-line="1018" selection-start-column="5" selection-end-line="1018" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="17.5">
@@ -1403,16 +1375,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-267.41666">
-          <caret line="654" column="0" selection-start-line="633" selection-start-column="0" selection-end-line="654" selection-end-column="0" />
+        <state vertical-scroll-proportion="-10.625">
+          <caret line="389" column="18" selection-start-line="389" selection-start-column="18" selection-end-line="389" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4140625">
+        <state vertical-scroll-proportion="-6.6573424">
           <caret line="338" column="48" selection-start-line="338" selection-start-column="48" selection-end-line="338" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/loadDatabaseInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/heatMapData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1039" column="33" selection-start-line="1026" selection-start-column="26" selection-end-line="1039" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceChartData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="2" selection-end-line="28" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="761" column="61" selection-start-line="761" selection-start-column="61" selection-end-line="761" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/radarChartData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8937198">
+          <caret line="352" column="51" selection-start-line="352" selection-start-column="51" selection-end-line="352" selection-end-column="51" />
           <folding />
         </state>
       </provider>

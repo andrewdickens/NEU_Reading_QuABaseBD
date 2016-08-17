@@ -1087,10 +1087,10 @@ function loadHeatmapObject(dataObject){
                 label: 'DynamoDB',
                 data: DynamoRankings
             },
-            {
-                label: 'Oracle NoSQL',
-                data: OracleRankings
-            },
+            //{
+            //    label: 'Oracle NoSQL',
+            //    data: OracleRankings
+            //},
             {
                 label: 'FoundationDB',
                 data: FoundationRankings

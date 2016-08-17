@@ -558,16 +558,18 @@ public class FeatureRatings {
 								return 50;
 
 				} else if (feature
-						.equals("Sorting of query results")) { //todo values don't match spreadsheet
+						.equals("Sorting of query results")) {
 						if (returnValueQuery.getSortingOfQueryResults().equals("NoValue")) {
 								return 0;
 						} else if (returnValueQuery.getSortingOfQueryResults().equals("none")) {
 								return 1;
-						} else if (returnValueQuery.getSortingOfQueryResults().equals("1")) {
+						} else if (returnValueQuery.getSortingOfQueryResults().equals("ascending")) {
 								return 4;
-						} else if (returnValueQuery.getSortingOfQueryResults().equals("2")) {
+						} else if (returnValueQuery.getSortingOfQueryResults().equals("descending")) {
+								return 4;
+						} else if (returnValueQuery.getSortingOfQueryResults().equals("ascending, descending")) {
 								return 7;
-						} else
+						}else
 								return 50;
 
 				} else if (feature.equals("Triggers")) {
@@ -757,18 +759,20 @@ public class FeatureRatings {
 						} else
 								return 50;
 
-				} else if (feature.equals("Server authentication")) {//todo values don't map to excel
+				} else if (feature.equals("Server authentication")) {
 
 						if (returnValue.getServerAuthentication().equals("NoValue")) {
 								return 0;
-						} else if (returnValue.getServerAuthentication().equals("not secured")) {
+						} else if (returnValue.getServerAuthentication().equals("shared keyfile")) {
 								return 1;
-						} else if (returnValue.getServerAuthentication().equals("1")) {
-								return 4;
-						} else if (returnValue.getServerAuthentication().equals("2+")) {
+						} else if (returnValue.getServerAuthentication().equals("SSL")) {
 								return 7;
-						} else
-								return 50;
+						} else if (returnValue.getServerAuthentication().equals("Not secured")) {
+								return 7;
+						} else if (returnValue.getServerAuthentication().equals("server account credentials")) {
+								return 4;
+						}else
+								return 7;
 
 				} else if (feature.equals("Credential Store")) {
 
