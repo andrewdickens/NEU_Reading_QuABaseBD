@@ -40,33 +40,6 @@ public class FeatureRatings {
 				return null;
 		}
 
-//		public static Integer getFeatureRatingJSON(String databaseName, String featureCategory,
-//				String feature) throws IOException, ParserConfigurationException, SAXException {
-//
-//				System.out.println("IN JSON**************");
-//				//todo retrieve and parse JSON, create database, call methods
-//
-//				if (featureCategory.equals("admin")) {
-//						return FeatureRatings.getAdminRatings(databaseName, feature);
-//				} else if (featureCategory.equals("consistency")) {
-//						return FeatureRatings.getConsistencyRatings2(databaseName, feature);
-//				} else if (featureCategory.equals("data_distribution")) {
-//						return FeatureRatings.getDataDistributionRatings2(databaseName, feature);
-//				} else if (featureCategory.equals("data_model")) {
-//						return getDataModelRatingsJSON(databaseName, feature);
-////						return FeatureRatings.getDataModelRatings2(databaseName, feature);
-//				} else if (featureCategory.equals("query")) {
-//						return FeatureRatings.getQueryLanguagesRatings2(databaseName, feature);
-//				} else if (featureCategory.equals("data_replication")) {
-//						return FeatureRatings.getDataReplicationRatings2(databaseName, feature);
-//				} else if (featureCategory.equals("security")) {
-//						return FeatureRatings.getSecurityRatings2(databaseName, feature);
-//				} else if (featureCategory.equals("scalability")) {
-//						return FeatureRatings.getScalabilityRatings2(databaseName, feature);
-//				}
-//				return null;
-//		}
-
 		public static Integer getAdminRatings(String databaseName, String feature) {
 
 				Admin returnValueAdmin = new Admin();
@@ -362,106 +335,106 @@ public class FeatureRatings {
 				return null;
 		}
 
-		public static Integer getDataModelRatings2(String databaseName, String feature) {
-
-				DataModel returnValueDataModel = new DataModel();
-				returnValueDataModel.setDataModelDescription(ArrayParser
-						.parseStringToArray(Database.retrieveDescription(databaseName, "data_model")));
-
-				if (feature.equals("Scalable Request Processing Architecture")) {
-						if (returnValueDataModel.getEnforcedSchema().equals("required")) {
-								return 2;
-						} else if (returnValueDataModel.getEnforcedSchema().equals("optional")) {
-								return 4;
-						} else if (returnValueDataModel.getEnforcedSchema().equals("not required")) {
-								return 7;
-						} else
-								return 50;
-				} else if (feature.equals("Opaque Data Objects (need application interpretation)")) {
-
-						if (returnValueDataModel.getOpaqueDataObjects().equals("required")) {
-								return 1;
-						} else if (returnValueDataModel.getOpaqueDataObjects().equals("not required")) {
-								return 7;
-						} else
-								return 50;
-				} else if (feature.equals("Hierarchical Data Objects (e.g. sub objects)")) {
-
-						if (returnValueDataModel.getHierarchicalDataObjects().equals("not supported")) {
-								return 1;
-						} else if (returnValueDataModel.getHierarchicalDataObjects().equals("supported")) {
-								return 7;
-						} else
-								return 50;
-				} else if (feature.equals("Automatically Allocated Keys")) {
-						if (returnValueDataModel.getAutoAllocatedKeys().equals("not supported")) {
-								return 1;
-						} else if (returnValueDataModel.getAutoAllocatedKeys().equals("supported")) {
-								return 7;
-						} else
-								return 50;
-				} else if (feature.equals("Composite Keys")) {
-
-						if (returnValueDataModel.getCompositeKeys().equals("not supported")) {
-								return 1;
-						} else if (returnValueDataModel.getCompositeKeys().equals("supported")) {
-								return 7;
-						} else
-								return 50;
-				} else if (feature.equals("Secondary Indexes")) {
-
-						if (returnValueDataModel.getSecondaryIndexes().equals("not supported")) {
-								return 1;
-						} else if (returnValueDataModel.getSecondaryIndexes().equals("supported")) {
-								return 7;
-						} else
-								return 50;
-				} else if (feature.equals("Query by Key Ranges")) {
-
-						if (returnValueDataModel.getQueryByKeyRanges().equals("not supported")) {
-								return 1;
-						} else if (returnValueDataModel.getQueryByKeyRanges().equals("supported")) {
-								return 7;
-						} else
-								return 50;
-				} else if (feature.equals("Query by Partial Key")) {
-						if (returnValueDataModel.getQueryByPartialKeys().equals("not supported")) {
-								return 1;
-						} else if (returnValueDataModel.getQueryByPartialKeys().equals("supported")) {
-								return 6;
-						} else
-								return 50;
-				} else if (feature.equals("Query by Non-keyed Values")) {
-
-						if (returnValueDataModel.getQueryByNonKeyValues().equals("not supported")) {
-								return 1;
-						} else if (returnValueDataModel.getQueryByNonKeyValues().equals("supported")) {
-								return 7;
-						} else
-								return 50;
-				} else if (feature.equals("Map Reduce API")) {
-
-						if (returnValueDataModel.getMapReduceAPI().equals("not supported")) {
-								return 1;
-						} else if (returnValueDataModel.getMapReduceAPI()
-								.equals("intergrated with an external framework")) {
-								return 5;
-						} else if (returnValueDataModel.getMapReduceAPI().equals("builtin")) {
-								return 7;
-						} else
-								return 50;
-				}
-				//						else if (feature.equals("Indexed Text Search")) {
-				//
-				//								if (returnValueDataModel.getPhysicalStorageUsage().equals("not supported")) {
-				//										return 1;
-				//								} else if (returnValueDataModel.getPhysicalStorageUsage().equals("supported")) {
-				//										return 7;
-				//								}else
-				//										return 50;
-				//						}
-				return null;
-		}
+//		public static Integer getDataModelRatings2(String databaseName, String feature) {
+//
+//				DataModel returnValueDataModel = new DataModel();
+//				returnValueDataModel.setDataModelDescription(ArrayParser
+//						.parseStringToArray(Database.retrieveDescription(databaseName, "data_model")));
+//
+//				if (feature.equals("Scalable Request Processing Architecture")) {
+//						if (returnValueDataModel.getEnforcedSchema().equals("required")) {
+//								return 2;
+//						} else if (returnValueDataModel.getEnforcedSchema().equals("optional")) {
+//								return 4;
+//						} else if (returnValueDataModel.getEnforcedSchema().equals("not required")) {
+//								return 7;
+//						} else
+//								return 50;
+//				} else if (feature.equals("Opaque Data Objects (need application interpretation)")) {
+//
+//						if (returnValueDataModel.getOpaqueDataObjects().equals("required")) {
+//								return 1;
+//						} else if (returnValueDataModel.getOpaqueDataObjects().equals("not required")) {
+//								return 7;
+//						} else
+//								return 50;
+//				} else if (feature.equals("Hierarchical Data Objects (e.g. sub objects)")) {
+//
+//						if (returnValueDataModel.getHierarchicalDataObjects().equals("not supported")) {
+//								return 1;
+//						} else if (returnValueDataModel.getHierarchicalDataObjects().equals("supported")) {
+//								return 7;
+//						} else
+//								return 50;
+//				} else if (feature.equals("Automatically Allocated Keys")) {
+//						if (returnValueDataModel.getAutoAllocatedKeys().equals("not supported")) {
+//								return 1;
+//						} else if (returnValueDataModel.getAutoAllocatedKeys().equals("supported")) {
+//								return 7;
+//						} else
+//								return 50;
+//				} else if (feature.equals("Composite Keys")) {
+//
+//						if (returnValueDataModel.getCompositeKeys().equals("not supported")) {
+//								return 1;
+//						} else if (returnValueDataModel.getCompositeKeys().equals("supported")) {
+//								return 7;
+//						} else
+//								return 50;
+//				} else if (feature.equals("Secondary Indexes")) {
+//
+//						if (returnValueDataModel.getSecondaryIndexes().equals("not supported")) {
+//								return 1;
+//						} else if (returnValueDataModel.getSecondaryIndexes().equals("supported")) {
+//								return 7;
+//						} else
+//								return 50;
+//				} else if (feature.equals("Query by Key Ranges")) {
+//
+//						if (returnValueDataModel.getQueryByKeyRanges().equals("not supported")) {
+//								return 1;
+//						} else if (returnValueDataModel.getQueryByKeyRanges().equals("supported")) {
+//								return 7;
+//						} else
+//								return 50;
+//				} else if (feature.equals("Query by Partial Key")) {
+//						if (returnValueDataModel.getQueryByPartialKeys().equals("not supported")) {
+//								return 1;
+//						} else if (returnValueDataModel.getQueryByPartialKeys().equals("supported")) {
+//								return 6;
+//						} else
+//								return 50;
+//				} else if (feature.equals("Query by Non-keyed Values")) {
+//
+//						if (returnValueDataModel.getQueryByNonKeyValues().equals("not supported")) {
+//								return 1;
+//						} else if (returnValueDataModel.getQueryByNonKeyValues().equals("supported")) {
+//								return 7;
+//						} else
+//								return 50;
+//				} else if (feature.equals("Map Reduce API")) {
+//
+//						if (returnValueDataModel.getMapReduceAPI().equals("not supported")) {
+//								return 1;
+//						} else if (returnValueDataModel.getMapReduceAPI()
+//								.equals("intergrated with an external framework")) {
+//								return 5;
+//						} else if (returnValueDataModel.getMapReduceAPI().equals("builtin")) {
+//								return 7;
+//						} else
+//								return 50;
+//				}
+//				//						else if (feature.equals("Indexed Text Search")) {
+//				//
+//				//								if (returnValueDataModel.getPhysicalStorageUsage().equals("not supported")) {
+//				//										return 1;
+//				//								} else if (returnValueDataModel.getPhysicalStorageUsage().equals("supported")) {
+//				//										return 7;
+//				//								}else
+//				//										return 50;
+//				//						}
+//				return null;
+//		}
 
 		public static Integer getQueryLanguagesRatings2(String databaseName, String feature) {
 

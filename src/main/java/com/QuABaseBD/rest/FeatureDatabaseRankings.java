@@ -22,13 +22,4 @@ import java.io.IOException;
 				return FeatureRatings.getFeatureRating(databaseName, featureCategory, featureType);
 		}
 
-//		@GET @Path("/get/ranking/{database}/{featureCategory}/{feature}/{fileName}")
-//		@Produces(MediaType.APPLICATION_JSON)
-//		public Integer getFeatureRankingJSON(@PathParam("database") String databaseName,
-//				@PathParam("featureCategory") String featureCategory,
-//				@PathParam("feature") String featureType, @PathParam("fileName") String fileName)
-//				throws IOException, ParserConfigurationException, SAXException {
-//				return FeatureRatings.getFeatureRatingJSON(databaseName, featureCategory, featureType);
-//		}
-
 }
