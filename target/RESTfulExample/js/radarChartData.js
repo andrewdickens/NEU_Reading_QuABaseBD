@@ -314,8 +314,8 @@ function loadRadarDataObjectOne2(dataObject) {
                 {
                     label: capitalizeFirstLetter(databaseName),
                     data: accumuloValues,
-                    backgroundColor: "rgba(220,65,65,0.0)",
-                    borderColor: "rgba(220,65,65,.7)",
+                    backgroundColor: "rgba(220,65,65,0.1)",
+                    borderColor: "rgba(220,65,65,.3)",
                     pointBackgroundColor: "rgba(220,65,65,.7)",
                     pointBorderColor: "rgba(220,65,65,.7)",
                     pointHoverBackgroundColor: "#fff",
@@ -349,7 +349,7 @@ function loadRadarDataObjectTwo2(dataObject) {
                 {
                     label: capitalizeFirstLetter(databaseName1),
                     data: accumuloValues1,
-                    backgroundColor: "rgba(220,65,65,0.0)",
+                    backgroundColor: "rgba(220,65,65,0.1)",
                     borderColor: "rgba(220,65,65,.3)",
                     pointBackgroundColor: "rgba(220,65,65,.7)",
                     pointBorderColor: "rgba(220,65,65,.7)",
@@ -359,12 +359,12 @@ function loadRadarDataObjectTwo2(dataObject) {
                 {
                     label: capitalizeFirstLetter(databaseName2),
                     data: accumuloValues2,
-                    backgroundColor: "rgba(63, 191, 127,0.0)",
-                    borderColor: "rgba(63, 191, 127,.3)",
-                    pointBackgroundColor: "rgba(63, 191, 127,.7)",
-                    pointBorderColor: "rgba(63, 191, 127,.7)",
+                    backgroundColor: "rgba(230, 230, 0,0.2)",
+                    borderColor: "rgba(230, 230, 0,.3)",
+                    pointBackgroundColor: "rgba(230, 230, 0,.7)",
+                    pointBorderColor: "rgba(230, 230, 0,.7)",
                     pointHoverBackgroundColor: "#fff",
-                    pointHoverBorderColor: "rgba(63, 191, 127,.7)"
+                    pointHoverBorderColor: "rgba(230, 230, 0,.7)"
                 }
             ]
         },
@@ -396,8 +396,8 @@ function loadRadarDataObjectThree2(dataObject) {
                 {
                     label: capitalizeFirstLetter(databaseName1),
                     data: accumuloValues1,
-                    backgroundColor: "rgba(220,65,65,0.0)",
-                    borderColor: "rgba(220,65,65,.7)",
+                    backgroundColor: "rgba(220,65,65,0.1)",
+                    borderColor: "rgba(220,65,65,.3)",
                     pointBackgroundColor: "rgba(220,65,65,.7)",
                     pointBorderColor: "rgba(220,65,65,.7)",
                     pointHoverBackgroundColor: "#fff",
@@ -406,18 +406,18 @@ function loadRadarDataObjectThree2(dataObject) {
                 {
                     label: capitalizeFirstLetter(databaseName2),
                     data: accumuloValues2,
-                    backgroundColor: "rgba(63, 191, 127,0.0)",
-                    borderColor: "rgba(63, 191, 127,.7)",
-                    pointBackgroundColor: "rgba(63, 191, 127,.7)",
-                    pointBorderColor: "rgba(63, 191, 127,.7)",
+                    backgroundColor: "rgba(230, 230, 0,0.2)",
+                    borderColor: "rgba(230, 230, 0,.3)",
+                    pointBackgroundColor: "rgba(230, 230, 0,.7)",
+                    pointBorderColor: "rgba(230, 230, 0,.7)",
                     pointHoverBackgroundColor: "#fff",
-                    pointHoverBorderColor: "rgba(63, 191, 127,.7)"
+                    pointHoverBorderColor: "rgba(230, 230, 0,.7)"
                 },
                 {
                     label: capitalizeFirstLetter(databaseName3),
                     data: accumuloValues3,
-                    backgroundColor: "rgba(63, 127, 191,0.0)",
-                    borderColor: "rgba(63, 127, 191,.7)",
+                    backgroundColor: "rgba(63, 127, 191,0.3)",
+                    borderColor: "rgba(63, 127, 191,.3)",
                     pointBackgroundColor: "rgba(63, 127, 191,.7)",
                     pointBorderColor: "rgba(63, 127, 191,.7)",
                     pointHoverBackgroundColor: "#fff",
@@ -434,44 +434,6 @@ function loadRadarDataObjectThree2(dataObject) {
         }
     });
 }
-
-//function loadCassandra(feature, databaseName) {
-//    console.log("in cassandra");
-//    var radarLabels = loadChartLabels(databaseName, feature);
-//    var cassandraValues = loadRadarChartData(databaseName, feature);
-//
-//    console.log(radarLabels);
-//    console.log(cassandraValues);
-//
-//    var ctx = document.getElementById("radarChart");
-//    var myChart = new Chart(ctx, {
-//        type: 'radar',
-//        data: {
-//            labels: radarLabels,
-//            datasets: [
-//                {
-//                    label: databaseName,
-//                    data: cassandraValues,
-//                    backgroundColor: "rgba(220,65,65,0.0)",
-//                    borderColor: "rgba(220,120,120,1)",
-//                    pointBackgroundColor: "rgba(220,120,120,1)",
-//                    pointBorderColor: "rgba(220,120,120,1)",
-//                    pointHoverBackgroundColor: "#fff",
-//                    pointHoverBorderColor: "rgba(179,181,198,1)"
-////                                            borderWidth: 1
-//                }
-//            ]
-//        },
-//        options: {
-////                                    legendCallback: function(myChart){},
-//            scales: {
-//                ticks: {
-//                    beginAtZero: true
-//                }
-//            }
-//        }
-//    });
-//}
 
 function loadRadarChartData(databaseName, featureType) {
     var json;
