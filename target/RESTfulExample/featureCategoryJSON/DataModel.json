@@ -2,28 +2,28 @@
     "category": "Data Model",
     "description": "Relative feature values to support compariosn of Data Model features",
     "version": "1.0",
-    "Fixed Schema" : 
+    "Enforced Schema" :
 
                     {
                     "required": "3", 
-                    "optional": "5"
+                    "not required": "5"
                     }
             ,
-    "Opaque Data Objects" :
+    "Opaque Data Objects (need application interpretation)" :
 
                 {
                     "not required" : "7",
                     "required" : "1"
                 }
             ,
-    "Hierarchical Data Objects" :
+    "HHierarchical Data Objects (e.g. sub objects)" :
 
                 {
                     "supported" : "7",
                     "not supported" : "1"
                 }
             ,
-    "Automatically Allocated Primary Key" :
+    "Automatically Allocated Keys" :
 
                 {
                     "supported" : "7",
@@ -44,21 +44,21 @@
                     "not supported" : "1"
                 }
             ,
-    "Query by Key Range" :
+    "Query by Key Ranges" :
 
                 {
                     "supported" : "7",
                     "not supported" : "1"
                 }
             ,
-    "Query by Partial Key" :
+    "Query by Partial Keys" :
 
                 {
                     "supported" : "7",
                     "not supported" : "1"
                 }
             ,
-    "Query by Non-Key Values" :
+    "Query by Non-keyed Values" :
 
                 {
                     "supported" : "7",

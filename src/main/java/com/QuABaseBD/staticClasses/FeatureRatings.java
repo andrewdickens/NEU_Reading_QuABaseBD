@@ -1,53 +1,25 @@
-package com.QuABaseBD.staticMethods;
+package com.QuABaseBD.staticClasses;
 
 import com.QuABaseBD.featureCategories.*;
-import com.QuABaseBD.featureCategoryRankings;
-import com.QuABaseBD.parsers.ArrayParser;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 import com.google.gson.stream.JsonReader;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URL;
 
 /**
  * Created by andrewdickens on 8/7/16.
  */
 public class FeatureRatings {
 
-		public static Integer getFeatureRatingAll(String databaseName, String featureCategory,
-				String feature) {
-				if (featureCategory.equals("admin")) {
-						return FeatureRatings.getAdminRatings(databaseName, feature);
-				} else if (featureCategory.equals("consistency")) {
-						return FeatureRatings.getConsistencyRatings2(databaseName, feature);
-				} else if (featureCategory.equals("data_distribution")) {
-						return FeatureRatings.getDataDistributionRatings2(databaseName, feature);
-				} else if (featureCategory.equals("data_model")) {
-						return FeatureRatings.getDataModelRatings2(databaseName, feature);
-				} else if (featureCategory.equals("query")) {
-						return FeatureRatings.getQueryLanguagesRatings2(databaseName, feature);
-				} else if (featureCategory.equals("data_replication")) {
-						return FeatureRatings.getDataReplicationRatings2(databaseName, feature);
-				} else if (featureCategory.equals("security")) {
-						return FeatureRatings.getSecurityRatings2(databaseName, feature);
-				} else if (featureCategory.equals("scalability")) {
-						return FeatureRatings.getScalabilityRatings2(databaseName, feature);
-				}
-				return null;
-		}
+		public static final String DATA_MODEL_JSON = "DataModel.json";
+		public static final String JSON_FILES_PATH =
+				"/Users/andrewdickens/Documents/School/IanReadingCourse/RESTfulExample 7/src/main/webapp/featureCategoryJSON/";
 
-		public static Integer getFeatureRatingJSON(String databaseName, String featureCategory,
-				String feature) throws IOException, ParserConfigurationException, SAXException {
-
-				System.out.println("IN JSON**************");
-				//todo retrieve and parse JSON, create database, call methods
-
+		public static Integer getFeatureRating(String databaseName, String featureCategory,
+				String feature) throws ParserConfigurationException, SAXException, IOException {
 				if (featureCategory.equals("admin")) {
 						return FeatureRatings.getAdminRatings(databaseName, feature);
 				} else if (featureCategory.equals("consistency")) {
@@ -56,7 +28,6 @@ public class FeatureRatings {
 						return FeatureRatings.getDataDistributionRatings2(databaseName, feature);
 				} else if (featureCategory.equals("data_model")) {
 						return getDataModelRatingsJSON(databaseName, feature);
-//						return FeatureRatings.getDataModelRatings2(databaseName, feature);
 				} else if (featureCategory.equals("query")) {
 						return FeatureRatings.getQueryLanguagesRatings2(databaseName, feature);
 				} else if (featureCategory.equals("data_replication")) {
@@ -68,6 +39,33 @@ public class FeatureRatings {
 				}
 				return null;
 		}
+
+//		public static Integer getFeatureRatingJSON(String databaseName, String featureCategory,
+//				String feature) throws IOException, ParserConfigurationException, SAXException {
+//
+//				System.out.println("IN JSON**************");
+//				//todo retrieve and parse JSON, create database, call methods
+//
+//				if (featureCategory.equals("admin")) {
+//						return FeatureRatings.getAdminRatings(databaseName, feature);
+//				} else if (featureCategory.equals("consistency")) {
+//						return FeatureRatings.getConsistencyRatings2(databaseName, feature);
+//				} else if (featureCategory.equals("data_distribution")) {
+//						return FeatureRatings.getDataDistributionRatings2(databaseName, feature);
+//				} else if (featureCategory.equals("data_model")) {
+//						return getDataModelRatingsJSON(databaseName, feature);
+////						return FeatureRatings.getDataModelRatings2(databaseName, feature);
+//				} else if (featureCategory.equals("query")) {
+//						return FeatureRatings.getQueryLanguagesRatings2(databaseName, feature);
+//				} else if (featureCategory.equals("data_replication")) {
+//						return FeatureRatings.getDataReplicationRatings2(databaseName, feature);
+//				} else if (featureCategory.equals("security")) {
+//						return FeatureRatings.getSecurityRatings2(databaseName, feature);
+//				} else if (featureCategory.equals("scalability")) {
+//						return FeatureRatings.getScalabilityRatings2(databaseName, feature);
+//				}
+//				return null;
+//		}
 
 		public static Integer getAdminRatings(String databaseName, String feature) {
 
@@ -1014,25 +1012,9 @@ public class FeatureRatings {
 						featureValue = returnValueDataModel.getMapReduceAPI();
 				}
 
-				JsonReader reader = new JsonReader(new FileReader("DataModel.json"));
+				JsonReader reader = new JsonReader(new FileReader(JSON_FILES_PATH + DATA_MODEL_JSON));
 
 				return featureCategoryRankings.readFeaturesArray(reader, feature, featureValue);
-
-		}
-
-		public static void main(String[] args)
-				throws IOException, ParserConfigurationException, SAXException {
-
-				DataModel returnValueDataModel = new DataModel();
-				returnValueDataModel.setDataModelDescription(ArrayParser
-						.parseStringToArray(Database.retrieveDescription("accumulo", "data_model")));
-
-				System.out.println("value is " + getFeatureRatingJSON("accumulo", "data_model", "Secondary Indexes"));
-
-				Integer test = getDataModelRatingsJSON("accumulo", "Secondary Indexes");
-				System.out.println("secondary indexes is " + returnValueDataModel.getSecondaryIndexes());
-
-				System.out.println("rating from JSON is " + test);
 
 		}
 

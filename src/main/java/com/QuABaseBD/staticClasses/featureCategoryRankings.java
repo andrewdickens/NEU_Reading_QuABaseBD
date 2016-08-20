@@ -1,4 +1,4 @@
-package com.QuABaseBD;
+package com.QuABaseBD.staticClasses;
 
 import com.google.gson.stream.JsonReader;
 
@@ -9,23 +9,14 @@ import java.io.IOException;
  */
 public class featureCategoryRankings {
 
-		public static Integer readFeaturesArray(JsonReader reader, String feature, String featureValue) throws IOException {
-				System.out.println("Starting readFeaturesArrayMethod");
-
-				System.out.println(reader.toString());
-
+		public static Integer readFeaturesArray(JsonReader reader, String feature, String featureValue)
+				throws IOException {
 				reader.beginObject();
 
 				while (reader.hasNext()) {
-
 						String name = reader.nextName();
-//						if (name.equals("category") || name.equals("description") || name.equals("version")) {
-//								System.out.println(name);
-//								reader.skipValue();
-//								continue;
-//						}
 
-						if(!name.equals(feature)) {
+						if (!name.equals(feature)) {
 								reader.skipValue();
 								continue;
 						}
@@ -40,11 +31,9 @@ public class featureCategoryRankings {
 
 		public static Integer readFeature(JsonReader reader, String featureValue) throws IOException {
 
-				System.out.println("feature value is " + featureValue);
 				reader.beginObject();
 				while (reader.hasNext()) {
 						String name = reader.nextName();
-						System.out.println("name is " + name);
 
 						if (!name.equals(featureValue)) {
 								reader.skipValue();
@@ -53,8 +42,7 @@ public class featureCategoryRankings {
 
 						return reader.nextInt();
 				}
-						reader.endObject();
-
+				reader.endObject();
 				return 50;
 		}
 
