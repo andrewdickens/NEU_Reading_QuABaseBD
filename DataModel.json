@@ -1,0 +1,84 @@
+{
+    "category": "Data Model",
+    "description": "Relative feature values to support compariosn of Data Model features",
+    "version": "1.0",
+    "Fixed Schema" : 
+
+                    {
+                    "required": "3", 
+                    "optional": "5"
+                    }
+            ,
+    "Opaque Data Objects" :
+
+                {
+                    "not required" : "7",
+                    "required" : "1"
+                }
+            ,
+    "Hierarchical Data Objects" :
+
+                {
+                    "supported" : "7",
+                    "not supported" : "1"
+                }
+            ,
+    "Automatically Allocated Primary Key" :
+
+                {
+                    "supported" : "7",
+                    "not supported" : "1"
+                }
+            ,
+    "Composite Keys" : 
+
+                {
+                    "supported" : "7",
+                    "not supported" : "1"
+                }
+            ,
+    "Secondary Indexes" :
+
+                {
+                    "supported" : "7",
+                    "not supported" : "1"
+                }
+            ,
+    "Query by Key Range" :
+
+                {
+                    "supported" : "7",
+                    "not supported" : "1"
+                }
+            ,
+    "Query by Partial Key" :
+
+                {
+                    "supported" : "7",
+                    "not supported" : "1"
+                }
+            ,
+    "Query by Non-Key Values" :
+
+                {
+                    "supported" : "7",
+                    "not supported" : "1"
+                }
+            ,
+    "Map-Reduce API" :
+
+                {
+                    "builtin" : "7",
+                    "integrated with an external framework" : "5",
+                    "not supported" : "1"
+                }
+            ,
+    "Indexed Text Search" :
+
+                {
+                    "support in a plug-in (e.g. Solr)" : "5",
+                    "proprietary (database-specific)" : "7",
+                    "not supported" : "1"
+                }
+
+}

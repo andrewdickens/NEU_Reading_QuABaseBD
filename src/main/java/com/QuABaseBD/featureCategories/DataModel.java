@@ -1,5 +1,8 @@
 package com.QuABaseBD.featureCategories;
 
+import java.io.File;
+import java.net.URL;
+
 /**
  * Created by andrewdickens on 8/6/16.
  */
@@ -140,5 +143,6 @@ public class DataModel{
 		public void setMapReduceAPI(String mapReduceAPI) {
 				this.mapReduceAPI = mapReduceAPI;
 		}
+
 
 }

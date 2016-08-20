@@ -1,4 +1,4 @@
-package com.QuABaseBD.staticClass;
+package com.QuABaseBD.staticMethods;
 
 import java.sql.*;
 
