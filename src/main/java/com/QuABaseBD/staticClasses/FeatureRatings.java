@@ -5,6 +5,7 @@ import com.google.gson.stream.JsonReader;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -960,6 +961,10 @@ public class FeatureRatings {
 				returnValueDataModel.setDataModelDescription(ArrayParser
 						.parseStringToArray(Database.retrieveDescription(databaseName, "data_model")));
 
+				File newFile = new File(".");
+
+				System.out.println("*******************************Path is " + newFile.getAbsoluteFile());
+
 				String featureValue = null;
 
 				if (feature.equals("Scalable Request Processing Architecture")) {
@@ -984,11 +989,20 @@ public class FeatureRatings {
 						featureValue = returnValueDataModel.getMapReduceAPI();
 				}
 
+				String filePath = new File("").getAbsolutePath();
+				String newPath = filePath + "/src/main/webapp/featureCategoryJSON/";
+
 				JsonReader reader = new JsonReader(new FileReader(JSON_FILES_PATH + DATA_MODEL_JSON));
 
 				return featureCategoryRankings.readFeaturesArray(reader, feature, featureValue);
 
 		}
+
+				public static void main(String[] args)
+						throws ParserConfigurationException, SAXException, IOException {
+
+						getDataModelRatingsJSON("accumulo", "test");
+				}
 
 }
 
