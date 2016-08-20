@@ -5,7 +5,6 @@ import com.google.gson.stream.JsonReader;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -21,21 +20,21 @@ public class FeatureRatings {
 		public static Integer getFeatureRating(String databaseName, String featureCategory,
 				String feature) throws ParserConfigurationException, SAXException, IOException {
 				if (featureCategory.equals("admin")) {
-						return FeatureRatings.getAdminRatings(databaseName, feature);
+						return getAdminRatings(databaseName, feature);
 				} else if (featureCategory.equals("consistency")) {
-						return FeatureRatings.getConsistencyRatings2(databaseName, feature);
+						return getConsistencyRatings(databaseName, feature);
 				} else if (featureCategory.equals("data_distribution")) {
-						return FeatureRatings.getDataDistributionRatings2(databaseName, feature);
+						return getDataDistributionRatings(databaseName, feature);
 				} else if (featureCategory.equals("data_model")) {
 						return getDataModelRatingsJSON(databaseName, feature);
 				} else if (featureCategory.equals("query")) {
-						return FeatureRatings.getQueryLanguagesRatings2(databaseName, feature);
+						return getQueryLanguagesRatings(databaseName, feature);
 				} else if (featureCategory.equals("data_replication")) {
-						return FeatureRatings.getDataReplicationRatings2(databaseName, feature);
+						return getDataReplicationRatings(databaseName, feature);
 				} else if (featureCategory.equals("security")) {
-						return FeatureRatings.getSecurityRatings2(databaseName, feature);
+						return getSecurityRatings(databaseName, feature);
 				} else if (featureCategory.equals("scalability")) {
-						return FeatureRatings.getScalabilityRatings2(databaseName, feature);
+						return getScalabilityRatings(databaseName, feature);
 				}
 				return null;
 		}
@@ -114,7 +113,7 @@ public class FeatureRatings {
 				return null;
 		}
 
-		public static Integer getConsistencyRatings2(String databaseName, String feature) {
+		public static Integer getConsistencyRatings(String databaseName, String feature) {
 
 				Consistency returnValueConsistency = new Consistency();
 				returnValueConsistency.setConsistencyDescription(ArrayParser
@@ -234,7 +233,7 @@ public class FeatureRatings {
 		}
 
 
-		public static Integer getDataDistributionRatings2(String databaseName, String feature) {
+		public static Integer getDataDistributionRatings(String databaseName, String feature) {
 
 				Distribution returnValueDistribution = new Distribution();
 				returnValueDistribution.setDistributionDescription(ArrayParser
@@ -436,7 +435,7 @@ public class FeatureRatings {
 //				return null;
 //		}
 
-		public static Integer getQueryLanguagesRatings2(String databaseName, String feature) {
+		public static Integer getQueryLanguagesRatings(String databaseName, String feature) {
 
 				QueryLanguage returnValueQuery = new QueryLanguage();
 				returnValueQuery.setQueryLanguageDescription(
@@ -611,7 +610,7 @@ public class FeatureRatings {
 		}
 
 
-		public static Integer getDataReplicationRatings2(String databaseName, String feature) {
+		public static Integer getDataReplicationRatings(String databaseName, String feature) {
 
 				Replication returnValue = new Replication();
 				returnValue.setReplicationDescription(ArrayParser
@@ -752,7 +751,7 @@ public class FeatureRatings {
 				return null;
 		}
 
-		public static Integer getSecurityRatings2(String databaseName, String feature) {
+		public static Integer getSecurityRatings(String databaseName, String feature) {
 
 				Security returnValue = new Security();
 				returnValue.setSecurityDescription(
@@ -873,7 +872,7 @@ public class FeatureRatings {
 
 		}
 
-		public static Integer getScalabilityRatings2(String databaseName, String feature) {
+		public static Integer getScalabilityRatings(String databaseName, String feature) {
 
 				Scalability returnValue = new Scalability();
 				returnValue.setScalabilityDescription(ArrayParser //todo values don't map to excel
