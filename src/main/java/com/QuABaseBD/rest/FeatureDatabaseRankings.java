@@ -16,7 +16,8 @@ import java.io.IOException;
 
 		@GET @Path("/get/ranking/{database}/{featureCategory}/{feature}")
 		@Produces(MediaType.APPLICATION_JSON)
-		public Integer getChartRankingAll(@PathParam("database") String databaseName,
+		public Integer getFeatureRanking(
+				@PathParam("database") String databaseName,
 				@PathParam("featureCategory") String featureCategory,
 				@PathParam("feature") String featureType) {
 				return FeatureRatings.getFeatureRatingAll(databaseName, featureCategory, featureType);
@@ -24,9 +25,11 @@ import java.io.IOException;
 
 		@GET @Path("/get/ranking/{database}/{featureCategory}/{feature}/{fileName}")
 		@Produces(MediaType.APPLICATION_JSON)
-		public Integer getChartRankingJSON(@PathParam("database") String databaseName,
+		public Integer getFeatureRankingJSON(
+				@PathParam("database") String databaseName,
 				@PathParam("featureCategory") String featureCategory,
-				@PathParam("feature") String featureType, @PathParam("fileName") String fileName)
+				@PathParam("feature") String featureType,
+				@PathParam("fileName") String fileName)
 				throws IOException, ParserConfigurationException, SAXException {
 				return FeatureRatings
 						.getFeatureRatingJSON(databaseName, featureCategory, featureType);

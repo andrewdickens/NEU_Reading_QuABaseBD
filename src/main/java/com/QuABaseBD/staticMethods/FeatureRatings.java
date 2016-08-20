@@ -1,6 +1,7 @@
 package com.QuABaseBD.staticMethods;
 
 import com.QuABaseBD.featureCategories.*;
+import com.QuABaseBD.featureCategoryRankings;
 import com.QuABaseBD.parsers.ArrayParser;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -43,6 +44,8 @@ public class FeatureRatings {
 
 		public static Integer getFeatureRatingJSON(String databaseName, String featureCategory,
 				String feature) throws IOException, ParserConfigurationException, SAXException {
+
+				System.out.println("IN JSON**************");
 				//todo retrieve and parse JSON, create database, call methods
 
 				if (featureCategory.equals("admin")) {
@@ -52,7 +55,8 @@ public class FeatureRatings {
 				} else if (featureCategory.equals("data_distribution")) {
 						return FeatureRatings.getDataDistributionRatings2(databaseName, feature);
 				} else if (featureCategory.equals("data_model")) {
-						return FeatureRatings.getDataModelRatingsJSON(databaseName, feature);
+						return getDataModelRatingsJSON(databaseName, feature);
+//						return FeatureRatings.getDataModelRatings2(databaseName, feature);
 				} else if (featureCategory.equals("query")) {
 						return FeatureRatings.getQueryLanguagesRatings2(databaseName, feature);
 				} else if (featureCategory.equals("data_replication")) {
@@ -986,155 +990,49 @@ public class FeatureRatings {
 				returnValueDataModel.setDataModelDescription(ArrayParser
 						.parseStringToArray(Database.retrieveDescription(databaseName, "data_model")));
 
-				JsonReader reader = new JsonReader(new FileReader("DataModel.json"));
-				Gson gson = new Gson();
+				String featureValue = null;
 
-				System.out.println(reader.toString());
-
-				reader.beginObject();
-
-				while (reader.hasNext()) {
-
-						String name = reader.nextName();
-						System.out.println(name);
-
-						if (name.equals("name")) {
-
-								System.out.println(reader.nextString());
-
-						} else if (name.equals("age")) {
-
-								System.out.println(reader.nextInt());
-
-						} else if (name.equals("message")) {
-
-								// read array
-								reader.beginArray();
-
-								while (reader.hasNext()) {
-										System.out.println(reader.nextString());
-								}
-
-								reader.endArray();
-
-						} else {
-								reader.skipValue(); //avoid some unhandle events
-						}
+				if (feature.equals("Scalable Request Processing Architecture")) {
+						featureValue = returnValueDataModel.getEnforcedSchema();
+				} else if (feature.equals("Opaque Data Objects (need application interpretation)")) {
+						featureValue = returnValueDataModel.getOpaqueDataObjects();
+				} else if (feature.equals("Hierarchical Data Objects (e.g. sub objects)")) {
+						featureValue = returnValueDataModel.getHierarchicalDataObjects();
+				} else if (feature.equals("Automatically Allocated Keys")) {
+						featureValue = returnValueDataModel.getAutoAllocatedKeys();
+				} else if (feature.equals("Composite Keys")) {
+						featureValue = returnValueDataModel.getCompositeKeys();
+				} else if (feature.equals("Secondary Indexes")) {
+						featureValue = returnValueDataModel.getSecondaryIndexes();
+				} else if (feature.equals("Query by Key Ranges")) {
+						featureValue = returnValueDataModel.getQueryByKeyRanges();
+				} else if (feature.equals("Query by Partial Key")) {
+						featureValue = returnValueDataModel.getQueryByPartialKeys();
+				} else if (feature.equals("Query by Non-keyed Values")) {
+						featureValue = returnValueDataModel.getQueryByNonKeyValues();
+				} else if (feature.equals("Map Reduce API")) {
+						featureValue = returnValueDataModel.getMapReduceAPI();
 				}
 
-				reader.endObject();
-				reader.close();
+				JsonReader reader = new JsonReader(new FileReader("DataModel.json"));
 
+				return featureCategoryRankings.readFeaturesArray(reader, feature, featureValue);
 
-//				URL url = getClass().getResource("ListStopWords.txt");
-//				File file = new File(url.getPath());
-
-//				JsonElement json = gson.fromJson(new FileReader("C:\\DataModel.json"), JsonElement.class);
-//				String result = gson.toJson(json);
-
-
-//
-//				if (feature.equals("Scalable Request Processing Architecture")) {
-//						if (returnValueDataModel.getEnforcedSchema().equals("required")) {
-//								return 2;
-//						} else if (returnValueDataModel.getEnforcedSchema().equals("optional")) {
-//								return 4;
-//						} else if (returnValueDataModel.getEnforcedSchema().equals("not required")) {
-//								return 7;
-//						} else
-//								return 50;
-//				} else if (feature.equals("Opaque Data Objects (need application interpretation)")) {
-//
-//						if (returnValueDataModel.getOpaqueDataObjects().equals("required")) {
-//								return 1;
-//						} else if (returnValueDataModel.getOpaqueDataObjects().equals("not required")) {
-//								return 7;
-//						} else
-//								return 50;
-//				} else if (feature.equals("Hierarchical Data Objects (e.g. sub objects)")) {
-//
-//						if (returnValueDataModel.getHierarchicalDataObjects().equals("not supported")) {
-//								return 1;
-//						} else if (returnValueDataModel.getHierarchicalDataObjects().equals("supported")) {
-//								return 7;
-//						} else
-//								return 50;
-//				} else if (feature.equals("Automatically Allocated Keys")) {
-//						if (returnValueDataModel.getAutoAllocatedKeys().equals("not supported")) {
-//								return 1;
-//						} else if (returnValueDataModel.getAutoAllocatedKeys().equals("supported")) {
-//								return 7;
-//						} else
-//								return 50;
-//				} else if (feature.equals("Composite Keys")) {
-//
-//						if (returnValueDataModel.getCompositeKeys().equals("not supported")) {
-//								return 1;
-//						} else if (returnValueDataModel.getCompositeKeys().equals("supported")) {
-//								return 7;
-//						} else
-//								return 50;
-//				} else if (feature.equals("Secondary Indexes")) {
-//
-//						if (returnValueDataModel.getSecondaryIndexes().equals("not supported")) {
-//								return 1;
-//						} else if (returnValueDataModel.getSecondaryIndexes().equals("supported")) {
-//								return 7;
-//						} else
-//								return 50;
-//				} else if (feature.equals("Query by Key Ranges")) {
-//
-//						if (returnValueDataModel.getQueryByKeyRanges().equals("not supported")) {
-//								return 1;
-//						} else if (returnValueDataModel.getQueryByKeyRanges().equals("supported")) {
-//								return 7;
-//						} else
-//								return 50;
-//				} else if (feature.equals("Query by Partial Key")) {
-//						if (returnValueDataModel.getQueryByPartialKeys().equals("not supported")) {
-//								return 1;
-//						} else if (returnValueDataModel.getQueryByPartialKeys().equals("supported")) {
-//								return 6;
-//						} else
-//								return 50;
-//				} else if (feature.equals("Query by Non-keyed Values")) {
-//
-//						if (returnValueDataModel.getQueryByNonKeyValues().equals("not supported")) {
-//								return 1;
-//						} else if (returnValueDataModel.getQueryByNonKeyValues().equals("supported")) {
-//								return 7;
-//						} else
-//								return 50;
-//				} else if (feature.equals("Map Reduce API")) {
-//
-//						if (returnValueDataModel.getMapReduceAPI().equals("not supported")) {
-//								return 1;
-//						} else if (returnValueDataModel.getMapReduceAPI()
-//								.equals("intergrated with an external framework")) {
-//								return 5;
-//						} else if (returnValueDataModel.getMapReduceAPI().equals("builtin")) {
-//								return 7;
-//						} else
-//								return 50;
-//				}
-//				//						else if (feature.equals("Indexed Text Search")) {
-//				//
-//				//								if (returnValueDataModel.getPhysicalStorageUsage().equals("not supported")) {
-//				//										return 1;
-//				//								} else if (returnValueDataModel.getPhysicalStorageUsage().equals("supported")) {
-//				//										return 7;
-//				//								}else
-//				//										return 50;
-//				//						}
-//				return null;
-
-				return null;
 		}
 
 		public static void main(String[] args)
 				throws IOException, ParserConfigurationException, SAXException {
 
-				getDataModelRatingsJSON("accumulo", "test");
+				DataModel returnValueDataModel = new DataModel();
+				returnValueDataModel.setDataModelDescription(ArrayParser
+						.parseStringToArray(Database.retrieveDescription("accumulo", "data_model")));
+
+				System.out.println("value is " + getFeatureRatingJSON("accumulo", "data_model", "Secondary Indexes"));
+
+				Integer test = getDataModelRatingsJSON("accumulo", "Secondary Indexes");
+				System.out.println("secondary indexes is " + returnValueDataModel.getSecondaryIndexes());
+
+				System.out.println("rating from JSON is " + test);
 
 		}
 

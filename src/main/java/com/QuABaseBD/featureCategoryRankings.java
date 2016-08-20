@@ -1,24 +1,16 @@
 package com.QuABaseBD;
 
 import com.google.gson.stream.JsonReader;
-import org.xml.sax.SAXException;
 
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by andrewdickens on 8/20/16.
  */
 public class featureCategoryRankings {
-		List<features> featureCategoryRankings;
 
-
-		public featureCategoryRankings readFeaturesArray(JsonReader reader) throws IOException {
+		public static Integer readFeaturesArray(JsonReader reader, String feature, String featureValue) throws IOException {
 				System.out.println("Starting readFeaturesArrayMethod");
-				List<features> features = new ArrayList<features>();
 
 				System.out.println(reader.toString());
 
@@ -27,82 +19,43 @@ public class featureCategoryRankings {
 				while (reader.hasNext()) {
 
 						String name = reader.nextName();
-						if (name.equals("category") || name.equals("description") || name.equals("version")) {
-								System.out.println(name);
+//						if (name.equals("category") || name.equals("description") || name.equals("version")) {
+//								System.out.println(name);
+//								reader.skipValue();
+//								continue;
+//						}
+
+						if(!name.equals(feature)) {
 								reader.skipValue();
 								continue;
 						}
 
-
-						System.out.println(name);
-						readFeature(reader);
-
-//						reader.skipValue();
+						return readFeature(reader, featureValue);
 				}
 
 				reader.endObject();
 				reader.close();
-				return null;
+				return 50;
 		}
 
-		public rankings readFeature(JsonReader reader) throws IOException {
-//				List<rankings> rankings = new ArrayList<com.QuABaseBD.rankings>();
-//				//				String featureName = null;
-//				//				Integer rankingValue = 0;
-//
-//				String username = null;
-				int followersCount = 0;
-//
-//				System.out.println("in Read Feature");
+		public static Integer readFeature(JsonReader reader, String featureValue) throws IOException {
+
+				System.out.println("feature value is " + featureValue);
 				reader.beginObject();
 				while (reader.hasNext()) {
 						String name = reader.nextName();
-						System.out.println(name);
-						if (followersCount % 2 == 0) {
-								//						reader.skipValue();
-								System.out.println(reader.nextString());
-						} else
-								System.out.println(reader.nextInt());
-						followersCount++;
+						System.out.println("name is " + name);
+
+						if (!name.equals(featureValue)) {
+								reader.skipValue();
+								continue;
+						}
+
+						return reader.nextInt();
 				}
-//				System.out.println("ending");
 						reader.endObject();
-						//				return new User(username, followersCount);
-						//		}
-				return null;
-		}
 
-
-		public static void main(String[] args)
-				throws IOException, ParserConfigurationException, SAXException {
-
-				com.QuABaseBD.featureCategoryRankings test = new featureCategoryRankings();
-				JsonReader reader = new JsonReader(new FileReader("DataModel.json"));
-
-				test.readFeaturesArray(reader);
-
-				//				JsonReader reader = new JsonReader(new FileReader("DataModel.json"));
-				//				Gson gson = new Gson();
-				//
-				//				System.out.println(reader.toString());
-				//
-				//				reader.beginObject();
-				//
-				//				while (reader.hasNext()) {
-				//
-				//						String name = reader.nextName();
-				//						if (name.equals("category") || name.equals("description") || name.equals("version")) {
-				//								reader.skipValue();
-				//								continue;
-				//						}
-				//
-				//						System.out.println(name);
-				//
-				//						reader.skipValue();
-				//				}
-				//
-				//				reader.endObject();
-				//				reader.close();
+				return 50;
 		}
 
 }

@@ -65,7 +65,7 @@
                     "not supported" : "1"
                 }
             ,
-    "Map-Reduce API" :
+    "Map Reduce API" :
 
                 {
                     "builtin" : "7",
