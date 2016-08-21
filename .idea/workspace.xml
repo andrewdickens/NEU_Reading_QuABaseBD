@@ -2,7 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="566d8638-a090-4f88-87bf-6f0a01cb65e4" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/Admin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/ArrayParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/ChartData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/ChartLabels.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/Charts.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/Consistency.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/DataModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/Database.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/DatabaseDescription.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/DescriptionType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/Distribution.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/JSONParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/QueryLanguage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/Replication.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/Scalability.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/Security.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/rest/FeatureRatings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/mkyong/rest/JSONServiceChartData.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/WEB-INF/classes/com/QuABaseBD/featureCategories/Admin.class" afterPath="$PROJECT_DIR$/target/RESTfulExample/WEB-INF/classes/com/QuABaseBD/featureCategories/Admin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/WEB-INF/classes/com/QuABaseBD/featureCategories/DataModel.class" afterPath="$PROJECT_DIR$/target/RESTfulExample/WEB-INF/classes/com/QuABaseBD/featureCategories/DataModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/QuABaseBD/featureCategories/Admin.class" afterPath="$PROJECT_DIR$/target/classes/com/QuABaseBD/featureCategories/Admin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/QuABaseBD/featureCategories/DataModel.class" afterPath="$PROJECT_DIR$/target/classes/com/QuABaseBD/featureCategories/DataModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuABaseBD_Visualization.iml" afterPath="$PROJECT_DIR$/QuABaseBD_Visualization.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Admin.java" afterPath="$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Admin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html" afterPath="$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/index.html" afterPath="$PROJECT_DIR$/target/RESTfulExample/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/js/heatMapData.js" afterPath="$PROJECT_DIR$/target/RESTfulExample/js/heatMapData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/js/radarChartData.js" afterPath="$PROJECT_DIR$/target/RESTfulExample/js/radarChartData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/RESTfulExample/subPages/heatMap/HeatMap.html" afterPath="$PROJECT_DIR$/target/RESTfulExample/subPages/heatMap/HeatMap.html" />
     </list>
     <ignored path="RESTfulExample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,22 +58,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5">
-              <caret line="90" column="51" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HeatMap.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html">
+      <file leaf-file-name="featureCategoryRankings.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClasses/featureCategoryRankings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57174885">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FeatureRatings.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClasses/FeatureRatings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.468085">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/DataModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,7 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/mkyong/Scalability.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/JSONServiceChartData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mkyong/rest/FeatureRatings.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/subPages/radarCharts/RadarChart.html" />
@@ -92,34 +150,35 @@
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/parsers/JSONParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/Charts.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClass/Database.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/rest/JSONServiceChartData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/FeatureRatings.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClass/FeatureRatings.java" />
         <option value="$PROJECT_DIR$/DataModel.json" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/rankings.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/features.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/DataModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategoryRankings.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticMethods/FeatureRatings.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/parsers/XMLStringParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/parsers/ArrayParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticMethods/ArrayParser.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/featureCategoryJSON/DataModel.json" />
-        <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClasses/FeatureRatings.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Distribution.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/QueryLanguage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Replication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Admin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Consistency.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClasses/ArrayParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClasses/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClasses/featureCategoryRankings.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/rest/FeatureDatabaseRankings.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/databaseCharts.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/heatMapData.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/radarChartData.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Admin.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/DataModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClasses/FeatureRatings.java" />
       </list>
     </option>
   </component>
@@ -216,6 +275,80 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTfulExample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTfulExample 7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuABaseBD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="staticClasses" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTfulExample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTfulExample 7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuABaseBD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTfulExample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTfulExample 7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuABaseBD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="featureCategories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -230,7 +363,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.5592635" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -911,12 +1044,12 @@
       <workItem from="1470462094909" duration="1477000" />
       <workItem from="1470463761227" duration="118708000" />
       <workItem from="1471313486926" duration="10000" />
-      <workItem from="1471313502493" duration="49065000" />
+      <workItem from="1471313502493" duration="50784000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254522000" />
+    <option name="totallyTimeSpent" value="256241000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1436" height="877" extended-state="6" />
@@ -1024,26 +1157,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.2.2/gson-2.2.2.jar!/com/google/gson/stream/JsonReader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.53110045">
           <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/radarChartData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4365482">
-          <caret line="361" column="58" selection-start-line="361" selection-start-column="58" selection-end-line="361" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1060,14 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.875">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Distribution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1104,39 +1213,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Consistency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/DataModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65531915">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClasses/ArrayParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="6" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClasses/featureCategoryRankings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1148,34 +1229,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClasses/FeatureRatings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5319149">
-          <caret line="965" column="0" selection-start-line="965" selection-start-column="0" selection-end-line="965" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/rest/FeatureDatabaseRankings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22340426">
           <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.095744684">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/heatMapData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79787236">
-          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -1206,7 +1263,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
+        <state vertical-scroll-proportion="-56.25">
           <caret line="90" column="51" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
           <folding />
         </state>
@@ -1214,9 +1271,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/subPages/heatMap/HeatMap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57174885">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="150" column="16" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/heatMapData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1382979">
+          <caret line="138" column="1" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/radarChartData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4957447">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5425532">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="e#1848#1849#0" expanded="true" />
+            <element signature="e#1900#1901#0" expanded="true" />
+            <element signature="e#1940#1941#0" expanded="true" />
+            <element signature="e#1977#1978#0" expanded="true" />
+            <element signature="e#2006#2007#0" expanded="true" />
+            <element signature="e#2060#2061#0" expanded="true" />
+            <element signature="e#2102#2103#0" expanded="true" />
+            <element signature="e#2145#2146#0" expanded="true" />
+            <element signature="e#2180#2181#0" expanded="true" />
+            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#2384#2385#0" expanded="true" />
+            <element signature="e#2549#2550#0" expanded="true" />
+            <element signature="e#2579#2580#0" expanded="true" />
+            <element signature="e#2635#2636#0" expanded="true" />
+            <element signature="e#2674#2675#0" expanded="true" />
+            <element signature="e#2716#2717#0" expanded="true" />
+            <element signature="e#2750#2751#0" expanded="true" />
+            <element signature="e#2911#2912#0" expanded="true" />
+            <element signature="e#2953#2954#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+            <element signature="e#3176#3177#0" expanded="true" />
+            <element signature="e#3340#3341#0" expanded="true" />
+            <element signature="e#3377#3378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Consistency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5744681">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/Distribution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5106383">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClasses/featureCategoryRankings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/featureCategories/DataModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/QuABaseBD/staticClasses/FeatureRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.468085">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1275,7 +1435,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>RESTfulExample</last-edited>
+          <last-edited>QuABaseBD_Visualization</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

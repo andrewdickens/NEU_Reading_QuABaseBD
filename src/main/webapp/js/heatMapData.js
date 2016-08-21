@@ -117,3 +117,23 @@ function loadHeatmapObject(dataObject){
     var ctx = document.getElementById('heatmap').getContext('2d');
     var newChart = new Chart(ctx).HeatMap(data, options);
 }
+
+/**
+ *
+ * @returns {boolean}
+ */
+function validate() {
+    var selectChoose = document.getElementById('database');
+    var maxOptions = 1;
+    var optionCount = 0;
+    for (var i = 0; i < selectChoose.length; i++) {
+        if (selectChoose[i].selected) {
+            optionCount++;
+            if (optionCount > maxOptions) {
+                alert("please choose no more than 1 values")
+                return false;
+            }
+        }
+    }
+    return true;
+}
