@@ -10,11 +10,8 @@
     <meta name="author" content="">
     <title>QuABaseBD</title>
 
-    <script src="../../js/databaseCharts.js"></script>
     <script src="../../js/Chart.js-2.1.6/dist/Chart.js"></script>
 
-    <!--<script src="../../js/radarChartData.js"></script>-->
-    <script src="../../js/chartData.js"></script>
     <script src="../../js/Chart.js-2.1.6/src/core/core.js"></script>
 
     <script src="../../js/jquery-1.12.4.min.js"></script>
@@ -40,10 +37,8 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="../../js/databaseCharts.js"></script>
     <script src="../../js/Chart.js-2.1.6/dist/Chart.js"></script>
     <script src="../../js/radarChartData.js"></script>
-    <script src="../../js/chartData.js"></script>
     <script src="../../js/Chart.js-2.1.6/src/core/core.js"></script>
     <script src="../../js/Chart.HeatMap-0.0.1-alpha/dst/Chart.HeatMap.S.js"></script>
     <script src="../../js/jquery-1.12.4.min.js"></script>
@@ -79,10 +74,12 @@
                         <a href="../../index.html"><i class="fa fa-dashboard fa-fw"></i>Radar Chart</a>
                     </li>
                     <li>
-                        <a href="../heatMap/HeatMap.html"><i class="fa fa-edit fa-fw"></i>Heat Map</a>
+                        <a href="../heatMap/HeatMap.html"><i class="fa fa-edit fa-fw"></i>Heat
+                            Map</a>
                     </li>
                     <li>
-                        <a href="http://quabase.sei.cmu.edu/mediawiki/index.php/Main_Page"><i class="fa fa-edit fa-fw"></i>QuABaseBD
+                        <a href="http://quabase.sei.cmu.edu/mediawiki/index.php/Main_Page"><i
+                                class="fa fa-edit fa-fw"></i>QuABaseBD
                             Wiki</a>
                     </li>
                 </ul>
@@ -181,10 +178,13 @@
                         <select class="form-control" multiple="" id="admin"
                                 name="admin">
                             <OPTION value="Configuration Files">Configuration Files</OPTION>
-                            <OPTION value="Node command line access">Node command line access</OPTION>
+                            <OPTION value="Node command line access">Node command line access
+                            </OPTION>
                             <OPTION value="Node add remove">Node add/remove</OPTION>
                             <OPTION value="Cluster monitoring">Cluster monitoring</OPTION>
-                            <OPTION value="Dump database configuration">Dump database configuration</OPTION>
+                            <OPTION value="Dump database configuration">Dump database
+                                configuration
+                            </OPTION>
                             <OPTION value="Database object count">Database object count</OPTION>
                             <OPTION value="Physical storage usage">Physical storage usage</OPTION>
                         </select>
@@ -195,16 +195,36 @@
                     <form onselect="validate()">
                         <select class="form-control" multiple="" id="consistency"
                                 name="consistency">
-                            <OPTION value="Object-Level isolation on updates">Object-Level isolation on updates</OPTION>
-                            <OPTION value="ACID transactions in single database">ACID transactions in single database</OPTION>
-                            <OPTION value="Distributed ACID transactions">Distributed ACID transactions</OPTION>
-                            <OPTION value="Updates applied to transaction log before returning from write">Updates applied before returning from write</OPTION>
-                            <OPTION value="Specify Quorum reads and writes">Specify Quorum Reads/Writes</OPTION>
-                            <OPTION value="Specify number of replicas to write to">Specify number of replicas to write to</OPTION>
-                            <OPTION value="Behaviour when write cannot complete on specified number of replicas">Behaviour when write cannot complete</OPTION>
-                            <OPTION value="Specify number of replicas to read from">Specify number of replicas to read from</OPTION>
-                            <OPTION value="Read from replica master only">Read from replica master only</OPTION>
-                            <OPTION value="Object level timestamps to detect conflicts">Object level timestamps to detect conflicts</OPTION>
+                            <OPTION value="Object-Level isolation on updates">Object-Level isolation
+                                on updates
+                            </OPTION>
+                            <OPTION value="ACID transactions in single database">ACID transactions
+                                in single database
+                            </OPTION>
+                            <OPTION value="Distributed ACID transactions">Distributed ACID
+                                transactions
+                            </OPTION>
+                            <OPTION value="Updates applied to transaction log before returning from write">
+                                Updates applied before returning from write
+                            </OPTION>
+                            <OPTION value="Specify Quorum reads and writes">Specify Quorum
+                                Reads/Writes
+                            </OPTION>
+                            <OPTION value="Specify number of replicas to write to">Specify number of
+                                replicas to write to
+                            </OPTION>
+                            <OPTION value="Behaviour when write cannot complete on specified number of replicas">
+                                Behaviour when write cannot complete
+                            </OPTION>
+                            <OPTION value="Specify number of replicas to read from">Specify number
+                                of replicas to read from
+                            </OPTION>
+                            <OPTION value="Read from replica master only">Read from replica master
+                                only
+                            </OPTION>
+                            <OPTION value="Object level timestamps to detect conflicts">Object level
+                                timestamps to detect conflicts
+                            </OPTION>
                         </select>
                     </form>
                 </div>
@@ -214,10 +234,16 @@
                         <select class="form-control" multiple="" id="scalability"
                                 name="scalability">
                             <OPTION value="Scale Out Architecture">Scale Out Architecture</OPTION>
-                            <OPTION value="Client Request Load Balancing">Client Request Load Balancing</OPTION>
+                            <OPTION value="Client Request Load Balancing">Client Request Load
+                                Balancing
+                            </OPTION>
                             <OPTION value="Scale Data Capacity">Scale Data Capacity</OPTION>
-                            <OPTION value="Data Object Based Locks on Writes">Data Object Based Locks on Writes</OPTION>
-                            <OPTION value="Scalable Request Processing Architecture">Scalable Request Processing Architecture</OPTION>
+                            <OPTION value="Data Object Based Locks on Writes">Data Object Based
+                                Locks on Writes
+                            </OPTION>
+                            <OPTION value="Scalable Request Processing Architecture">Scalable
+                                Request Processing Architecture
+                            </OPTION>
                         </select>
                     </form>
                 </div>
@@ -226,15 +252,24 @@
                     <form onselect="validate()">
                         <select class="form-control" multiple="" id="data_model"
                                 name="data_model">
-                            <OPTION value="Scalable Request Processing Architecture">Enforced Schema</OPTION>
-                            <OPTION value="Opaque Data Objects (need application interpretation)">Opaque Data Objects</OPTION>
-                            <OPTION value="Hierarchical Data Objects (e.g. sub objects)">Hierarchical Data Objects</OPTION>
-                            <OPTION value="Automatically Allocated Keys">Automatically Allocated Keys</OPTION>
+                            <OPTION value="Scalable Request Processing Architecture">Enforced
+                                Schema
+                            </OPTION>
+                            <OPTION value="Opaque Data Objects (need application interpretation)">
+                                Opaque Data Objects
+                            </OPTION>
+                            <OPTION value="Hierarchical Data Objects (e.g. sub objects)">
+                                Hierarchical Data Objects
+                            </OPTION>
+                            <OPTION value="Automatically Allocated Keys">Automatically Allocated
+                                Keys
+                            </OPTION>
                             <OPTION value="Composite Keys">Composite Keys</OPTION>
                             <OPTION value="Secondary Indexes">Secondary Indexes</OPTION>
                             <OPTION value="Query by Key Ranges">Query by Key Ranges</OPTION>
                             <OPTION value="Query by Partial Key">Query by Partial Key</OPTION>
-                            <OPTION value="Query by Non-keyed Values">Query by Non-keyed Values</OPTION>
+                            <OPTION value="Query by Non-keyed Values">Query by Non-keyed Values
+                            </OPTION>
                             <OPTION value="Map Reduce API">Map Reduce API</OPTION>
                             <!--<OPTION value="Indexed Text Search">Indexed Text Search</OPTION>-->
                         </select>
@@ -245,16 +280,25 @@
                     <form onselect="validate()">
                         <select class="form-control" multiple="" id="data_replication"
                                 name="data_replication">
-                            <OPTION value="Replication Architecture">Replication Architecture</OPTION>
+                            <OPTION value="Replication Architecture">Replication Architecture
+                            </OPTION>
                             <OPTION value="Replication for Backup">Replication for Backup</OPTION>
-                            <OPTION value="Replication across Data Centers">Replication across Data Centers</OPTION>
+                            <OPTION value="Replication across Data Centers">Replication across Data
+                                Centers
+                            </OPTION>
                             <OPTION value="Replicas Writes">Replicas Writes</OPTION>
                             <OPTION value="Replica Reads">Replica Reads</OPTION>
                             <OPTION value="Read Repair">Read Repair</OPTION>
-                            <OPTION value="Automatic Replica Failure Detection">Automatic Replica Failure Detection</OPTION>
+                            <OPTION value="Automatic Replica Failure Detection">Automatic Replica
+                                Failure Detection
+                            </OPTION>
                             <OPTION value="Automatic Failover">Automatic Failover</OPTION>
-                            <OPTION value="Automatic New Master Election after Failure">Automatic New Master Election after Failure</OPTION>
-                            <OPTION value="Replica Recovery and Resynchronization">Replica Recovery and Resynchronization</OPTION>
+                            <OPTION value="Automatic New Master Election after Failure">Automatic
+                                New Master Election after Failure
+                            </OPTION>
+                            <OPTION value="Replica Recovery and Resynchronization">Replica Recovery
+                                and Resynchronization
+                            </OPTION>
                         </select>
                     </form>
                 </div>
@@ -263,13 +307,22 @@
                     <form onselect="validate()">
                         <select class="form-control" multiple="" id="data_distribution"
                                 name="data_distribution">
-                            <OPTION value="Data Distribution Architecture">Data Distribution Architecture</OPTION>
-                            <OPTION value="Data Distribution Method">Data Distribution Method</OPTION>
-                            <OPTION value="Automatic Data Rebalancing">Automatic Data Rebalancing</OPTION>
-                            <OPTION value="Physical Data Distribution">Physical Data Distribution</OPTION>
+                            <OPTION value="Data Distribution Architecture">Data Distribution
+                                Architecture
+                            </OPTION>
+                            <OPTION value="Data Distribution Method">Data Distribution Method
+                            </OPTION>
+                            <OPTION value="Automatic Data Rebalancing">Automatic Data Rebalancing
+                            </OPTION>
+                            <OPTION value="Physical Data Distribution">Physical Data Distribution
+                            </OPTION>
                             <OPTION value="Query Architecture">Query Architecture</OPTION>
-                            <OPTION value="Queries using Non-Shard Key Value">Queries using Non-Shard Key Value</OPTION>
-                            <OPTION value="Merging Query Results from Multiple Shards">Merging Query Results from Multiple Shards</OPTION>
+                            <OPTION value="Queries using Non-Shard Key Value">Queries using
+                                Non-Shard Key Value
+                            </OPTION>
+                            <OPTION value="Merging Query Results from Multiple Shards">Merging Query
+                                Results from Multiple Shards
+                            </OPTION>
                         </select>
                     </form>
                 </div>
@@ -301,9 +354,12 @@
                             <OPTION value="Cursor-based queries">Cursor-based queries</OPTION>
                             <OPTION value="JOIN-style queries">JOIN-style queries</OPTION>
                             <OPTION value="Complex data types">Complex data types</OPTION>
-                            <OPTION value="Restrict number of objects returned by a query">Restrict number of objects returned by a query</OPTION>
+                            <OPTION value="Restrict number of objects returned by a query">Restrict
+                                number of objects returned by a query
+                            </OPTION>
                             <OPTION value="Key matching options">Key matching options</OPTION>
-                            <OPTION value="Sorting of query results">Sorting of query results</OPTION>
+                            <OPTION value="Sorting of query results">Sorting of query results
+                            </OPTION>
                             <OPTION value="Triggers">Triggers</OPTION>
                             <OPTION value="Expire data values">Expire data values</OPTION>
                         </select>
@@ -397,11 +453,6 @@
 
 <!-- Metis Menu Plugin JavaScript -->
 <script src="../../bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
-<!-- Morris Charts JavaScript -->
-<script src="../../bower_components/raphael/raphael-min.js"></script>
-<script src="../../bower_components/morrisjs/morris.min.js"></script>
-<script src="../../js/morris-data.js"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="../../dist/js/sb-admin-2.js"></script>

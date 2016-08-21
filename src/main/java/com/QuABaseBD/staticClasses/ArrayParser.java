@@ -5,6 +5,11 @@ package com.QuABaseBD.staticClasses;
  */
 public class ArrayParser {
 
+		/**
+		 *
+		 * @param input
+		 * @return
+		 */
 		public static String[][] parseStringToArray(String input){
 				String[] charactersRemoved = removeNewLine(toArray(input));
 
@@ -17,6 +22,11 @@ public class ArrayParser {
 				return matrix;
 		}
 
+		/**
+		 *
+		 * @param input
+		 * @return
+		 */
 		public static String[] toArray(String input){
 				String[] returnValue = input.split("\n");
 
@@ -27,6 +37,12 @@ public class ArrayParser {
 
 				return returnValue;
 		}
+
+		/**
+		 *
+		 * @param input
+		 * @return
+		 */
 		public static String[] removeNewLine(String[] input){
 				int count=1;
 				for(int i=0; i<input.length; i++){
@@ -49,6 +65,11 @@ public class ArrayParser {
 				return returnValue;
 		}
 
+		/**
+		 *
+		 * @param input
+		 * @return
+		 */
 		public static String[][] to2DArray(String[] input){
 
 				int count=0;

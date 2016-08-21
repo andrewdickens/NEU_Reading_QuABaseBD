@@ -8,19 +8,12 @@ public class Admin{
 		String featureType;
 		String databaseName;
 		String configurationFiles;
-		String adminConfigFileURL;
 		String NodeCommandLineAccess;
-		String AdminCommandLineURL;
 		String NodeAddRemove;
-		String AdminNodeAddURL;
 		String ClusterMonitoring;
-		String AdminClusterMonitoringURL;
 		String DumpDatabaseConfiguration;
-		String AdminDumpConfigURL;
 		String DatabaseObjectCount;
-		String AdminObjectCountURL;
 		String PhysicalStorageUsage;
-		String AdminStorageSizeURL;
 
 
 
@@ -53,19 +46,12 @@ public class Admin{
 				this.featureType = "noValue";
 				this.databaseName = "noValue";
 				this.configurationFiles = "noValue";
-				this.adminConfigFileURL = "noValue";
 				NodeCommandLineAccess = "noValue";
-				AdminCommandLineURL = "noValue";
 				NodeAddRemove = "noValue";
-				AdminNodeAddURL = "noValue";
 				ClusterMonitoring = "noValue";
-				AdminClusterMonitoringURL = "noValue";
 				DumpDatabaseConfiguration = "noValue";
-				AdminDumpConfigURL = "noValue";
 				DatabaseObjectCount = "noValue";
-				AdminObjectCountURL = "noValue";
 				PhysicalStorageUsage = "noValue";
-				AdminStorageSizeURL = "noValue";
 		}
 
 		public String getFeatureType() {

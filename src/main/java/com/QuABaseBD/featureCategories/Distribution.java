@@ -8,18 +8,12 @@ public class Distribution {
 		String featureType;
 		String databaseName;
 		String architecture;
-		String architectureURL;
 		String distributionMethod;
-		String distributionMethodURL;
 		String rebalancing;
-		String rebalanceURL;
 		String physicalDistribution;
-		String physicalURL;
 		String queryArchitecture;
-		String queryURL;
 		String nonShardKey;
 		String mergingResults;
-		String mergeURL;
 
 		public void setDistributionDescription(String[][] descriptionMatrix){
 
@@ -67,28 +61,12 @@ public class Distribution {
 				this.architecture = architecture;
 		}
 
-		public String getArchitectureURL() {
-				return architectureURL;
-		}
-
-		public void setArchitectureURL(String architectureURL) {
-				this.architectureURL = architectureURL;
-		}
-
 		public String getDistributionMethod() {
 				return distributionMethod;
 		}
 
 		public void setDistributionMethod(String distributionMethod) {
 				this.distributionMethod = distributionMethod;
-		}
-
-		public String getDistributionMethodURL() {
-				return distributionMethodURL;
-		}
-
-		public void setDistributionMethodURL(String distributionMethodURL) {
-				this.distributionMethodURL = distributionMethodURL;
 		}
 
 		public String getRebalancing() {
@@ -99,14 +77,6 @@ public class Distribution {
 				this.rebalancing = rebalancing;
 		}
 
-		public String getRebalanceURL() {
-				return rebalanceURL;
-		}
-
-		public void setRebalanceURL(String rebalanceURL) {
-				this.rebalanceURL = rebalanceURL;
-		}
-
 		public String getPhysicalDistribution() {
 				return physicalDistribution;
 		}
@@ -115,28 +85,12 @@ public class Distribution {
 				this.physicalDistribution = physicalDistribution;
 		}
 
-		public String getPhysicalURL() {
-				return physicalURL;
-		}
-
-		public void setPhysicalURL(String physicalURL) {
-				this.physicalURL = physicalURL;
-		}
-
 		public String getQueryArchitecture() {
 				return queryArchitecture;
 		}
 
 		public void setQueryArchitecture(String queryArchitecture) {
 				this.queryArchitecture = queryArchitecture;
-		}
-
-		public String getQueryURL() {
-				return queryURL;
-		}
-
-		public void setQueryURL(String queryURL) {
-				this.queryURL = queryURL;
 		}
 
 		public String getNonShardKey() {
@@ -155,11 +109,4 @@ public class Distribution {
 				this.mergingResults = mergingResults;
 		}
 
-		public String getMergeURL() {
-				return mergeURL;
-		}
-
-		public void setMergeURL(String mergeURL) {
-				this.mergeURL = mergeURL;
-		}
 }

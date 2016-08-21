@@ -9,6 +9,14 @@ import java.io.IOException;
  */
 public class featureCategoryRankings {
 
+		/**
+		 *
+		 * @param reader
+		 * @param feature
+		 * @param featureValue
+		 * @return
+		 * @throws IOException
+		 */
 		public static Integer readFeaturesArray(JsonReader reader, String feature, String featureValue)
 				throws IOException {
 				reader.beginObject();
@@ -29,6 +37,13 @@ public class featureCategoryRankings {
 				return 50;
 		}
 
+		/**
+		 *
+		 * @param reader
+		 * @param featureValue
+		 * @return
+		 * @throws IOException
+		 */
 		public static Integer readFeature(JsonReader reader, String featureValue) throws IOException {
 
 				reader.beginObject();

@@ -13,6 +13,16 @@ import java.io.IOException;
 
 @Path("/database/chart") public class FeatureDatabaseRankings {
 
+		/**
+		 *
+		 * @param databaseName
+		 * @param featureCategory
+		 * @param featureType
+		 * @return
+		 * @throws IOException
+		 * @throws SAXException
+		 * @throws ParserConfigurationException
+		 */
 		@GET @Path("/get/ranking/{database}/{featureCategory}/{feature}")
 		@Produces(MediaType.APPLICATION_JSON)
 		public Integer getFeatureRanking(@PathParam("database") String databaseName,

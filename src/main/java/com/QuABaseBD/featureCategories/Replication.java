@@ -8,22 +8,15 @@ public class Replication {
 		String featureType;
 		String databaseName;
 		String architecture;
-		String archURL;
 		String replicationForBackup;
 		String replicationAcrossDataCenters;
-		String dataCenterURL;
 		String replicaWrites;
 		String replicaReads;
-		String readsURL;
 		String readRepair;
 		String automaticReplicaFailureDetection;
-		String repFailDetectURL;
 		String automaticFailover;
-		String failoverURL;
 		String automaticNewMasterElection;
-		String masterElectionURL;
 		String replicaRecoveryAndResync;
-		String repRecoveryURL;
 
 		public void setReplicationDescription(String[][] descriptionMatrix){
 
@@ -84,14 +77,6 @@ public class Replication {
 				this.architecture = architecture;
 		}
 
-		public String getArchURL() {
-				return archURL;
-		}
-
-		public void setArchURL(String archURL) {
-				this.archURL = archURL;
-		}
-
 		public String getReplicationForBackup() {
 				return replicationForBackup;
 		}
@@ -108,28 +93,12 @@ public class Replication {
 				this.replicationAcrossDataCenters = replicationAcrossDataCenters;
 		}
 
-		public String getDataCenterURL() {
-				return dataCenterURL;
-		}
-
-		public void setDataCenterURL(String dataCenterURL) {
-				this.dataCenterURL = dataCenterURL;
-		}
-
 		public String getReplicaReads() {
 				return replicaReads;
 		}
 
 		public void setReplicaReads(String replicaReads) {
 				this.replicaReads = replicaReads;
-		}
-
-		public String getReadsURL() {
-				return readsURL;
-		}
-
-		public void setReadsURL(String readsURL) {
-				this.readsURL = readsURL;
 		}
 
 		public String getReadRepair() {
@@ -148,28 +117,12 @@ public class Replication {
 				this.automaticReplicaFailureDetection = automaticReplicaFailureDetection;
 		}
 
-		public String getRepFailDetectURL() {
-				return repFailDetectURL;
-		}
-
-		public void setRepFailDetectURL(String repFailDetectURL) {
-				this.repFailDetectURL = repFailDetectURL;
-		}
-
 		public String getAutomaticFailover() {
 				return automaticFailover;
 		}
 
 		public void setAutomaticFailover(String automaticFailover) {
 				this.automaticFailover = automaticFailover;
-		}
-
-		public String getFailoverURL() {
-				return failoverURL;
-		}
-
-		public void setFailoverURL(String failoverURL) {
-				this.failoverURL = failoverURL;
 		}
 
 		public String getAutomaticNewMasterElection() {
@@ -180,27 +133,11 @@ public class Replication {
 				this.automaticNewMasterElection = automaticNewMasterElection;
 		}
 
-		public String getMasterElectionURL() {
-				return masterElectionURL;
-		}
-
-		public void setMasterElectionURL(String masterElectionURL) {
-				this.masterElectionURL = masterElectionURL;
-		}
-
 		public String getReplicaRecoveryAndResync() {
 				return replicaRecoveryAndResync;
 		}
 
 		public void setReplicaRecoveryAndResync(String replicaRecoveryAndResync) {
 				this.replicaRecoveryAndResync = replicaRecoveryAndResync;
-		}
-
-		public String getRepRecoveryURL() {
-				return repRecoveryURL;
-		}
-
-		public void setRepRecoveryURL(String repRecoveryURL) {
-				this.repRecoveryURL = repRecoveryURL;
 		}
 }
