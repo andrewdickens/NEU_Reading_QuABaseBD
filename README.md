@@ -40,7 +40,7 @@ Java Backend
         1.  The FeatureRatings class contains the logic that compares the input feature with what's
         stored in the database.  There are a few categories with values that don't match (so these
         charts will always return faulty values (50).  Once a chart is generated, a value of 50 will
-        generally indicate this bug case.
+        generally indicate this bug case (an example is Scalability->Scale out Architecture->Accumulo).
         2.  Ian requested the above comparison logic be based off a JSON file, instead of hardcoded into
         the backend.  I implemented this with the Data_Model JSON.  This is currently implemented with
         an absolute file path unique to my file directory, so will need to be updated once this is
