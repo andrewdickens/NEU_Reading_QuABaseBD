@@ -21,9 +21,6 @@ function loadRadarDataObject(dataObject) {
  * @param dataObject
  */
 function loadRadarDataObjectOne(dataObject) {
-    console.log(dataObject);
-    console.log('feature type is ' + dataObject.features[0]);
-    console.log('database is ' + dataObject.databases[0]);
     var databaseName = dataObject.databases[0];
     var accumuloValues = loadRadarChartData(dataObject, 0);
 
@@ -167,25 +164,19 @@ function loadRadarDataObjectThree(dataObject) {
 function loadRadarChartData(dataObject, index) {
     var json;
     var returnData = [];
-    console.log("index value is " + index);
     var featureCount = dataObject.numberOfFeatures;
 
     for(var i=0; i<featureCount; i++) {
-        console.log("http://localhost:8080/rest/database/chart/get/ranking" + "/" + dataObject.databases[index] + "/" + dataObject.featureCategory + "/" + dataObject.features[i]);
-        console.log(dataObject.features[i]);
         $.ajax({
             type: "GET",
             url: "http://localhost:8080/rest/database/chart/get/ranking" + "/" + dataObject.databases[index] + "/" + dataObject.featureCategory + "/" + dataObject.features[i],
             async: false,
             dataType: "json",
             success: function (data) {
-                console.log("in success callback data");
                 returnData[i] = data;
             }
         });
     }
-
-    console.log("value from the callback is " + returnData);
 
     return returnData;
 }
