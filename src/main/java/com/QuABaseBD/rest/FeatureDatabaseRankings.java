@@ -22,6 +22,9 @@ import java.io.IOException;
 		 * @throws IOException
 		 * @throws SAXException
 		 * @throws ParserConfigurationException
+		 *
+		 * This method calls the API and returns the Integer value associated with the given database,
+		 * featureCategory, and feature.
 		 */
 		@GET @Path("/get/ranking/{database}/{featureCategory}/{feature}")
 		@Produces(MediaType.APPLICATION_JSON)

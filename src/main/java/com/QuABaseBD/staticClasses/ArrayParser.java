@@ -9,6 +9,8 @@ public class ArrayParser {
 		 *
 		 * @param input
 		 * @return
+		 *
+		 * Parses input String into a matrix
 		 */
 		public static String[][] parseStringToArray(String input){
 				String[] charactersRemoved = removeNewLine(toArray(input));
@@ -26,6 +28,8 @@ public class ArrayParser {
 		 *
 		 * @param input
 		 * @return
+		 *
+		 * Parses input String into an array of Strings, delimited by newline
 		 */
 		public static String[] toArray(String input){
 				String[] returnValue = input.split("\n");
@@ -42,6 +46,8 @@ public class ArrayParser {
 		 *
 		 * @param input
 		 * @return
+		 *
+		 * Removes blank newlines from the array
 		 */
 		public static String[] removeNewLine(String[] input){
 				int count=1;
@@ -69,6 +75,8 @@ public class ArrayParser {
 		 *
 		 * @param input
 		 * @return
+		 *
+		 * Converts String array to matrix
 		 */
 		public static String[][] to2DArray(String[] input){
 

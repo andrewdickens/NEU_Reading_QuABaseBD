@@ -1,7 +1,6 @@
 package com.QuABaseBD.staticClasses;
 
 import com.google.gson.stream.JsonReader;
-
 import java.io.IOException;
 
 /**
@@ -16,8 +15,11 @@ public class featureCategoryRankings {
 		 * @param featureValue
 		 * @return
 		 * @throws IOException
+		 *
+		 * Given a JSON, feature, and featureValue, return the value in the JSON that matches the
+		 * given featureValue.
 		 */
-		public static Integer readFeaturesArray(JsonReader reader, String feature, String featureValue)
+		public static Integer readFeaturesJSON(JsonReader reader, String feature, String featureValue)
 				throws IOException {
 				reader.beginObject();
 

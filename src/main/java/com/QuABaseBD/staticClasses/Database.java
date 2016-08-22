@@ -36,6 +36,9 @@ public class Database {
 		 * @param databaseName
 		 * @param featureType
 		 * @return
+		 *
+		 * Retrieves given featureType String for given Database from MySQL database.
+		 * Return value is eventually parsed for use by front end
 		 */
 		public static String retrieveDescription(String databaseName, String featureType) {
 

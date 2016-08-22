@@ -21,6 +21,20 @@ public class FeatureRatings {
 		public static final String SUPPORTED = "supported";
 		public static final String NO_VALUE = "noValue";
 
+
+		/**
+		 *
+		 * @param databaseName
+		 * @param featureCategory
+		 * @param feature
+		 * @return
+		 * @throws ParserConfigurationException
+		 * @throws SAXException
+		 * @throws IOException
+		 *
+		 * Given a Database, featureCategory, and feature, return the value mapped to the specific
+		 * feature.
+		 */
 		public static Integer getFeatureRating(String databaseName, String featureCategory,
 				String feature) throws ParserConfigurationException, SAXException, IOException {
 				if (featureCategory.equals("admin")) {
@@ -993,7 +1007,7 @@ public class FeatureRatings {
 
 				JsonReader reader = new JsonReader(new FileReader(JSON_FILES_PATH + DATA_MODEL_JSON));
 
-				return featureCategoryRankings.readFeaturesArray(reader, feature, featureValue);
+				return featureCategoryRankings.readFeaturesJSON(reader, feature, featureValue);
 
 		}
 
